@@ -10,6 +10,11 @@
     margin-top: 50px;
 }
 
+#content .row .left {
+    border-right: solid 1.5px #191b1a;
+    height: 1000px;
+}
+
 .slide-bar {
     position: fixed;
     height: 100%;

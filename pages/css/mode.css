@@ -1,0 +1,25 @@
+.dark-mode .left a {
+    color: black;
+}
+
+.dark-mode .left a:hover {
+    text-decoration: none;
+    color: rgb(4, 170, 45);
+    font-weight: 150;
+}
+
+.dark-mode .slide-bar ul li a{
+    color: white;
+}
+
+.dark-mode #about .wrap h2{
+    color: rgb(212, 209, 209);
+}
+
+.dark-mode #about .wrap p{
+    color: rgb(212, 209, 209);
+}
+
+.dark-mode #content .row .left{
+    border-right: solid 1.5px #f7f7f7;
+}

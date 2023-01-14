@@ -24,6 +24,11 @@
     <!-- about css -->
     <link rel="stylesheet" href="css/about.css">
 
+    <!-- mode -->
+    <script src="../js/mode.js"></script>
+    <link rel="stylesheet" href="../assets/css/mode.css">
+    <link rel="stylesheet" href="css/mode.css">
+
 </head>
 
 <body>
@@ -54,14 +59,33 @@
                 <li><a href="login.html">Đăng nhập</a></li>
                 <li><a href="register.html">Đăng ký</a></li>
             </ul>
+            <div style="margin-right: 0px;" class="search-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
             <!-- search -->
             <div class="search-btn">
                 <i class="search-icon ti-search"> </i>
+                <!-- <i onclick="changeMode()" class='mode-icon bx bx-sun'></i> -->
             </div>
+
+
+
+            <!-- mode -->
+            <!-- <div id="mode-btn" class="mode">
+                <i class='mode-icon bx bx-sun'></i>
+            </div> -->
 
             <div id="mobile-menu" class="mobile-menu-btn">
                 <i class="menu-icon ti-menu"></i>
             </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
+
+            <!-- <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div> -->
 
             <!-- .nav -->
         </div>
@@ -70,7 +94,7 @@
 
         <div id="content">
             <div class="row">
-                <div style="height: 1000px; border-right: solid 1.5px #191b1a; " class="col-sm-3 left">
+                <div class="col-sm-3 left">
                     <div class="slide-bar">
                         <ul>
                             <li><a href="#about">Đôi nét về Frog Quiz</a></li>

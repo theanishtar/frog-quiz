@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css" />
 
     <!-- mode -->
-    <!-- <script src="js/mode.js"></script> -->
+    <script src="js/mode.js"></script>
+    <link rel="stylesheet" href="assets/css/mode.css">
 
 </head>
 
@@ -31,7 +32,7 @@
                 <li><a style="font-size: 20px;" href="">Frog <span style="color: #15825a;">Quiz</span></a></li>
                 <li><a href="pages/about.html">Giới thiệu</a></li>
                 <li>
-                    <a href="#">Khóa học
+                    <a>Khóa học
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
@@ -65,12 +66,16 @@
                     </li> -->
             </ul>
 
-
+            <div style="margin-right: 0px;" class="search-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
             <!-- search -->
             <div class="search-btn">
                 <i class="search-icon ti-search"> </i>
                 <!-- <i onclick="changeMode()" class='mode-icon bx bx-sun'></i> -->
             </div>
+
+
 
             <!-- mode -->
             <!-- <div id="mode-btn" class="mode">
@@ -79,6 +84,10 @@
 
             <div id="mobile-menu" class="mobile-menu-btn">
                 <i class="menu-icon ti-menu"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
             </div>
 
             <!-- <div id="mobile-menu" class="mobile-menu-btn">
@@ -95,7 +104,7 @@
                 <h1 class="text-heading">Chào mừng đến với <span style="color: #15825a;">Frog Quiz</span>
                 </h1>
                 <div class="text-description">
-                    Chúng tôi sẽ mang đến cho bạn những bài học bổ ích, những câu hỏi thú vị, <br> 
+                    Chúng tôi sẽ mang đến cho bạn những bài học bổ ích, những câu hỏi thú vị, <br>
                     giúp bạn trở thành một developer chuyên nghiệp.
 
                 </div>

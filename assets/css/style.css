@@ -180,9 +180,20 @@ html {
     padding: 0 21px;
 }
 
-#header .mode {
-    float: right;
+.mode {
+    margin-right: 50px;
     padding: 0 21px;
+    margin-top: 2.5px;
+    font-size: 25px;
+    line-height: 46px;
+}
+
+.mode:hover i {
+    color: #009688;
+}
+
+.mode:hover{
+    cursor: pointer;
 }
 
 /* #header .mobile-menu-btn:hover {
@@ -192,6 +203,11 @@ html {
 
 #header .mobile-menu-btn:hover .menu-icon {
     color: #009688;
+}
+
+#header .mobile-menu-btn:hover{
+    
+    cursor: pointer;
 }
 
 #header .search-btn:hover {
@@ -404,7 +420,7 @@ html {
 
 /* footer */
 
-#content{
+#content {
     margin-bottom: 50px;
     width: 100%;
 }
