@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/img/ico/icon.png" type="image/x-icon">
     <title>Frog Quiz</title>
     <!-- icon -->
 
@@ -18,14 +19,17 @@
     <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css" />
 
+    <!-- mode -->
+    <!-- <script src="js/mode.js"></script> -->
+
 </head>
 
 <body>
     <div id="main">
         <div id="header">
             <ul id="nav">
-                <li><a style="font-size: 20px;" href="#">Frog <span style="color: #15825a;">Quiz</span></a></li>
-                <li><a href="#">Giới thiệu</a></li>
+                <li><a style="font-size: 20px;" href="">Frog <span style="color: #15825a;">Quiz</span></a></li>
+                <li><a href="pages/about.html">Giới thiệu</a></li>
                 <li>
                     <a href="#">Khóa học
                         <i class="nav-arrow-down ti-angle-down"></i>
@@ -40,9 +44,11 @@
                         <li><a href="#">Lập trình game</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Liên hệ</a></li>
-                <li><a href="#">Góp ý</a></li>
-                <li><a href="login.html">Đăng nhập</a></li>
+                <li><a href="pages/contact.html">Liên hệ</a></li>
+                <li><a href="pages/contribute.html">Góp ý</a></li>
+                <li><a href="pages/qna.html">Hỏi đáp</a></li>
+                <li><a href="pages/login.html">Đăng nhập</a></li>
+                <li><a href="pages/register.html">Đăng ký</a></li>
                 <!-- <li>
                         <a href="#"
                             >Hi, FrogDev
@@ -58,14 +64,26 @@
                         </ul>
                     </li> -->
             </ul>
+
+
             <!-- search -->
             <div class="search-btn">
                 <i class="search-icon ti-search"> </i>
+                <!-- <i onclick="changeMode()" class='mode-icon bx bx-sun'></i> -->
             </div>
+
+            <!-- mode -->
+            <!-- <div id="mode-btn" class="mode">
+                <i class='mode-icon bx bx-sun'></i>
+            </div> -->
 
             <div id="mobile-menu" class="mobile-menu-btn">
                 <i class="menu-icon ti-menu"></i>
             </div>
+
+            <!-- <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div> -->
 
             <!-- .nav -->
         </div>
@@ -77,8 +95,8 @@
                 <h1 class="text-heading">Chào mừng đến với <span style="color: #15825a;">Frog Quiz</span>
                 </h1>
                 <div class="text-description">
-                    Chúng tôi sẽ mang đến cho bạn những bài học bổ ích, những câu hỏi thú vị, giúp bạn trở thành một
-                    developer chuyên nghiệp.
+                    Chúng tôi sẽ mang đến cho bạn những bài học bổ ích, những câu hỏi thú vị, <br> 
+                    giúp bạn trở thành một developer chuyên nghiệp.
 
                 </div>
                 <!-- HTML !-->
@@ -92,7 +110,7 @@
             <span>Kết quả đạt được</span>
         </div> -->
         <div class="noi_bat">
-            
+
             <div class="one">
                 <div class="left">
                     <i class='bx bxl-spring-boot'></i>
@@ -168,7 +186,7 @@
                             <li><a href="#">TikTok</a></li>
                             <li><a href="#">YouTube</a></li>
                             <li><a href="#">Fanpage</a></li>
-                            
+
                         </ul>
                     </div>
                 </div>

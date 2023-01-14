@@ -1,0 +1,72 @@
+.noi_bat {
+    margin-bottom: 30px;
+}
+
+.row {
+    width: 100%;
+}
+
+#content {
+    margin-top: 50px;
+}
+
+.slide-bar {
+    position: fixed;
+    height: 100%;
+}
+
+.slide-bar a span {
+    margin-bottom: 200px;
+}
+
+.left {
+    padding: 30px 30px 0px 50px;
+}
+
+.left a {
+    font-size: 16px;
+    font-weight: 200;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.left a:hover {
+    text-decoration: none;
+    color: rgb(6, 138, 50);
+    font-weight: 150;
+}
+
+.right {
+    padding: 0px 40px 0px 90px;
+}
+
+.slide-bar ul>li{
+    margin-bottom: 20px;
+    list-style-type: none;
+    
+}
+
+#about .wrap{
+    margin-top: 50px;
+}
+
+#about .wrap h2{
+    margin-left: -20px;
+}
+
+
+.footer {
+    z-index: 1;
+}
+
+
+/* Mobile */
+@media (max-width: 46.1875em) {
+    .left {
+        display: none;
+    }
+
+    .right {
+        padding: 50px 40px 0px 50px;
+    }
+}

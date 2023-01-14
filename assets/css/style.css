@@ -180,6 +180,11 @@ html {
     padding: 0 21px;
 }
 
+#header .mode {
+    float: right;
+    padding: 0 21px;
+}
+
 /* #header .mobile-menu-btn:hover {
     border-bottom: solid 2px #009688;
     background-color: #ccc;
@@ -192,15 +197,25 @@ html {
 #header .search-btn:hover {
     cursor: pointer;
     /* background-color: #f44336; */
-    color: #009688;
+    /* color: #009688; */
+}
+
+#header .mode-icon {
+    margin: 0px 0px 0px 20px;
 }
 
 #header .search-icon:hover {
     color: #009688;
 }
 
+#header .mode-icon:hover {
+    cursor: pointer;
+    color: #009688;
+}
+
 #header .menu-icon,
-#header .search-icon {
+#header .search-icon,
+#header .mode-icon {
     color: rgb(0, 0, 0);
     font-size: 20px;
     line-height: 46px;
@@ -316,10 +331,10 @@ html {
 }
 
 
-.hr-feeds{
+.hr-feeds {
     size: 50;
     color: #000;
-    width: 90%; 
+    width: 90%;
     display: flex;
     justify-content: space-between;
     margin-left: auto;
@@ -329,7 +344,7 @@ html {
 
 /* noi bat */
 
-.fire-end{
+.fire-end {
     margin: 0 auto;
     display: flex;
     margin-top: 280px;
@@ -337,12 +352,12 @@ html {
     justify-content: center;
 }
 
-.fire-end i{
+.fire-end i {
     color: rgb(184, 43, 11);
     font-size: 30px;
 }
 
-.fire-end span{
+.fire-end span {
     font-size: 20px;
 }
 
@@ -388,8 +403,14 @@ html {
 
 
 /* footer */
+
+#content{
+    margin-bottom: 50px;
+    width: 100%;
+}
+
 .site-footer {
-    background-color: #dddddd58;
+    background-color: #dedddd;
     padding: 45px 0 20px;
     font-size: 13px;
     line-height: 24px;

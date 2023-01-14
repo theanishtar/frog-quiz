@@ -39,6 +39,10 @@
 
 /* Mobile */
 @media (max-width: 46.1875em) {
+    #mode-pc {
+        display: none;
+    }
+
     .s-full-width {
         width: 100% !important;
     }
@@ -81,11 +85,11 @@
 
     #nav .subnav {
         position: initial;
-        background: #333;
+        background: rgb(255, 255, 255);
     }
 
     #nav .subnav a {
-        color: #fff;
+        color: rgb(0, 0, 0);
         padding: 5px 41px;
     }
 
@@ -114,7 +118,8 @@
         width: auto;
         margin-bottom: 20px;
     }
-    .slider{
+
+    .slider {
         margin: 0px 50px;
     }
 
@@ -124,7 +129,7 @@
         margin: 0 40px;
     }
 
-    #slider .text-heading span{
+    #slider .text-heading span {
         padding-top: 100px;
     }
 

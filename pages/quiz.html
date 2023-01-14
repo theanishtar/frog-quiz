@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/img/ico/icon.png" type="image/x-icon">
+    <title>Frog Quiz</title>
+    <!-- icon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/jquery.min.js">
+    <link rel="stylesheet" href="../js/bootstrap.min.js">
+    
+    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css" />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+
+</head>
+
+<body>
+
+
+    <style>
+        html {
+    font-family: Helvetica, arial, sans-serif;
+    scroll-behavior: smooth;
+}
+        .form {
+            width: 820px;
+            height: 500px;
+            margin: 50px auto;
+            padding: 45px 65px;
+        }
+
+        .form__box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #fff;
+            border-radius: 40px;
+        }
+
+        .form__left {
+            width: 50%;
+        }
+
+        .form__padding {
+            width: 210px;
+            height: 210px;
+            background: #f2f2f2;
+            border-radius: 50%;
+            margin: 0 auto;
+            line-height: 210px;
+            position: relative;
+        }
+
+        .form__image {
+            max-width: 100%;
+            width: 60%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .form__right {
+            line-height: 26px;
+            width: 50%;
+        }
+
+        .form__padding-right {
+            padding: 0 25px;
+        }
+
+        .form__title {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form__submit-btn {
+            /* background: #1fcc44; */
+            /* font-size: 17px; */
+            padding: 0px;
+            cursor: pointer;
+            background: #ad5389;
+            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+            border: none;
+            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+
+            /* align-items: center;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 0.7em 1.4em 0.7em 1.1em;
+            color: white;
+            background: #ad5389;
+            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+            border: none;
+            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+            letter-spacing: 0.05em;
+            border-radius: 20em;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation; */
+        }
+
+        .form__submit-btn:hover {
+            /* background: #ff3f70; */
+            box-shadow: 0 0.5em 1.5em -0.5em #00100498;
+            background: linear-gradient(0deg, rgb(137, 186, 218) 0%, rgb(92, 195, 223) 100%);
+        }
+
+        .form__email {
+            position: relative;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 25px;
+            height: 35px;
+            border-radius: 20px;
+            border: none;
+            background: #f2f2f2;
+            padding: 10px;
+            font-size: 14px;
+            position: relative;
+        }
+
+        input:after {
+            position: absolute;
+            content: "a***";
+        }
+
+        a {
+            color: #107b27;
+            position: relative;
+        }
+
+        a:hover {
+            color: #ff3f70;
+        }
+
+        .container {
+            margin-top: 90px;
+            margin-bottom: 50px;
+        }
+
+
+        /* Mobile */
+        @media (max-width: 46.1875em) {
+            .form {
+                margin: 0px 0px;
+                padding: 0px 0px;
+                width: 100%;
+            }
+
+            .form__box {
+                display: block;
+            }
+
+            .form__right {
+                width: auto;
+            }
+
+            .form__left {
+                width: auto;
+            }
+
+            input {
+                height: auto;
+            }
+            .form__submit-btn{
+                padding: 10px;
+            }
+
+            .site-footer {
+                padding-top: 10px;
+                padding-bottom: 5px;
+            }
+
+            .site-footer .container{
+                margin-top: 50px;
+            }
+
+            .container{
+                margin-bottom: 80px;
+            }
+        }
+    </style>
+
+    <div id="main">
+        <div id="header">
+            <ul id="nav">
+                <li><a style="font-size: 20px;" href="../index.html">Frog <span style="color: #15825a;">Quiz</span></a>
+                </li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li>
+                    <a href="">Khóa học
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="#">Tất cả</a></li>
+                        <li><a href="#">Lập trình cơ bản</a></li>
+                        <li><a href="#">Lập trình nâng cao</a></li>
+                        <li><a href="#">Lập trình website</a></li>
+                        <li><a href="#">Lập trình nhúng</a></li>
+                        <li><a href="#">Lập trình mobile</a></li>
+                        <li><a href="#">Lập trình game</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="contribute.html">Góp ý</a></li>
+                <li><a href="qna.html">Hỏi đáp</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li><a href="register.html">Đăng ký</a></li>
+            </ul>
+            <!-- search -->
+            <div class="search-btn">
+                <i class="search-icon ti-search"> </i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+
+            <!-- .nav -->
+        </div>
+
+        <div class="container">
+            <div class="form">
+                <div class="form__box">
+                    <div class="form__left">
+                        <div class="form__padding"><img class="form__image" src="../assets/img/ico/frog-bc.png" /></div>
+                    </div>
+                    <div class="form__right">
+                        <div class="form__padding-right">
+                            <form>
+                                <h1 class="form__title">Đăng nhập vào <span style="color: #15825a;">Frog Quiz</span></h1>
+                                <input class="form__email" type="text" placeholder=" Email" />
+                                <input class="form__password" type="text" placeholder=" Mật khẩu" />
+                                <input class="form__submit-btn " type="submit" value="Đăng nhập" />
+                            </form>
+                            <span><a class="form__link" href="#">Quên mật khẩu?</a></span>
+                            <p>
+                                <a class="form__link" href="#">Tạo tài khoản mới</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Site footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>Giới thiệu</h6>
+                        <p class="text-justify">Frog Guide<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i> là một
+                            wensite hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các ngôn
+                            ngữ lập trình, công nghệ phổ biến như C, C++, Java, HTML, CSS, Bootstrap,
+                            JavaScript, PHP, Android, SQL và các thuật toán.</p>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Khóa học</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">C</a></li>
+                            <li><a href="#">UI Design</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">Android</a></li>
+                            <li><a href="#">Embed</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Frog team</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">Frog Guide</a></li>
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">TikTok</a></li>
+                            <li><a href="#">YouTube</a></li>
+                            <li><a href="#">Fanpage</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+                            <a href="#">Dang Tran Huu</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a target="_blank" class="facebook" href="#"><i
+                                        class="facebook-icon ti-facebook"></i></a></li>
+                            <li><a target="_blank" class="twitter" href="#"><i class="twitter-icon ti-twitter"></i></a>
+                            </li>
+                            <li><a target="_blank" class="github" href="https://github.com/TheanIshtar"><i
+                                        class="github-icon ti-github"></i></a></li>
+                            <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in/tranhuudang/"><i
+                                        class="linkedin-icon ti-linkedin"></i></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script>
+        var header = document.getElementById("header");
+        var mobileMenu = document.getElementById("mobile-menu");
+        var headerHeight = header.clientHeight;
+
+        // mobile menu
+        mobileMenu.onclick = function () {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = "auto";
+            } else {
+                header.style.height = null;
+            }
+        };
+
+        // auto close when clicked menu mobile
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (let i = 0; i < menuItems.length; i++) {
+            const menuItem = menuItems[i];
+            menuItem.onclick = function (event) {
+                var isParentMenu =
+                    this.nextElementSibling &&
+                    this.nextElementSibling.classList.contains("subnav");
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+            };
+        }
+    </script>
+</body>
+
+</html>
