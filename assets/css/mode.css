@@ -6,7 +6,7 @@
 
 
 .dark-mode #header {
-    background-color:#1f1f26ef;
+    background-color:#1f1f26fd;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
@@ -73,6 +73,10 @@
     box-shadow: 0 0.7em 1.5em -0.5em #7aafe7bd;
 }
 
+.dark-mode .button-88:hover {
+    background: linear-gradient(0deg, rgb(1, 235, 52) 0%, rgb(0, 121, 14) 100%);
+    box-shadow: 0 0.7em 1.5em -0.5em #4ed280bd;
+}
 
 /* content */
 
@@ -98,3 +102,76 @@
     color:rgb(244, 230, 204);
 }
 
+
+
+
+
+/* footer */
+
+.dark-mode .site-footer {
+    background-color: #34635c;
+    color: #ffffff;
+}
+
+.dark-mode .site-footer hr {
+    border-top-color: rgb(0, 0, 0);
+}
+
+.dark-mode .site-footer h6 {
+    color: #3ec770;
+}
+
+.dark-mode .site-footer a {
+    color: #7295db;
+}
+
+.dark-mode .site-footer a:hover {
+    color: #55ffc1;
+}
+
+
+.dark-mode .footer-links a {
+    color: #bfd9be
+}
+
+.dark-mode .footer-links a:active,
+.dark-mode .footer-links a:focus,
+.dark-mode .footer-links a:hover {
+    color: #2bd385;
+}
+
+.dark-mode .site-footer .social-icons a {
+    background-color: #434343
+}
+
+.dark-mode .social-icons li.title {
+    color: #ffffff;
+}
+
+.dark-mode .social-icons a {
+    background-color: #eceeef;
+    color: #ffffff;
+}
+
+.dark-mode .social-icons a:active,
+.dark-mode .social-icons a:focus,
+.dark-mode .social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe
+}
+
+.dark-mode .social-icons a.facebook:hover {
+    background-color: #3b5998
+}
+
+.dark-mode .social-icons a.twitter:hover {
+    background-color: #00aced
+}
+
+.dark-mode .social-icons a.linkedin:hover {
+    background-color: #007bb6
+}
+
+.dark-mode .social-icons a.github:hover {
+    background-color: #251c1f
+}

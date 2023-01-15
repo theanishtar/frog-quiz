@@ -1,5 +1,13 @@
 /* PC */
-@media (min-width: 64em) {}
+@media (min-width: 64em) {
+
+    #title-tong-quan{
+        text-align: center;
+        margin-top: 90px;
+        margin-bottom: 50px;
+    }
+
+}
 
 /* Tablet & Mobile */
 @media (max-width: 63.9375em) {
@@ -32,6 +40,8 @@
         padding: 12px 0;
         display: inline-block;
     }
+
+    
 }
 
 /* Tablet */
@@ -137,5 +147,9 @@
         margin-left: 20px;
         margin-right: 20px;
         /* text-shadow: 0 0 1px #000; */
+    }
+
+    #content .hr-fire{  
+        margin-top: 50px;
     }
 }

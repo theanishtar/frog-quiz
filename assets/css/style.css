@@ -184,7 +184,7 @@ html {
     margin-right: 50px;
     padding: 0 21px;
     margin-top: 2.5px;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 46px;
 }
 
@@ -192,7 +192,7 @@ html {
     color: #009688;
 }
 
-.mode:hover{
+.mode:hover {
     cursor: pointer;
 }
 
@@ -205,8 +205,8 @@ html {
     color: #009688;
 }
 
-#header .mobile-menu-btn:hover{
-    
+#header .mobile-menu-btn:hover {
+
     cursor: pointer;
 }
 
@@ -338,8 +338,8 @@ html {
 }
 
 .button-88:hover {
-    box-shadow: 0 0.5em 1.5em -0.5em #00100498;
-    background: linear-gradient(0deg, rgb(137, 186, 218) 0%, rgb(92, 195, 223) 100%);
+    background: linear-gradient(0deg, rgb(57, 93, 255) 0%, rgb(0, 150, 250) 100%);
+    box-shadow: 0 0.7em 1.5em -0.5em #062d55;
 }
 
 .button-88:active {
@@ -348,7 +348,6 @@ html {
 
 
 .hr-feeds {
-    size: 50;
     color: #000;
     width: 90%;
     display: flex;
@@ -414,7 +413,20 @@ html {
     font-size: 15px;
 }
 
+/* content */
+#content .hr-fire{
+    color: #000;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -150px;
+}
 
+.tong-quan{
+    margin-top: 50px;
+}
 
 
 

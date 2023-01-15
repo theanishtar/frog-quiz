@@ -83,7 +83,7 @@
             </div> -->
 
             <div id="mobile-menu" class="mobile-menu-btn">
-                <i class="menu-icon ti-menu"></i>
+                <i id="menu-i" class="menu-icon ti-menu"></i>
             </div>
 
             <div id="mobile-menu" class="mobile-menu-btn mode">
@@ -119,7 +119,6 @@
             <span>Kết quả đạt được</span>
         </div> -->
         <div class="noi_bat">
-
             <div class="one">
                 <div class="left">
                     <i class='bx bxl-spring-boot'></i>
@@ -161,6 +160,50 @@
 
 
         <div id="content">
+            <hr class="hr-fire">
+            <h2 id="title-tong-quan" style="margin-left: 20px;">Cùng tìm hiểu về Frog <span style="color: #15825a;">Quiz</span></h2>
+            
+            <div class="noi_bat tong-quan">
+                <div class="one">
+                    <div class="left">
+                        <i style="color: rgb(27, 135, 138);" class='bx bx-code-alt' ></i>
+                    </div>
+                    <div class="right">
+                        <div class="tieu_de">CODE</div>
+                        <p>Cung cấp nhiều kiến thức thú vị, thực tế liên quan tới lập trình</p>
+                    </div>
+                </div>
+                <div class="two">
+                    <div class="left">
+                        <i style="color: rgb(255, 61, 61);"   class='bx bx-palette'></i>
+                        <!-- <i style="color: rgb(66, 143, 17);"  class='bx bx-category-alt'></i> -->
+                    </div>
+                    <div class="right">
+                        <div class="tieu_de">GRAPHIC</div>
+                        <p>Giao diện tiện lợi dễ sử dụng, tương thích nhiều nền tảng</p>
+                    </div>
+                </div>
+                <div class="three">
+                    <div class="left">
+                        <i style="color: rgb(185, 152, 22);"  class='bx bxs-brightness-half'></i>
+                    </div>
+                    <div class="right">
+                        <div class="tieu_de">DARK MODE</div>
+                        <p>Cung cấp chế độ dark mode giúp người học tránh cường độ ánh sáng cao</p>
+                    </div>
+    
+                </div>
+                <div class="four">
+                    <div class="left">
+                        <i style="color: rgb(197, 43, 153);"  class='ti-infinite'></i>
+                    </div>
+                    <div class="right">
+                        <div class="tieu_de">PERMANENTLY</div>
+                        <p>Cập nhật các kiến thức mới liên tục</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Site footer -->
@@ -230,10 +273,17 @@
     <script>
         var header = document.getElementById("header");
         var mobileMenu = document.getElementById("mobile-menu");
+        var icon = document.getElementById("menu-i");
         var headerHeight = header.clientHeight;
+
+        function changesIconMenu() {
+            icon.classList.toggle("ti-menu");
+            icon.classList.toggle("ti-close");
+        }
 
         // mobile menu
         mobileMenu.onclick = function () {
+            changesIconMenu();
             var isClosed = header.clientHeight === headerHeight;
             if (isClosed) {
                 header.style.height = "auto";
