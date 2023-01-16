@@ -1,4 +1,4 @@
-.dark-mode{
+.dark-mode {
     background-color: #1f1f26ef;
 }
 
@@ -6,7 +6,7 @@
 
 
 .dark-mode #header {
-    background-color:#1f1f26fd;
+    background-color: #1f1f26fd;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
@@ -17,7 +17,7 @@
     /* text-transform: uppercase; */
 }
 
-.dark-mode #nav>li>span{
+.dark-mode #nav>li>span {
     color: white;
 }
 
@@ -62,8 +62,8 @@
     color: rgb(255, 255, 255);
 }
 
-.dark-mode .mode{
-    color:aliceblue
+.dark-mode .mode {
+    color: aliceblue
 }
 
 .dark-mode .button-88 {
@@ -99,12 +99,41 @@
 }
 
 .dark-mode .noi_bat p {
-    color:rgb(244, 230, 204);
+    color: rgb(244, 230, 204);
+}
+
+
+.dark-mode #main #content #title-tong-quan {
+    color: #f7f7f7;
 }
 
 
 
+.dark-mode #main .banner .left .content h2,
+.dark-mode #main .banner .left .content p {
+    color: rgb(198, 210, 219);
+}
 
+.dark-mode .banner .left .content .block .button-30 {
+    color: rgb(12, 52, 74);
+    background-color: rgb(96, 147, 173);
+    box-shadow: rgba(165, 124, 255, 0.4) 0 2px 4px, rgba(197, 170, 255, 0.3) 0 7px 13px -3px, #3d6f88 0 -3px 0 inset;
+
+}
+
+.dark-mode .banner .left .content .block .button-30:hover {
+    box-shadow: rgba(196, 196, 197, 0.4) 0 4px 8px, rgba(154, 134, 197, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.dark-mode .banner .left .content .block .button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.dark-mode .button-88:active {
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
 
 /* footer */
 
@@ -174,4 +203,9 @@
 
 .dark-mode .social-icons a.github:hover {
     background-color: #251c1f
+}
+
+.dark-mode .site-footer hr {
+    border-top-color: rgb(226, 248, 230);
+    opacity: 0.5;
 }

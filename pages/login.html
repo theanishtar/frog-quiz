@@ -12,14 +12,19 @@
 
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../js/jquery.min.js">
-    <link rel="stylesheet" href="../js/bootstrap.min.js">
-    
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css" />
 
     <!-- my css -->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
+
+    <!-- mode -->
+    <script src="../js/mode.js"></script>
+    <link rel="stylesheet" href="../assets/css/mode.css">
+    <link rel="stylesheet" href="css/mode.css">
 
 </head>
 
@@ -28,9 +33,10 @@
 
     <style>
         html {
-    font-family: Helvetica, arial, sans-serif;
-    scroll-behavior: smooth;
-}
+            font-family: Helvetica, arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
         .form {
             width: 820px;
             height: 500px;
@@ -59,16 +65,26 @@
             border-radius: 50%;
             margin: 0 auto;
             line-height: 210px;
-            position: relative;
+            display: flex;
+            justify-content: center;
+            -webkit-animation-duration: 3s;
+            animation-duration: 5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
 
         .form__image {
             max-width: 100%;
             width: 60%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            object-fit: contain; 
+            flex-shrink: 0;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s; 
+            -webkit-animation-fill-mode: both; 
+            animation-fill-mode: both; 
         }
 
         .form__right {
@@ -96,23 +112,6 @@
             background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
             border: none;
             box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
-
-            /* align-items: center;
-            font-family: inherit;
-            font-weight: 500;
-            font-size: 16px;
-            padding: 0.7em 1.4em 0.7em 1.1em;
-            color: white;
-            background: #ad5389;
-            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
-            border: none;
-            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
-            letter-spacing: 0.05em;
-            border-radius: 20em;
-            cursor: pointer;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation; */
         }
 
         .form__submit-btn:hover {
@@ -130,12 +129,13 @@
             width: 100%;
             margin-bottom: 25px;
             height: 35px;
-            border-radius: 20px;
+            border-radius: 15px;
             border: none;
             background: #f2f2f2;
             padding: 10px;
             font-size: 14px;
             position: relative;
+            margin-top: 5px;
         }
 
         input:after {
@@ -157,6 +157,93 @@
             margin-bottom: 50px;
         }
 
+        .user__email span,
+        .user__pass span{
+            margin-left: 5px;
+        }
+
+        .form__submit-btn{
+            margin-top: 40px;
+        }
+        .user__pass{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .user__pass i{
+            margin-right: 10px;
+            font-size: 22px;
+            color:rgba(20, 167, 62, 1);
+        }
+        .user__pass i:hover{
+            color: #3391ae;
+            cursor: pointer;
+        }
+        /* bounce effect */
+        @-webkit-keyframes bounce { 
+            0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+            40% {-webkit-transform: translateY(-30px);} 
+            60% {-webkit-transform: translateY(-15px);} 
+         } 
+         
+         @keyframes bounce { 
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+            40% {transform: translateY(-30px);} 
+            60% {transform: translateY(-15px);} 
+         }
+
+         @-webkit-keyframes bounce_auto {
+
+0%,
+50%,
+100% {
+    -webkit-transform: translateY(0);
+}
+
+25% {
+    -webkit-transform: translateY(15px);
+}
+
+75% {
+    -webkit-transform: translateY(-15px);
+}
+}
+
+@keyframes bounce_auto {
+
+0%,
+50%,
+100% {
+    -webkit-transform: translateY(0);
+}
+
+25% {
+    -webkit-transform: translateY(15px);
+}
+
+75% {
+    -webkit-transform: translateY(-15px);
+}
+}
+         
+         .bounce { 
+            -webkit-animation-name: bounce; 
+            animation-name: bounce; 
+         }
+
+         .bounce_auto {
+            -webkit-animation-name: bounce_auto;
+            animation-name: bounce_auto;
+        }
+        /* bounce effect */
+        /* PC */
+        @media (min-width: 64em) {
+            .form__padding{
+                width: 300px;
+                height: 300px;
+                margin-right: 50px;
+            }
+        }
 
         /* Mobile */
         @media (max-width: 46.1875em) {
@@ -181,7 +268,8 @@
             input {
                 height: auto;
             }
-            .form__submit-btn{
+
+            .form__submit-btn {
                 padding: 10px;
             }
 
@@ -190,12 +278,30 @@
                 padding-bottom: 5px;
             }
 
-            .site-footer .container{
+            .site-footer .container {
                 margin-top: 50px;
             }
 
-            .container{
+            .form {
                 margin-bottom: 80px;
+            }
+
+            .container{
+                margin-bottom: 90px;
+            }
+
+            .form .user__email input,
+            #password,
+            .form__submit-btn {
+                height: 40px;
+            }
+
+            .form__submit-btn {
+                margin-top: 30px;
+            }
+
+            .form input{
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -226,13 +332,22 @@
                 <li><a href="">Đăng nhập</a></li>
                 <li><a href="register.html">Đăng ký</a></li>
             </ul>
+
+            <div style="margin-right: 0px;" class="search-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
             <!-- search -->
             <div class="search-btn">
                 <i class="search-icon ti-search"> </i>
             </div>
 
+
             <div id="mobile-menu" class="mobile-menu-btn">
-                <i class="menu-icon ti-menu"></i>
+                <i id="menu-i" class="menu-icon ti-menu"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
             </div>
 
             <!-- .nav -->
@@ -242,14 +357,26 @@
             <div class="form">
                 <div class="form__box">
                     <div class="form__left">
-                        <div class="form__padding"><img class="form__image" src="../assets/img/ico/frog-bc.png" /></div>
+                        <div class="form__padding bounce_auto">
+                            <img class="form__image bounce" src="../assets/img/ico/frog-bc.png" /></div>
                     </div>
                     <div class="form__right">
                         <div class="form__padding-right">
                             <form>
-                                <h1 class="form__title">Đăng nhập vào <span style="color: #15825a;">Frog Quiz</span></h1>
-                                <input class="form__email" type="text" placeholder=" Email" />
-                                <input class="form__password" type="text" placeholder=" Mật khẩu" />
+                                <h1 class="form__title">Đăng nhập vào <span style="color: #15825a;">Frog Quiz</span>
+                                </h1>
+                                <div class="user__email">
+                                    <span>Email:</span>
+                                    <input class="form__email" type="text" placeholder="" />
+                                </div>
+                                
+                                <div class="user__pass">
+                                    <span class="pass__title">Mật khẩu:</span>
+                                    <i id="show" class='turn__pass bx bxs-hide'></i>
+                                    
+                                </div>
+                                <input id="password" class="form__password" type="password" placeholder="" />
+                                
                                 <input class="form__submit-btn " type="submit" value="Đăng nhập" />
                             </form>
                             <span><a class="form__link" href="changes-password.html">Quên mật khẩu?</a></span>
@@ -262,6 +389,7 @@
             </div>
         </div>
 
+        
         <!-- Site footer -->
         <footer class="site-footer">
             <div class="container">
@@ -269,7 +397,7 @@
                     <div class="col-sm-12 col-md-6">
                         <h6>Giới thiệu</h6>
                         <p class="text-justify">Frog Guide<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i> là một
-                            wensite hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các ngôn
+                            website hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các ngôn
                             ngữ lập trình, công nghệ phổ biến như C, C++, Java, HTML, CSS, Bootstrap,
                             JavaScript, PHP, Android, SQL và các thuật toán.</p>
                     </div>
@@ -304,7 +432,7 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-6 col-xs-12">
                         <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
-                            <a href="#">Dang Tran Huu</a>.
+                            <a href="#">Frog</a>.
                         </p>
                     </div>
 
@@ -314,9 +442,9 @@
                                         class="facebook-icon ti-facebook"></i></a></li>
                             <li><a target="_blank" class="twitter" href="#"><i class="twitter-icon ti-twitter"></i></a>
                             </li>
-                            <li><a target="_blank" class="github" href="https://github.com/TheanIshtar"><i
+                            <li><a target="_blank" class="github" href="https://github.com/"><i
                                         class="github-icon ti-github"></i></a></li>
-                            <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in/tranhuudang/"><i
+                            <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in//"><i
                                         class="linkedin-icon ti-linkedin"></i></i></a></li>
                         </ul>
                     </div>
@@ -325,14 +453,20 @@
         </footer>
     </div>
 
-
     <script>
         var header = document.getElementById("header");
         var mobileMenu = document.getElementById("mobile-menu");
+        var icon = document.getElementById("menu-i");
         var headerHeight = header.clientHeight;
+
+        function changesIconMenu() {
+            icon.classList.toggle("ti-menu");
+            icon.classList.toggle("ti-close");
+        }
 
         // mobile menu
         mobileMenu.onclick = function () {
+            changesIconMenu();
             var isClosed = header.clientHeight === headerHeight;
             if (isClosed) {
                 header.style.height = "auto";
@@ -356,6 +490,19 @@
                 }
             };
         }
+
+        
+
+        document.getElementById("show").onclick = function() {
+            let password = document.getElementById("password");
+            let iconPass = document.getElementById("show");
+            let flag = iconPass.classList.contains("bxs-hide");
+
+            flag && iconPass.classList.toggle("bxs-show");
+
+            password.type = password.type == "password" ? "text" : "password";
+        }
+
     </script>
 </body>
 

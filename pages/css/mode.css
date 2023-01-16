@@ -23,3 +23,29 @@
 .dark-mode #content .row .left{
     border-right: solid 1.5px #f7f7f7;
 }
+
+/* login and register */
+
+
+.dark-mode .form__box{
+    background-color: #1f1f2600;
+}
+
+.dark-mode .form__padding{
+    background-color: #4e4e52;
+}
+
+.dark-mode .form__title{
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .form .form__email,
+.dark-mode .form .form__password {
+    background: #676767e9;
+    color: rgb(255, 255, 255) ;
+}
+
+.dark-mode .form__box .user__email, span
+.dark-mode .form__box .user__pass, span{
+    color: rgb(255, 255, 255);
+}

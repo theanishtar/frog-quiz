@@ -21,6 +21,11 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
 
+    <!-- mode -->
+    <script src="../js/mode.js"></script>
+    <link rel="stylesheet" href="../assets/css/mode.css">
+    <link rel="stylesheet" href="css/mode.css">
+
 </head>
 
 <body>
@@ -226,13 +231,22 @@
                 <li><a href="login.html">Đăng nhập</a></li>
                 <li><a href="register.html">Đăng ký</a></li>
             </ul>
+           
+            <div style="margin-right: 0px;" class="search-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
             <!-- search -->
             <div class="search-btn">
                 <i class="search-icon ti-search"> </i>
             </div>
 
+
             <div id="mobile-menu" class="mobile-menu-btn">
-                <i class="menu-icon ti-menu"></i>
+                <i id="menu-i" class="menu-icon ti-menu"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
             </div>
 
             <!-- .nav -->
@@ -262,6 +276,7 @@
             </div>
         </div>
 
+        
         <!-- Site footer -->
         <footer class="site-footer">
             <div class="container">
@@ -269,7 +284,7 @@
                     <div class="col-sm-12 col-md-6">
                         <h6>Giới thiệu</h6>
                         <p class="text-justify">Frog Guide<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i> là một
-                            wensite hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các ngôn
+                            website hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các ngôn
                             ngữ lập trình, công nghệ phổ biến như C, C++, Java, HTML, CSS, Bootstrap,
                             JavaScript, PHP, Android, SQL và các thuật toán.</p>
                     </div>
@@ -304,7 +319,7 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-6 col-xs-12">
                         <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
-                            <a href="#">Dang Tran Huu</a>.
+                            <a href="#">Frog</a>.
                         </p>
                     </div>
 
@@ -314,9 +329,9 @@
                                         class="facebook-icon ti-facebook"></i></a></li>
                             <li><a target="_blank" class="twitter" href="#"><i class="twitter-icon ti-twitter"></i></a>
                             </li>
-                            <li><a target="_blank" class="github" href="https://github.com/TheanIshtar"><i
+                            <li><a target="_blank" class="github" href="https://github.com/"><i
                                         class="github-icon ti-github"></i></a></li>
-                            <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in/tranhuudang/"><i
+                            <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in//"><i
                                         class="linkedin-icon ti-linkedin"></i></i></a></li>
                         </ul>
                     </div>
@@ -325,14 +340,20 @@
         </footer>
     </div>
 
-
     <script>
         var header = document.getElementById("header");
         var mobileMenu = document.getElementById("mobile-menu");
+        var icon = document.getElementById("menu-i");
         var headerHeight = header.clientHeight;
+
+        function changesIconMenu() {
+            icon.classList.toggle("ti-menu");
+            icon.classList.toggle("ti-close");
+        }
 
         // mobile menu
         mobileMenu.onclick = function () {
+            changesIconMenu();
             var isClosed = header.clientHeight === headerHeight;
             if (isClosed) {
                 header.style.height = "auto";

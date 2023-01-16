@@ -59,33 +59,23 @@
                 <li><a href="login.html">Đăng nhập</a></li>
                 <li><a href="register.html">Đăng ký</a></li>
             </ul>
+            
             <div style="margin-right: 0px;" class="search-btn mode">
                 <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
             </div>
             <!-- search -->
             <div class="search-btn">
                 <i class="search-icon ti-search"> </i>
-                <!-- <i onclick="changeMode()" class='mode-icon bx bx-sun'></i> -->
             </div>
 
 
-
-            <!-- mode -->
-            <!-- <div id="mode-btn" class="mode">
-                <i class='mode-icon bx bx-sun'></i>
-            </div> -->
-
             <div id="mobile-menu" class="mobile-menu-btn">
-                <i class="menu-icon ti-menu"></i>
+                <i id="menu-i" class="menu-icon ti-menu"></i>
             </div>
 
             <div id="mobile-menu" class="mobile-menu-btn mode">
                 <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
             </div>
-
-            <!-- <div id="mobile-menu" class="mobile-menu-btn">
-                <i class="menu-icon ti-menu"></i>
-            </div> -->
 
             <!-- .nav -->
         </div>
@@ -160,14 +150,20 @@
 
     </div>
 
-
     <script>
         var header = document.getElementById("header");
         var mobileMenu = document.getElementById("mobile-menu");
+        var icon = document.getElementById("menu-i");
         var headerHeight = header.clientHeight;
+
+        function changesIconMenu() {
+            icon.classList.toggle("ti-menu");
+            icon.classList.toggle("ti-close");
+        }
 
         // mobile menu
         mobileMenu.onclick = function () {
+            changesIconMenu();
             var isClosed = header.clientHeight === headerHeight;
             if (isClosed) {
                 header.style.height = "auto";

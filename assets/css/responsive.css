@@ -1,16 +1,36 @@
 /* PC */
 @media (min-width: 64em) {
+    .tablet {
+        display: none;
+    }
 
-    #title-tong-quan{
+    #title-tong-quan {
         text-align: center;
         margin-top: 90px;
         margin-bottom: 50px;
     }
 
+    .banner {
+        margin-top: -50px;
+        margin-bottom: 300px;
+    }
+
+    .form__box .form__right .form__padding-right h1{
+        font-size: 23px;
+    }
+
+    .form__box .form__right .form__padding-right input{
+        height: 40px;
+        padding-left: 20px;
+    }
 }
 
 /* Tablet & Mobile */
 @media (max-width: 63.9375em) {
+    .tablet {
+        display: none;
+    }
+
     .btn {
         padding: 15px 16px;
     }
@@ -41,11 +61,35 @@
         display: inline-block;
     }
 
-    
+
 }
 
 /* Tablet */
-@media (min-width: 46.25em) and (max-width: 63.9375em) {}
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    #main {
+        display: none;
+    }
+
+    .tablet {
+        display: flex;
+    }
+
+    .tablet {
+        margin: 0 auto;
+        margin-top: 200px;
+        justify-content: space-between;
+        width: 80%;
+        height: 200px;
+        background-color: rgba(96, 198, 164, 0.395);
+        box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+        border-radius: 30px;
+    }
+
+    .tablet .content-tablet {
+        margin-left: 20px;
+    }
+
+}
 
 /* Mobile */
 @media (max-width: 46.1875em) {
@@ -149,7 +193,26 @@
         /* text-shadow: 0 0 1px #000; */
     }
 
-    #content .hr-fire{  
+    #content .hr-fire {
         margin-top: 50px;
+    }
+
+    .banner .left .content,
+    .banner .right .content {
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+
+    .banner{
+        height: 1010px;
+    }
+
+    .banner .right .content img {
+        margin-left: -20px;
+        width: 320px;
+    }
+
+    .form__box .form__submit-btn{
+        margin-bottom: 20px;
     }
 }
