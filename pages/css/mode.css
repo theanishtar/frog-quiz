@@ -12,7 +12,8 @@
     color: white;
 }
 
-.dark-mode #about .wrap h2{
+.dark-mode #about .wrap h2,
+.dark-mode #about h1{
     color: rgb(212, 209, 209);
 }
 
@@ -45,7 +46,7 @@
     color: rgb(255, 255, 255) ;
 }
 
-.dark-mode .form__box .user__email, span
-.dark-mode .form__box .user__pass, span{
+.dark-mode .form__box .user__email span,
+.dark-mode .form__box .user__pass span{
     color: rgb(255, 255, 255);
 }

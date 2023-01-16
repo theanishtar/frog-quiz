@@ -10,12 +10,16 @@
     margin-top: 50px;
 }
 
-#content .row .left {
-    border-right: solid 1.5px #191b1a;
-    height: 1000px;
+.row .left{
+    height: 100%;
 }
 
-#about-main p{
+#content .row .left {
+    border-right: solid 1.5px #191b1a;
+    height: 1400px;
+}
+
+.wrap p{
 font-size: 17px;
 }
 .slide-bar {
@@ -56,11 +60,14 @@ font-size: 17px;
 
 #about .wrap{
     margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 #about .wrap h2{
-    margin-left: -20px;
+    margin-left: 0px;
+    margin-bottom: 30px;
 }
+
 
 
 .footer {
@@ -75,6 +82,27 @@ font-size: 17px;
     }
 
     .right {
-        padding: 50px 40px 0px 50px;
+        padding: 0px 40px 0px 50px;
     }
+
+    footer{
+        display: block;
+    }
+
+    #content {
+        margin-bottom: -50px;
+    }
+}
+
+/* PC */
+@media (min-width: 64em){
+    footer{
+        display: none;
+    }
+
+    #about .wrap{
+        margin-right: 70px;
+    }
+
+    
 }

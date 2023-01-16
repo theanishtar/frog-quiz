@@ -688,11 +688,30 @@ html {
 .social-icons a.github:hover {
     background-color: #251c1f
 }
+.social-icons a.youtube:hover {
+    background-color: #d90808
+}
+
+
+ .form__title{
+    color: rgb(0, 0, 0);
+}
+
+ .form .form__email,
+ .form .form__password {
+    background: #f2f2f2;
+    color: rgb(0, 0, 0) ;
+}
+
+ .form__box .form__left .user__email, span
+ .form__box .form__left .user__pass, span{
+    color: rgb(0, 0, 0);
+}
 
 @media (max-width:767px) {
     .social-icons li.title {
         display: block;
         margin-right: 0;
-        font-weight: 600
+        font-weight: 600;
     }
 }

@@ -150,7 +150,7 @@
             color: #ff3f70;
         }
 
-        .container {
+        #container {
             margin-top: 90px;
             margin-bottom: 50px;
         }
@@ -300,21 +300,11 @@
             .form__submit-btn {
                 padding: 10px;
             }
-
-            .site-footer {
-                padding-top: 10px;
-                padding-bottom: 5px;
-            }
-
-            .site-footer .container {
-                margin-top: 50px;
-            }
-
             .form {
                 margin-bottom: 80px;
             }
 
-            .container {
+            #container {
                 margin-bottom: 180px;
                 margin-top: 70px;
             }
@@ -387,42 +377,44 @@
             <!-- .nav -->
         </div>
 
-        <div class="container">
-            <div class="form">
-                <div class="form__box">
-                    <div class="form__left">
-                        <div class="form__padding bounce_auto"><img class="form__image form__image__register bounce"
-                                src="../assets/img/ico/frog-crekphone.png" /></div>
-                    </div>
-                    <div class="form__right">
-                        <div class="form__padding-right">
-                            <form>
-                                <h1 class="form__title">Đăng nhập vào <span style="color: #15825a;">Frog Quiz</span>
-                                </h1>
-                                <div class="user__email">
-                                    <span>Email:</span>
-                                    <input class="form__email" type="text" placeholder="" />
-                                </div>
-
-                                <div class="user__pass">
-                                    <span class="pass__title">Mật khẩu:</span>
-                                    <i id="show" class='turn__pass bx bxs-hide'></i>
-                                    
-                                </div>
-                                <input id="password" class="form__password" type="password" placeholder="" />
-
-                                <div class="user__pass">
-                                    <span class="pass__title">Nhập lại mật khẩu:</span>
-
-                                </div>
-                                <input id="password__confirm" class="form__password" type="password" placeholder="" />
-
-                                <input class="form__submit-btn " type="submit" value="Đăng nhập" />
-                            </form>
-                            <span><a class="form__link" href="changes-password.html">Quên mật khẩu?</a></span>
-                            <p>
-                                <a class="form__link" href="register.html">Tạo tài khoản mới</a>
-                            </p>
+        <div id="container" class="container">
+            <div class="row">
+                <div class="form">
+                    <div class="form__box">
+                        <div class="form__left">
+                            <div class="form__padding bounce_auto"><img class="form__image form__image__register bounce"
+                                    src="../assets/img/ico/frog-crekphone.png" /></div>
+                        </div>
+                        <div class="form__right">
+                            <div class="form__padding-right">
+                                <form>
+                                    <h1 class="form__title">Đăng nhập vào <span style="color: #15825a;">Frog Quiz</span>
+                                    </h1>
+                                    <div class="user__email">
+                                        <span>Email:</span>
+                                        <input class="form__email" type="text" placeholder="" />
+                                    </div>
+    
+                                    <div class="user__pass">
+                                        <span class="pass__title">Mật khẩu:</span>
+                                        <i id="show" class='turn__pass bx bxs-hide'></i>
+                                        
+                                    </div>
+                                    <input id="password" class="form__password" type="password" placeholder="" />
+    
+                                    <div class="user__pass">
+                                        <span class="pass__title">Nhập lại mật khẩu:</span>
+    
+                                    </div>
+                                    <input id="password__confirm" class="form__password" type="password" placeholder="" />
+    
+                                    <input class="form__submit-btn " type="submit" value="Đăng nhập" />
+                                </form>
+                                <span><a class="form__link" href="changes-password.html">Quên mật khẩu?</a></span>
+                                <p>
+                                    <a class="form__link" href="register.html">Tạo tài khoản mới</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -436,8 +428,10 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <h6>Giới thiệu</h6>
-                        <p class="text-justify">Frog Guide<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i> là một
-                            website hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các ngôn
+                        <p class="text-justify">Frog Guide<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i>
+                            là một
+                            website hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các
+                            ngôn
                             ngữ lập trình, công nghệ phổ biến như C, C++, Java, HTML, CSS, Bootstrap,
                             JavaScript, PHP, Android, SQL và các thuật toán.</p>
                     </div>
@@ -457,12 +451,13 @@
                     <div class="col-xs-6 col-md-3">
                         <h6>Frog team</h6>
                         <ul class="footer-links">
-                            <li><a href="#">Frog Guide</a></li>
-                            <li><a href="#">Email</a></li>
-                            <li><a href="#">TikTok</a></li>
-                            <li><a href="#">YouTube</a></li>
-                            <li><a href="#">Fanpage</a></li>
-
+                            <li><a href="https://github.com/TheanIshtar/FrogGuide">Frog Guide</a></li>
+                            <li><a href="dangtt135@gmail.com">Email</a></li>
+                            <li><a href="https://github.com/frogtech">TikTok</a></li>
+                            <li><a href="https://www.youtube.com/@echhoclaptrinh">YouTube</a></li>
+                            <li><a href="https://www.facebook.com/echhoclaptrinh">Fanpage</a></li>
+                            <li><a href="">Github</a></li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -472,19 +467,20 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-6 col-xs-12">
                         <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
-                            <a href="#">Frog</a>.
+                            <a href="https://theanishtar.github.io/my-portfolio/">Dang Tran Huu</a>.
                         </p>
                     </div>
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <ul class="social-icons">
-                            <li><a target="_blank" class="facebook" href="#"><i
+                            <li><a target="_blank" class="facebook" href="https://www.facebook.com/dangdeveloper/"><i
                                         class="facebook-icon ti-facebook"></i></a></li>
-                            <li><a target="_blank" class="twitter" href="#"><i class="twitter-icon ti-twitter"></i></a>
+                            <li><a target="_blank" class="youtube" href="https://www.youtube.com/@echhoclaptrinh"><i
+                                        class="youtube-icon ti-youtube"></i></a>
                             </li>
-                            <li><a target="_blank" class="github" href="https://github.com/"><i
+                            <li><a target="_blank" class="github" href="https://github.com/theanishtar"><i
                                         class="github-icon ti-github"></i></a></li>
-                            <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in//"><i
+                            <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in/tranhuudang"><i
                                         class="linkedin-icon ti-linkedin"></i></i></a></li>
                         </ul>
                     </div>
