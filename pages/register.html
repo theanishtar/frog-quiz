@@ -25,10 +25,16 @@
     <link rel="stylesheet" href="../assets/css/mode.css">
     <link rel="stylesheet" href="css/mode.css">
 
+    <!-- toast -->
+    <script src="../toast/main.js"></script>
+    <link rel="stylesheet" href="../toast/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
 </head>
 
 <body>
-
+    <div id="toast"></div>
     <style>
         html {
             font-family: Helvetica, arial, sans-serif;
@@ -152,7 +158,7 @@
 
         #container {
             margin-top: 90px;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .user__email span,
@@ -388,7 +394,7 @@
                         <div class="form__right">
                             <div class="form__padding-right">
                                 <form>
-                                    <h1 class="form__title">Đăng nhập vào <span style="color: #15825a;">Frog Quiz</span>
+                                    <h1 class="form__title">Đăng ký tài khoản <span style="color: #15825a;">Frog Quiz</span>
                                     </h1>
                                     <div class="user__email">
                                         <span>Email:</span>
@@ -408,7 +414,7 @@
                                     </div>
                                     <input id="password__confirm" class="form__password" type="password" placeholder="" />
     
-                                    <input class="form__submit-btn " type="submit" value="Đăng nhập" />
+                                    <input onclick="showErrorToast();"  class="form__submit-btn " type="button" value="Đăng ký" />
                                 </form>
                                 <span><a class="form__link" href="changes-password.html">Quên mật khẩu?</a></span>
                                 <p>
@@ -428,7 +434,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <h6>Giới thiệu</h6>
-                        <p class="text-justify">Frog Guide<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i>
+                        <p class="text-justify">Frog Quiz<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i>
                             là một
                             website hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các
                             ngôn
@@ -537,6 +543,15 @@
 
             password.type = password.type == "password" ? "text" : "password";
             passConfirm.type = passConfirm.type == "password" ? "text" : "password";
+        }
+
+        function showErrorToast() {
+            toast({
+                title: "Thất bại!",
+                message: "Đăng ký không thành công, tính năng chưa phát triển!",
+                type: "error",
+                duration: 5000
+            });
         }
     </script>
 </body>

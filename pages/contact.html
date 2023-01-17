@@ -10,20 +10,26 @@
     <!-- icon -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../js/jquery.min.js">
-    <link rel="stylesheet" href="../js/bootstrap.min.js">
-    
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css" />
 
     <!-- my css -->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
+
     <!-- mode -->
     <script src="../js/mode.js"></script>
     <link rel="stylesheet" href="../assets/css/mode.css">
     <link rel="stylesheet" href="css/mode.css">
+    <!-- toast -->
+    <script src="../toast/main.js"></script>
+    <link rel="stylesheet" href="../toast/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 
 </head>
 
@@ -32,117 +38,43 @@
 
     <style>
         html {
-    font-family: Helvetica, arial, sans-serif;
-    scroll-behavior: smooth;
-}
-        .form {
-            width: 820px;
-            height: 500px;
-            margin: 50px auto;
-            padding: 45px 65px;
+            font-family: Helvetica, arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
-        .form__box {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background: #fff;
-            border-radius: 40px;
-        }
-
-        .form__left {
-            width: 50%;
-        }
-
-        .form__padding {
-            width: 210px;
-            height: 210px;
-            background: #f2f2f2;
-            border-radius: 50%;
-            margin: 0 auto;
-            line-height: 210px;
-            position: relative;
-        }
-
-        .form__image {
-            max-width: 100%;
-            width: 60%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .form__right {
-            line-height: 26px;
-            width: 50%;
-        }
-
-        .form__padding-right {
-            padding: 0 25px;
-        }
 
         .form__title {
-            font-size: 18px;
+            font-size: 25px;
             font-weight: bold;
-            text-align: center;
+            text-align: left;
             margin-bottom: 30px;
         }
 
-        .form__submit-btn {
-            /* background: #1fcc44; */
-            /* font-size: 17px; */
-            padding: 0px;
-            cursor: pointer;
-            background: #ad5389;
-            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
-            border: none;
-            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
-
-            /* align-items: center;
-            font-family: inherit;
-            font-weight: 500;
-            font-size: 16px;
-            padding: 0.7em 1.4em 0.7em 1.1em;
-            color: white;
-            background: #ad5389;
-            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
-            border: none;
-            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
-            letter-spacing: 0.05em;
-            border-radius: 20em;
-            cursor: pointer;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation; */
+        .left {
+            padding-right: 20px;
         }
 
-        .form__submit-btn:hover {
-            /* background: #ff3f70; */
-            box-shadow: 0 0.5em 1.5em -0.5em #00100498;
-            background: linear-gradient(0deg, rgb(137, 186, 218) 0%, rgb(92, 195, 223) 100%);
-        }
-
-        .form__email {
-            position: relative;
-        }
-
-        input {
+        input,
+        textarea {
             display: block;
             width: 100%;
             margin-bottom: 25px;
-            height: 35px;
-            border-radius: 20px;
+            height: 40px;
+            border-radius: 5px;
             border: none;
             background: #f2f2f2;
             padding: 10px;
             font-size: 14px;
             position: relative;
+            margin-top: 5px;
         }
 
         input:after {
+            position: absolute;
+            content: "a***";
+        }
+
+        textarea:after {
             position: absolute;
             content: "a***";
         }
@@ -156,50 +88,105 @@
             color: #ff3f70;
         }
 
-        .container {
-            margin-top: 90px;
-            margin-bottom: 50px;
+        #container {
+            margin-top: 150px;
+            margin-bottom: 60px;
+        }
+
+
+        textarea {
+            height: 100px;
+        }
+
+        .button-88 {
+            margin-top: 0px;
+            width: 150px;
+        }
+
+        .ojb {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .user__name,
+        .user__email {
+            width: 47%;
+        }
+
+        .right iframe {
+            border-radius: 10px;
+            box-shadow: 0 0.7em 1.5em -0.5em #62626298;
+        }
+
+        .toggle-collapse {
+            color: black;
+            font-size: 19px;
+        }
+
+        .toggle-collapse i {
+            color: black;
+            font-size: 15px;
+        }
+
+        .toggle-collapse:hover {
+            color: #107b27;
+            text-decoration: none;
+        }
+
+        .contact .icon{
+            font-size: 30px;
+            color: rgb(34, 195, 172);
+        }
+        .contact .content {
+            font-size: 17px;
+            color: rgb(0, 0, 0);
+            margin-top: 7px;
+            margin-left: 8px;
+        }
+
+        .row .title{
+            margin-left: 10px;
+        }
+
+        .contact{
+            display: flex;
+        }
+
+        iframe{
+            height: 540px;
         }
 
 
         /* Mobile */
         @media (max-width: 46.1875em) {
-            .form {
-                margin: 0px 0px;
-                padding: 0px 0px;
-                width: 100%;
+
+
+            #container {
+                margin-bottom: 180px;
+                margin-top: 70px;
             }
 
-            .form__box {
-                display: block;
+            .form__padding-right .form__title {
+                font-size: 20px;
             }
 
-            .form__right {
-                width: auto;
+            .form .user__email input,
+            #password,
+            #password__confirm,
+            .form__submit-btn {
+                height: 40px;
             }
 
-            .form__left {
-                width: auto;
+            .form__submit-btn {
+                margin-top: 30px;
             }
 
-            input {
-                height: auto;
-            }
-            .form__submit-btn{
-                padding: 10px;
+            .form input {
+                margin-bottom: 10px;
             }
 
-            .site-footer {
-                padding-top: 10px;
-                padding-bottom: 5px;
-            }
-
-            .site-footer .container{
-                margin-top: 50px;
-            }
-
-            .container{
-                margin-bottom: 80px;
+            iframe {
+                width: 99%;
             }
         }
     </style>
@@ -230,7 +217,7 @@
                 <li><a href="login.html">Đăng nhập</a></li>
                 <li><a href="register.html">Đăng ký</a></li>
             </ul>
-          
+
             <div style="margin-right: 0px;" class="search-btn mode">
                 <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
             </div>
@@ -251,38 +238,116 @@
             <!-- .nav -->
         </div>
 
-        <div class="container">
-            <div class="form">
-                <div class="form__box">
-                    <div class="form__left">
-                        <div class="form__padding"><img class="form__image" src="../assets/img/ico/frog-bc.png" /></div>
+        <div style="margin-top: 70px;" id="container" class="container">
+            <!--     <div  class="row">
+                <div style="margin-left: 50px; margin-top: 20px;" class="wrap">
+                    <a href="#demo" class="toggle-collapse" data-toggle="collapse">Mở <i class='bx bxs-down-arrow'></i></a>
+                    <div id="demo" class="collapse">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
-                    <div class="form__right">
-                        <div class="form__padding-right">
-                            <form>
-                                <h1 class="form__title">Đăng nhập vào <span style="color: #15825a;">Frog Quiz</span></h1>
-                                <input class="form__email" type="text" placeholder=" Email" />
-                                <input class="form__password" type="text" placeholder=" Mật khẩu" />
-                                <input class="form__submit-btn " type="submit" value="Đăng nhập" />
-                            </form>
-                            <span><a class="form__link" href="#">Quên mật khẩu?</a></span>
-                            <p>
-                                <a class="form__link" href="#">Tạo tài khoản mới</a>
-                            </p>
+                </div>
+                <div class="wrap">
+                     <button class="button-54 " >btn</button> 
+                    <a href="#demo" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
+                    <div id="demo" class="collapse">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="row">
+                <h1 class="title">Liên hệ với chúng tôi </h1>
+                <hr class="hr-fire">
+                <div class="left col-sm-6">
+                    <div class="contact">
+                        <div class="icon">
+                            <i class='bx bx-location-plus'></i>
+                        </div>
+                        <div class="content">
+                            288 Nguyễn Văn Linh, Hưng Lợi, Ninh Kiều, Cần Thơ
                         </div>
                     </div>
+                    <div class="contact">
+                        <div class="icon">
+                            <i class='bx bxs-phone-incoming'></i>
+                        </div>
+                        <div class="content">
+                            +84 392 023 333
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="icon">
+                            <i class='bx bx-mail-send'></i>
+                        </div>
+                        <div class="content">
+                            dangtt135@gmail.com
+                        </div>
+                    </div>
+                    <hr class="hr-fire">
+                    <form>
+
+                        <div class="ojb">
+                            <div class="user__name">
+                                <span>Họ tên:</span>
+                                <input class="form__name" type="text" />
+                            </div>
+                            <div class="user__email">
+                                <span>Email:</span>
+                                <input class="form__email" type="text" />
+                            </div>
+                        </div>
+                        <div class="user__subject">
+                            <span class="pass__title">Chủ đề:</span>
+                            <input id="password" class="form__password" type="text" />
+                        </div>
+                        <div class="user__message">
+                            <span class="pass__title">Nội dung:</span>
+                            <textarea class="form__message" name="" id="" rows="3"></textarea>
+                        </div>
+                        <div class="user__send">
+                            <button onclick="window.location.href='pages/login.html';" class="button-88"
+                                role="button">Xác nhận</button>
+                        </div>
+
+                        <!-- <div class="user__email">
+                            <span>Email:</span>
+                            <input class="form__email" type="text" placeholder="" />
+                            <input class="form__email" type="text" placeholder="" />
+                        </div>
+                        
+                        <div class="user__pass">
+                            <span class="pass__title">Mật khẩu:</span>
+                            <i id="show" class='turn__pass bx bxs-hide'></i>
+                            
+                        </div>
+                        <input id="password" class="form__password" type="password" placeholder="" />
+                        
+                        <input  onclick="showErrorToast();"  class="form__submit-btn " type="button" value="Đăng nhập" /> -->
+                    </form>
+                </div>
+                <div class="right col-sm-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8788739320867!2d105.75512251471191!3d10.026853092832754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a088476bb00027%3A0xd3c02747d1cbc8c6!2zMjg4IMSQLiBOZ3V54buFbiBWxINuIExpbmgsIEjGsG5nIEzhu6NpLCBOaW5oIEtp4buBdSwgQ-G6p24gVGjGoSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1673982504773!5m2!1sen!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
 
-        
+
         <!-- Site footer -->
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <h6>Giới thiệu</h6>
-                        <p class="text-justify">Frog Guide<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i> là một
+                        <p class="text-justify">Frog Quiz<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i> là một
                             website hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các ngôn
                             ngữ lập trình, công nghệ phổ biến như C, C++, Java, HTML, CSS, Bootstrap,
                             JavaScript, PHP, Android, SQL và các thuật toán.</p>

@@ -50,3 +50,30 @@
 .dark-mode .form__box .user__pass span{
     color: rgb(255, 255, 255);
 }
+
+/* liên hệ */
+.dark-mode .row .title{
+    color:rgb(255, 255, 255);
+} 
+.dark-mode .contact .content {
+    color: rgb(200, 200, 200);
+}
+
+.dark-mode form .ojb .user__name span,
+.dark-mode form .user__email span,
+.dark-mode form .user__subject span,
+.dark-mode form .user__message span{
+    color: white;
+}
+
+.dark-mode form .ojb .user__name input,
+.dark-mode form .user__email input,
+.dark-mode form .user__subject input,
+.dark-mode form .user__message textarea{
+    background: #676767e9;
+    color: rgb(255, 255, 255) ;
+}
+
+.dark-mode .content-tablet{
+    color: #fff;
+}

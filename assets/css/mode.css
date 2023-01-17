@@ -107,7 +107,29 @@
     color: #f7f7f7;
 }
 
+.dark-mode .banner{
+    /* animation auto change color */
+    animation: bannerAutoChangeDark 5s infinite alternate linear;
+}
 
+
+@keyframes bannerAutoChangeDark {
+    0%{
+        background-color: rgba(3, 82, 66, 0.585);
+    }
+    25%{
+        background-color: rgba(16, 90, 100, 0.521);
+    }
+    50%{
+        background-color: rgba(32, 87, 127, 0.549);
+    }
+    75%{
+        background-color: rgba(37, 33, 99, 0.556);
+    }
+    100%{
+        background-color: rgba(99, 48, 126, 0.497);
+    }
+}
 
 .dark-mode #main .banner .left .content h2,
 .dark-mode #main .banner .left .content p {

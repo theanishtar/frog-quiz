@@ -346,6 +346,34 @@ html {
     box-shadow: 0 0.3em 1em -0.5em #14a73e98;
 }
 
+.button-54 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-54:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+  
+  @media (min-width: 768px) {
+    .button-54 {
+      padding: 0.25em 0.75em;
+    }
+  }
 
 .hr-feeds {
     color: #000;
@@ -420,9 +448,31 @@ html {
     justify-content: space-between;
     width: 90%;
     height: 600px;
-    background-color: rgba(52, 131, 102, 0.259);
+    /* background-color: rgba(52, 131, 102, 0.259); */
     border-radius: 20px;
     box-shadow: rgba(50, 39, 84, 0.2) 0 3px 5px -1px,rgba(31, 27, 48, 0.14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+
+    /* animation auto change color */
+    animation: bannerAutoChange 5s infinite alternate linear;
+}
+
+
+@keyframes bannerAutoChange {
+    0%{
+        background-color: rgba(126, 189, 176, 0.621);
+    }
+    25%{
+        background-color: rgba(116, 145, 182, 0.534);
+    }
+    50%{
+        background-color: rgba(129, 142, 194, 0.574);
+    }
+    75%{
+        background-color: rgba(144, 131, 192, 0.51);
+    }
+    100%{
+        background-color: rgba(175, 140, 198, 0.533);
+    }
 }
 
 

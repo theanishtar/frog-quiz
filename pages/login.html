@@ -25,12 +25,18 @@
     <script src="../js/mode.js"></script>
     <link rel="stylesheet" href="../assets/css/mode.css">
     <link rel="stylesheet" href="css/mode.css">
+    <!-- toast -->
+    <script src="../toast/main.js"></script>
+    <link rel="stylesheet" href="../toast/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
 
 </head>
 
 <body>
 
-
+    <div id="toast"></div>
     <style>
         html {
             font-family: Helvetica, arial, sans-serif;
@@ -154,7 +160,7 @@
 
         #container {
             margin-top: 90px;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .user__email span,
@@ -193,38 +199,27 @@
          }
 
          @-webkit-keyframes bounce_auto {
+            0%, 50%, 100% {-webkit-transform: translateY(0);}
+            25% { -webkit-transform: translateY(15px);  }
+            75% { -webkit-transform: translateY(-15px); }
+        }
 
-0%,
-50%,
-100% {
-    -webkit-transform: translateY(0);
-}
+        @keyframes bounce_auto {
 
-25% {
-    -webkit-transform: translateY(15px);
-}
+        0%,
+        50%,
+        100% {
+            -webkit-transform: translateY(0);
+        }
 
-75% {
-    -webkit-transform: translateY(-15px);
-}
-}
+        25% {
+            -webkit-transform: translateY(15px);
+        }
 
-@keyframes bounce_auto {
-
-0%,
-50%,
-100% {
-    -webkit-transform: translateY(0);
-}
-
-25% {
-    -webkit-transform: translateY(15px);
-}
-
-75% {
-    -webkit-transform: translateY(-15px);
-}
-}
+        75% {
+            -webkit-transform: translateY(-15px);
+        }
+        }
          
          .bounce { 
             -webkit-animation-name: bounce; 
@@ -365,7 +360,7 @@
                                     </div>
                                     <input id="password" class="form__password" type="password" placeholder="" />
                                     
-                                    <input class="form__submit-btn " type="submit" value="Đăng nhập" />
+                                    <input  onclick="showErrorToast();"  class="form__submit-btn " type="button" value="Đăng nhập" />
                                 </form>
                                 <span><a class="form__link" href="changes-password.html">Quên mật khẩu?</a></span>
                                 <p>
@@ -385,7 +380,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <h6>Giới thiệu</h6>
-                        <p class="text-justify">Frog Guide<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i>
+                        <p class="text-justify">Frog Quiz<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i>
                             là một
                             website hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các
                             ngôn
@@ -494,6 +489,15 @@
             flag && iconPass.classList.toggle("bxs-show");
 
             password.type = password.type == "password" ? "text" : "password";
+        }
+
+        function showErrorToast() {
+            toast({
+                title: "Thất bại!",
+                message: "Tài khoản không tồn tại trên hệ thống!",
+                type: "error",
+                duration: 5000
+            });
         }
 
     </script>
