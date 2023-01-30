@@ -15,6 +15,7 @@
     float: right !important;
 }
 
+
 .btn {
     color: #fff;
     background-color: #000;
@@ -96,7 +97,6 @@ html {
     background-color: rgb(255, 255, 255);
     z-index: 1;
     /* border-bottom: solid 1.5px rgb(160, 160, 160); */
-
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -107,47 +107,49 @@ html {
     top: 40px;
 } */
 
-#nav,
+.nav-pc,
 .subnav {
     list-style-type: none;
 }
 
-#nav>li {
+.nav-pc>li {
     display: inline-block;
 }
 
-#nav li {
+.nav-pc li {
     position: relative;
 }
 
-#nav>li>a {
+.nav-pc>li>a {
     color: rgb(0, 0, 0);
     /* text-transform: uppercase; */
 }
 
-#nav li a {
+.nav-pc li a {
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
     display: block;
 }
 
-#nav li:hover .subnav {
+.nav-pc li:hover .subnav {
     display: block;
 }
 
-#nav .subnav li:hover a,
-#nav>li:hover>a {
-    color: rgb(34, 171, 127);
+.nav-pc .subnav li:hover a,
+.nav-pc>li:hover>a {
+    color: rgb(26, 77, 61);
+    text-decoration: solid;
     /* border-bottom: solid 2px #009688; */
     /* background-color: #ccc; */
+    background-color: rgba(0, 0, 0, 0);
 }
 
-#nav {
+.nav-pc {
     display: inline-block;
 }
 
-#nav .subnav {
+.nav-pc .subnav {
     display: none;
     position: absolute;
     min-width: 160px;
@@ -157,14 +159,17 @@ html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-#nav .subnav a {
+.nav-pc .subnav a {
     color: #000;
     padding: 0 12px;
     line-height: 38px;
 }
 
-#nav .nav-arrow-down {
-    font-size: 14px;
+.nav-pc .nav-arrow-down {
+    font-size: 10px;
+    margin-left: 1.5px;
+    /* transform: rotate(360deg);
+    outline: 2px dashed; */
 }
 
 #header .mobile-menu-btn {
@@ -196,10 +201,115 @@ html {
     cursor: pointer;
 }
 
+.hamburger{
+    align-items: center;
+    display: block;
+
+    user-select: none;
+
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.hamburger span{
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    margin-bottom: 4px;
+    position: relative;
+
+    background-color: rgba(0, 0, 0, 0.667);
+    border-radius: 6px;
+
+    transform-origin: 0 0;
+
+    transition: 0.4s;
+}
+
+.hamburger span:nth-child(3){
+    height: 2.5px;
+}
+
+.hamburger:hover span:nth-child(2){
+    transform: translateX(10px);
+    background-color: #007bb6;
+}
+
+.hamburger.is-active span:nth-child(1){
+    transform: translate(0px, -1.5px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3){
+    transform: translate(-1px, 2.5px) rotate(-45deg);
+}
+
+.hamburger.is-active:hover span {
+    background-color: #007bb6;
+}
+
 /* #header .mobile-menu-btn:hover {
     border-bottom: solid 2px #009688;
     background-color: #ccc;
 } */
+
+/*
+.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none
+}
+ 
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s
+}
+
+.hamburger.is-active:before {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px)
+}
+
+.hamburger.is-active:after {
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+    transform: rotate(45deg) translate(-9px, -8px)
+}
+
+.hamburger.is-active .bar {
+    opacity: 0
+} */
+
+#mobile-menu {
+    height: 100%;
+    line-height: 46px;
+}
+
+#mobile-menu button{
+    padding-top: 15px;
+    align-items: center;
+}
 
 #header .mobile-menu-btn:hover .menu-icon {
     color: #009688;
@@ -210,10 +320,11 @@ html {
     cursor: pointer;
 }
 
-#header .search-btn:hover {
+#header .search-btn:hover{
     cursor: pointer;
     /* background-color: #f44336; */
     /* color: #009688; */
+    
 }
 
 #header .mode-icon {

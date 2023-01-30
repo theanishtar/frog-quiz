@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../js/jquery.min.js">
     <link rel="stylesheet" href="../js/bootstrap.min.js">
-    
+
     <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css" />
 
     <!-- my css -->
@@ -45,10 +45,12 @@
             margin-bottom: 30px;
         }
 
-        .left{
-            padding-right: 20px;
+        .left {
+            padding-right: 50px;
         }
-        input,textarea {
+
+        input,
+        textarea {
             display: block;
             width: 100%;
             margin-bottom: 25px;
@@ -66,7 +68,8 @@
             position: absolute;
             content: "a***";
         }
-        textarea:after{
+
+        textarea:after {
             position: absolute;
             content: "a***";
         }
@@ -86,25 +89,26 @@
         }
 
 
-        textarea{
+        textarea {
             height: 100px;
         }
 
-        .button-88{
+        .button-88 {
             margin-top: 0px;
             width: 150px;
         }
 
-        .ojb{
+        .ojb {
             display: flex;
             justify-content: space-between;
         }
+
         .user__name,
-        .user__email{
+        .user__email {
             width: 47%;
         }
 
-        .right iframe{
+        .right iframe {
             border-radius: 10px;
             box-shadow: 0 0.7em 1.5em -0.5em #62626298;
         }
@@ -112,8 +116,10 @@
 
         /* Mobile */
         @media (max-width: 46.1875em) {
-            
 
+            .left {
+            padding-right: 20px;
+        }
             #container {
                 margin-bottom: 180px;
                 margin-top: 70px;
@@ -137,20 +143,96 @@
             .form input {
                 margin-bottom: 10px;
             }
-            iframe{
+
+            iframe {
                 width: 99%;
             }
         }
     </style>
 
+    <div class="tablet text-heading">
+        <div class="content-tablet">
+            <h1>Giao diện chỉ hỗ trợ PC và Mobile</h1>
+            <h2>Thành thật xin lỗi vì sự bất tiện này</h2>
+        </div>
+    </div>
     <div id="main">
         <div id="header">
-            <ul id="nav">
+            <ul class="nav-pc" id="nav">
                 <li><a style="font-size: 20px;" href="../index.html">Frog <span style="color: #15825a;">Quiz</span></a>
                 </li>
+                <li><a href="">Giới thiệu</a></li>
+                <li>
+                    <a>Khóa học
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="#">Tất cả</a></li>
+                        <li><a href="#">Lập trình cơ bản</a></li>
+                        <li><a href="#">Lập trình nâng cao</a></li>
+                        <li><a href="#">Lập trình website</a></li>
+                        <li><a href="#">Lập trình nhúng</a></li>
+                        <li><a href="#">Lập trình mobile</a></li>
+                        <li><a href="#">Lập trình game</a></li>
+
+                        <li><a href="#">aa</a></li>
+                        <li><a href="#">aa</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="contribute.html">Góp ý</a></li>
+                <li><a href="qna.html">Hỏi đáp</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li><a href="register.html">Đăng ký</a></li>
+                <!-- <li>
+                <a href="#"
+                    >Hi, FrogDev
+                    <i class="nav-arrow-down ti-angle-down"></i>
+                </a>
+                <ul class="subnav">
+                    <li><a href="#">Cập nhật thông tin</a></li>
+                    <li><a href="#">Đổi mật khẩu</a></li>
+                    <li><a href="#">Quên mật khẩu</a></li>
+                    <li><a href="#">Quên mật khẩu</a></li>
+                    <li><a href="#">Lịch sử thi</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </li> 
+        -->
+            </ul>
+
+            <div style="margin-right: 0px;" class="search-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
+            <!-- search -->
+            <div class="search-btn">
+                <i class="search-icon ti-search"> </i>
+            </div>
+
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <!-- <i id="menu-i" class="menu-icon ti-menu"></i> -->
+                <button id="menu-i" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="mobile-menu-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
+
+            <!-- .nav -->
+        </div>
+
+
+        <div id="menu-mobile">
+            <ul class="nav">
+                <li><a href=""></a></li>
                 <li><a href="about.html">Giới thiệu</a></li>
                 <li>
-                    <a href="">Khóa học
+                    <a>Khóa học
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
@@ -169,26 +251,8 @@
                 <li><a href="login.html">Đăng nhập</a></li>
                 <li><a href="register.html">Đăng ký</a></li>
             </ul>
-           
-            <div style="margin-right: 0px;" class="search-btn mode">
-                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
-            </div>
-            <!-- search -->
-            <div class="search-btn">
-                <i class="search-icon ti-search"> </i>
-            </div>
-
-
-            <div id="mobile-menu" class="mobile-menu-btn">
-                <i id="menu-i" class="menu-icon ti-menu"></i>
-            </div>
-
-            <div id="mobile-menu" class="mobile-menu-btn mode">
-                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
-            </div>
-
-            <!-- .nav -->
         </div>
+
 
         <div id="container" class="container">
             <div class="row">
@@ -212,12 +276,13 @@
                         </div>
                         <div class="user__message">
                             <span class="pass__title">Nội dung:</span>
-                            <textarea class="form__message" name="" id=""  rows="3"></textarea>
+                            <textarea class="form__message" name="" id="" rows="3"></textarea>
                         </div>
                         <div class="user__send">
-                            <button onclick="window.location.href='pages/login.html';" class="button-88" role="button">Xác nhận</button>
+                            <button onclick="window.location.href='pages/login.html';" class="button-88"
+                                role="button">Xác nhận</button>
                         </div>
-                        
+
                         <!-- <div class="user__email">
                             <span>Email:</span>
                             <input class="form__email" type="text" placeholder="" />
@@ -243,7 +308,7 @@
             </div>
         </div>
 
-        
+
         <!-- Site footer -->
         <footer class="site-footer">
             <div class="container">
@@ -307,44 +372,7 @@
         </footer>
     </div>
 
-    <script>
-        var header = document.getElementById("header");
-        var mobileMenu = document.getElementById("mobile-menu");
-        var icon = document.getElementById("menu-i");
-        var headerHeight = header.clientHeight;
-
-        function changesIconMenu() {
-            icon.classList.toggle("ti-menu");
-            icon.classList.toggle("ti-close");
-        }
-
-        // mobile menu
-        mobileMenu.onclick = function () {
-            changesIconMenu();
-            var isClosed = header.clientHeight === headerHeight;
-            if (isClosed) {
-                header.style.height = "auto";
-            } else {
-                header.style.height = null;
-            }
-        };
-
-        // auto close when clicked menu mobile
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-        for (let i = 0; i < menuItems.length; i++) {
-            const menuItem = menuItems[i];
-            menuItem.onclick = function (event) {
-                var isParentMenu =
-                    this.nextElementSibling &&
-                    this.nextElementSibling.classList.contains("subnav");
-                if (isParentMenu) {
-                    event.preventDefault();
-                } else {
-                    header.style.height = null;
-                }
-            };
-        }
-    </script>
+    <script src="../js/mobile-menu.js"></script>
 </body>
 
 </html>

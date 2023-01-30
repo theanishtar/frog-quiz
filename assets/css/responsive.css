@@ -4,6 +4,10 @@
         display: none;
     }
 
+    #menu-mobile {
+        display: none;
+    }
+
     #title-tong-quan {
         text-align: center;
         margin-top: 90px;
@@ -15,13 +19,18 @@
         margin-bottom: 300px;
     }
 
-    .form__box .form__right .form__padding-right h1{
+    .form__box .form__right .form__padding-right h1 {
         font-size: 23px;
     }
 
-    .form__box .form__right .form__padding-right input{
+    .form__box .form__right .form__padding-right input {
         height: 40px;
         padding-left: 20px;
+    }
+
+    #slider .text-description {
+        font-size: 18px;
+        /* text-shadow: 0 0 1px #000; */
     }
 }
 
@@ -109,8 +118,33 @@
         margin-top: 8px !important;
     }
 
+    #menu-mobile {
+        right: -100%;
+        display: block;
+        color: rgb(0, 0, 0);
+        background-color: #fff;
+        overflow-y: scroll;
+        position: fixed;
+        height: 100%;
+        top: 45px;
+        width: 60%;
+        z-index: 2;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #menu-mobile a {
+        color: rgb(0, 0, 0);
+    }
+
+    #menu-mobile nav li {
+        background-color: #fff;
+    }
+
     #header {
+        z-index: 3;
         overflow: hidden;
+        /* overflow-y: scroll; */
     }
 
     #header .mobile-menu-btn {
@@ -121,28 +155,112 @@
         display: none;
     }
 
-    #nav {
-        display: block;
+
+    .nav,
+    .subnav {
+        list-style-type: none;
     }
 
-    #nav li a {
-        padding: 1px 24px;
-    }
-
-    #nav>li {
-        display: block;
-    }
-
-    #nav>li:first-child {
+    .nav>li {
         display: inline-block;
     }
 
-    #nav .subnav {
-        position: initial;
-        background: rgb(255, 255, 255);
+    .nav li {
+        position: relative;
     }
 
-    #nav .subnav a {
+    .nav>li>a {
+        color: rgb(0, 0, 0);
+        /* text-transform: uppercase; */
+    }
+
+    .nav li a {
+        text-decoration: none;
+        line-height: 46px;
+        padding: 0 24px;
+        display: block;
+    }
+
+    .nav li:hover .subnav {
+        display: block;
+    }
+
+    .nav.subnav li:hover a,
+    .nav>li:hover>a {
+        color: rgb(26, 77, 61);
+        text-decoration: solid;
+        /* border-bottom: solid 2px #009688; */
+        /* background-color: #ccc; */
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .nav {
+        display: inline-block;
+    }
+
+    .nav .subnav {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav .subnav a {
+        color: #000;
+        padding: 0 12px;
+        line-height: 38px;
+    }
+
+    .nav .nav-arrow-down {
+        font-size: 10px;
+        margin-left: 1.5px;
+    }
+
+    .nav-pc {
+        display: block;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav li a {
+        padding: 1px 24px;
+    }
+
+    .nav li:hover {
+        background-color: rgba(212, 212, 212, 0.555);
+    }
+
+
+    .nav-pc>li {
+        display: block;
+    }
+
+    .nav>li {
+        display: block;
+    }
+
+    .nav>li:first-child {
+        display: inline-block;
+    }
+
+    .nav .subnav {
+        position: initial;
+    }
+
+    .nav li:hover {
+        cursor: pointer;
+    }
+
+    .nav .subnav li:hover {
+        background-color: rgb(239, 239, 239);
+    }
+
+    .nav .subnav a {
         color: rgb(0, 0, 0);
         padding: 5px 41px;
     }
@@ -183,13 +301,11 @@
         margin: 0 40px;
     }
 
-    #slider .text-heading span {
-        padding-top: 100px;
-    }
+
 
     #slider .text-description {
-        margin-left: 20px;
-        margin-right: 20px;
+        padding: 0px 50px;
+        font-size: 17px;
         /* text-shadow: 0 0 1px #000; */
     }
 
@@ -203,7 +319,7 @@
         margin-left: 20px;
     }
 
-    .banner{
+    .banner {
         height: 1010px;
     }
 
@@ -212,7 +328,7 @@
         width: 320px;
     }
 
-    .form__box .form__submit-btn{
+    .form__box .form__submit-btn {
         margin-bottom: 20px;
     }
 }

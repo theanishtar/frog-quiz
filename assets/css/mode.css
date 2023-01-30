@@ -10,6 +10,9 @@
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
+.dark-mode .hamburger span{
+    background-color: #fff;
+}
 
 
 .dark-mode #nav>li>a {
@@ -32,8 +35,19 @@
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+.dark-mode .nav .subnav {
+    background-color: rgb(54, 54, 54);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.dark-mode .nav .subnav li:hover{
+    background-color: rgb(65, 65, 65);
+}
+
+
 .dark-mode #nav .subnav a {
-    color: rgb(255, 255, 255);
+    color: rgb(14, 14, 14);
 }
 
 .dark-mode .mode:hover i {
@@ -46,6 +60,15 @@
 }
 
 
+.dark-mode #menu-mobile{
+    color: rgb(255, 255, 255);
+    background-color: rgb(47, 42, 42);
+    box-shadow: 0 0 5px rgba(231, 230, 230, 0.3);
+}
+
+.dark-mode #menu-mobile a{
+    color: rgb(248, 247, 247);
+}
 
 .dark-mode #header .search-icon:hover {
     color: #009688;
@@ -84,7 +107,9 @@
     color: rgb(255, 255, 255);
 }
 
-
+.dark-mode #slider .text-heading {
+    color: white;
+}
 
 .dark-mode .hr-feeds {
     color: #000;

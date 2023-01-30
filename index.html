@@ -29,8 +29,8 @@
     <script src="toast/main.js"></script>
     <link rel="stylesheet" href="toast/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" />
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
@@ -40,12 +40,12 @@
             <h1>Giao diện chỉ hỗ trợ PC và Mobile</h1>
             <h2>Thành thật xin lỗi vì sự bất tiện này</h2>
         </div>
-
     </div>
     <div id="main">
         <div id="header">
-            <ul id="nav">
-                <li><a style="font-size: 20px;" href="">Frog <span style="color: #15825a;">Quiz</span></a></li>
+            <ul class="nav-pc" id="nav">
+                <li><a id="logo" style="font-size: 20px;" href="">Frog <span style="color: #15825a;">Quiz</span></a>
+                </li>
                 <li><a href="pages/about.html">Giới thiệu</a></li>
                 <li>
                     <a>Khóa học
@@ -59,6 +59,9 @@
                         <li><a href="#">Lập trình nhúng</a></li>
                         <li><a href="#">Lập trình mobile</a></li>
                         <li><a href="#">Lập trình game</a></li>
+
+                        <li><a href="#">aa</a></li>
+                        <li><a href="#">aa</a></li>
                     </ul>
                 </li>
                 <li><a href="pages/contact.html">Liên hệ</a></li>
@@ -79,40 +82,71 @@
                             <li><a href="#">Lịch sử thi</a></li>
                             <li><a href="#">Đăng xuất</a></li>
                         </ul>
-                    </li> -->
+                    </li> 
+                -->
             </ul>
 
             <div style="margin-right: 0px;" class="search-btn mode">
                 <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
             </div>
             <!-- search -->
-            <div class="search-btn">
+            <div class="search-btn" id="search">
                 <i class="search-icon ti-search"> </i>
             </div>
 
 
             <div id="mobile-menu" class="mobile-menu-btn">
-                <i id="menu-i" class="menu-icon ti-menu"></i>
+                <!-- <i id="menu-i" class="menu-icon ti-menu"></i> -->
+                <button id="menu-i" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
             </div>
-
-            <div id="mobile-menu" class="mobile-menu-btn mode">
+            <div class="mobile-menu-btn mode">
                 <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
             </div>
 
             <!-- .nav -->
         </div>
 
+        <div id="menu-mobile">
+            <ul class="nav">
+                <li><a href=""></a></li>
+                <li><a href="pages/about.html">Giới thiệu</a></li>
+                <li>
+                    <a>Khóa học
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="#">Tất cả</a></li>
+                        <li><a href="#">Lập trình cơ bản</a></li>
+                        <li><a href="#">Lập trình nâng cao</a></li>
+                        <li><a href="#">Lập trình website</a></li>
+                        <li><a href="#">Lập trình nhúng</a></li>
+                        <li><a href="#">Lập trình mobile</a></li>
+                        <li><a href="#">Lập trình game</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/contact.html">Liên hệ</a></li>
+                <li><a href="pages/contribute.html">Góp ý</a></li>
+                <li><a href="pages/qna.html">Hỏi đáp</a></li>
+                <li><a href="pages/login.html">Đăng nhập</a></li>
+                <li><a href="pages/register.html">Đăng ký</a></li>
+            </ul>
+        </div>
+
 
         <div id="slider">
             <div class="text-content">
-                <h1 class="text-heading">Chào mừng đến với <span style="color: #15825a;">Frog Quiz</span>
+                <h1 class="text-heading"><span class="text-heading">Chào mừng đến với</span> <span id="heading-logo" style="color: #15825a;">Frog Quiz</span>
                 </h1>
-                <div class="text-description">
-                    Chúng tôi sẽ mang đến cho bạn những bài học bổ ích, những câu hỏi thú vị, <br>
-                    giúp bạn trở thành một developer chuyên nghiệp.
+                <div  class="text-description">
+                    Môi trường học tập thú vị dành cho sinh viên ngành CNTT!
 
                 </div>
-                <button  onclick="showErrorToast();"  class="button-88" role="button">Bắt đầu
+                <button onclick="showErrorToast();" class="button-88" role="button">Bắt đầu
                     nào</button>
             </div>
         </div>
@@ -243,8 +277,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <h6>Giới thiệu</h6>
-                        <p class="text-justify">Frog Quiz<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i>
-                            là một
+                        <p class="text-justify">Frog Quiz<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i> là một
                             website hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các
                             ngôn
                             ngữ lập trình, công nghệ phổ biến như C, C++, Java, HTML, CSS, Bootstrap,
@@ -266,12 +299,11 @@
                     <div class="col-xs-6 col-md-3">
                         <h6>Frog team</h6>
                         <ul class="footer-links">
-                            <li><a href="https://github.com/TheanIshtar/FrogGuide">Frog Guide</a></li>
-                            <li><a href="dangtt135@gmail.com">Email</a></li>
-                            <li><a href="https://github.com/frogtech">TikTok</a></li>
-                            <li><a href="https://www.youtube.com/@echhoclaptrinh">YouTube</a></li>
-                            <li><a href="https://www.facebook.com/echhoclaptrinh">Fanpage</a></li>
-                            <li><a href="">Github</a></li>
+                            <li><a href="#">Frog Guide</a></li>
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">TikTok</a></li>
+                            <li><a href="#">YouTube</a></li>
+                            <li><a href="#">Fanpage</a></li>
 
                         </ul>
                     </div>
@@ -282,72 +314,81 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-6 col-xs-12">
                         <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
-                            <a href="https://theanishtar.github.io/my-portfolio/">Dang Tran Huu</a>.
+                            <a href="#">Frog</a>.
                         </p>
                     </div>
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <ul class="social-icons">
-                            <li><a target="_blank" class="facebook" href="https://www.facebook.com/dangdeveloper/"><i
+                            <li><a target="_blank" class="facebook" href="#"><i
                                         class="facebook-icon ti-facebook"></i></a></li>
-                            <li><a target="_blank" class="youtube" href="https://www.youtube.com/@echhoclaptrinh"><i
-                                        class="youtube-icon ti-youtube"></i></a>
+                            <li><a target="_blank" class="twitter" href="#"><i
+                                        class="twitter-icon ti-twitter"></i></a>
                             </li>
-                            <li><a target="_blank" class="github" href="https://github.com/theanishtar"><i
+                            <li><a target="_blank" class="github" href="https://github.com/"><i
                                         class="github-icon ti-github"></i></a></li>
-                            <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in/tranhuudang"><i
+                            <li><a target="_blank" class="linkedin" href="#"><i
                                         class="linkedin-icon ti-linkedin"></i></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
+
     </div>
 
-
+    <script src="js/mobile-menu.js"></script>
     <script>
-        var header = document.getElementById("header");
-        var mobileMenu = document.getElementById("mobile-menu");
-        var icon = document.getElementById("menu-i");
-        var headerHeight = header.clientHeight;
+        // var menuMobileRight = document.getElementById("menu-mobile");
+        // var header = document.getElementById("header");
+        // var mobileMenu = document.getElementById("mobile-menu");
+        // var icon = document.getElementById("menu-i");
+        // var headerHeight = header.clientHeight;
 
-        function changesIconMenu() {
-            icon.classList.toggle("ti-menu");
-            icon.classList.toggle("ti-close");
-        }
+        // function changesIconMenu() {
+        //     // icon.classList.toggle("ti-menu");
+        //     // icon.classList.toggle("ti-close");
+        //     icon.classList.toggle("is-active");
+        // }
 
-        // mobile menu
-        mobileMenu.onclick = function () {
-            changesIconMenu();
-            var isClosed = header.clientHeight === headerHeight;
-            if (isClosed) {
-                header.style.height = "auto";
-            } else {
-                header.style.height = null;
-            }
-        };
+        // // mobile menu
+        // mobileMenu.onclick = function () {
+        //     changesIconMenu();
+        //     var isClosed = header.clientHeight === headerHeight;
+        //     var isOpen = menuMobileRight.getBoundingClientRect().left
+        //     //console.log(isOpen)
+        //     if (isOpen>200) {
+        //         menuMobileRight.style.right = "0";
+        //         //header.style.height = "auto";
+        //         // header.style.width = "70%";
+        //     } else {
+        //         menuMobileRight.style.right = "-100%";
+        //         //header.style.height = null;
+        //     }
+        //     //console.log(isOpen)
+        // };
 
-        // auto close when clicked menu mobile
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-        for (let i = 0; i < menuItems.length; i++) {
-            const menuItem = menuItems[i];
-            menuItem.onclick = function (event) {
-                var isParentMenu =
-                    this.nextElementSibling &&
-                    this.nextElementSibling.classList.contains("subnav");
-                if (isParentMenu) {
-                    event.preventDefault();
-                } else {
-                    header.style.height = null;
-                }
-            };
-        }
+        // // auto close when clicked menu mobile
+        // var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        // for (let i = 0; i < menuItems.length; i++) {
+        //     const menuItem = menuItems[i];
+        //     menuItem.onclick = function (event) {
+        //         var isParentMenu =
+        //             this.nextElementSibling &&
+        //             this.nextElementSibling.classList.contains("subnav");
+        //         if (isParentMenu) {
+        //             event.preventDefault();
+        //         } else {
+        //             header.style.height = null;
+        //         }
+        //     };
+        // }
 
         //toast
         function showSuccessToast() {
             toast({
                 title: "Thành công!",
-                message: "Bạn đã đăng ký thành công tài khoản tại F8.",
+                message: "Quá tuyệt vời Chào mừng bạn đến với Frog Quiz.",
                 type: "success",
                 duration: 5000
             });
