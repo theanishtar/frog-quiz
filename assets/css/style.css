@@ -107,6 +107,47 @@ html {
     top: 40px;
 } */
 
+
+
+.search-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.search-container form i{
+    font-size: 30px;
+    color: #009639;
+    padding-left: 15px;
+    z-index: 2;
+    position: relative;
+}
+
+.search-inp input[type="text"] {
+    z-index: 1;
+    position: absolute;
+    margin: 0 auto;
+    display: block;
+    width: 85%;
+    /* width: calc(100% - 50px); 20px [ left & Right ] padding + 4px border [ left & Right ]  */
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    padding: 10px;
+    padding-left: 50px;
+    border: 2px solid #00a778;
+    font-family: Helvetica, arial, sans-serif;
+}
+
+#myModal .btn-default{
+    background-color: #14ba54;
+}
+
 .nav-pc,
 .subnav {
     list-style-type: none;
@@ -138,7 +179,7 @@ html {
 
 .nav-pc .subnav li:hover a,
 .nav-pc>li:hover>a {
-    color: rgb(26, 77, 61);
+    color: rgb(17, 131, 15);
     text-decoration: solid;
     /* border-bottom: solid 2px #009688; */
     /* background-color: #ccc; */
@@ -191,6 +232,10 @@ html {
     margin-top: 2.5px;
     font-size: 20px;
     line-height: 46px;
+}
+
+.mode i{
+    font-size: 22px;
 }
 
 .mode:hover i {
@@ -311,14 +356,14 @@ html {
     align-items: center;
 }
 
-#header .mobile-menu-btn:hover .menu-icon {
+.menu-icon:hover {
     color: #009688;
 }
 
 #header .mobile-menu-btn:hover {
-
     cursor: pointer;
 }
+
 
 #header .search-btn:hover{
     cursor: pointer;
@@ -450,7 +495,7 @@ html {
 
 .button-88:hover {
     background: linear-gradient(0deg, rgb(57, 93, 255) 0%, rgb(0, 150, 250) 100%);
-    box-shadow: 0 0.7em 1.5em -0.5em #062d55;
+    box-shadow: 0 0.7em 1.5em -0.5em #1c8cfc;
 }
 
 .button-88:active {
@@ -658,7 +703,7 @@ html {
   }
   
   .button-30:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow: rgba(87, 82, 114, 0.4) 0 4px 8px, rgba(112, 106, 146, 0.3) 0 7px 13px -3px, #626289 0 -3px 0 inset;
     transform: translateY(-2px);
   }
   

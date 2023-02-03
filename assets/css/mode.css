@@ -47,7 +47,7 @@
 
 
 .dark-mode #nav .subnav a {
-    color: rgb(14, 14, 14);
+    color: rgb(250, 250, 250);
 }
 
 .dark-mode .mode:hover i {
@@ -55,14 +55,14 @@
 }
 
 
-.dark-mode #header .mobile-menu-btn:hover .menu-icon {
+.menu-icon:hover {
     color: #009688;
 }
 
 
 .dark-mode #menu-mobile{
     color: rgb(255, 255, 255);
-    background-color: rgb(47, 42, 42);
+    background-color: rgb(54, 54, 54);
     box-shadow: 0 0 5px rgba(231, 230, 230, 0.3);
 }
 
@@ -137,6 +137,10 @@
     animation: bannerAutoChangeDark 5s infinite alternate linear;
 }
 
+.dark-mode .banner{
+    box-shadow: rgba(167, 163, 179, 0.2) 0 3px 5px -1px,rgba(201, 199, 214, 0.14) 0 6px 10px 0,rgba(246, 243, 243, 0.12) 0 1px 18px 0;
+
+}
 
 @keyframes bannerAutoChangeDark {
     0%{

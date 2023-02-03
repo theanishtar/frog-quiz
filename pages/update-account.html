@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../js/jquery.min.js">
     <link rel="stylesheet" href="../js/bootstrap.min.js">
-    
+
     <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css" />
 
     <!-- my css -->
@@ -32,9 +32,10 @@
 
     <style>
         html {
-    font-family: Helvetica, arial, sans-serif;
-    scroll-behavior: smooth;
-}
+            font-family: Helvetica, arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
         .form {
             width: 820px;
             height: 500px;
@@ -185,7 +186,8 @@
             input {
                 height: auto;
             }
-            .form__submit-btn{
+
+            .form__submit-btn {
                 padding: 10px;
             }
 
@@ -194,11 +196,11 @@
                 padding-bottom: 5px;
             }
 
-            .site-footer .container{
+            .site-footer .container {
                 margin-top: 50px;
             }
 
-            .container{
+            .container {
                 margin-bottom: 80px;
             }
         }
@@ -230,12 +232,12 @@
                 <li><a href="login.html">Đăng nhập</a></li>
                 <li><a href="register.html">Đăng ký</a></li>
             </ul>
-            
+
             <div style="margin-right: 0px;" class="search-btn mode">
                 <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
             </div>
             <!-- search -->
-            <div class="search-btn">
+            <div class="search-btn" data-toggle="modal" data-target="#myModal" id="search">
                 <i class="search-icon ti-search"> </i>
             </div>
 
@@ -251,9 +253,9 @@
             <!-- .nav -->
         </div>
 
-        
+
         <div id="menu-mobile">
-            <ul  class="nav">
+            <ul class="nav">
                 <li><a href="pages/about.html">Giới thiệu</a></li>
                 <li>
                     <a>Khóa học
@@ -277,7 +279,7 @@
                 <li><a href="pages/qna.html">Hỏi đáp</a></li>
                 <li><a href="pages/login.html">Đăng nhập</a></li>
                 <li><a href="pages/register.html">Đăng ký</a></li>
-                
+
                 <li><a href="pages/register.html">Đăng ký</a></li>
                 <li><a href="pages/register.html">Đăng ký</a></li>
                 <li><a href="pages/register.html">Đăng ký</a></li>
@@ -291,6 +293,31 @@
             </ul>
         </div>
 
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Tìm kiếm</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="search-container">
+                            <form class="search-inp" action="">
+                                <i class='bx bx-search-alt'></i>
+                                <input type="text" placeholder="Lập trình Java..." name="search">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
         <div class="container">
             <div class="form">
@@ -301,7 +328,8 @@
                     <div class="form__right">
                         <div class="form__padding-right">
                             <form>
-                                <h1 class="form__title">Đăng nhập vào <span style="color: #15825a;">Frog Quiz</span></h1>
+                                <h1 class="form__title">Đăng nhập vào <span style="color: #15825a;">Frog Quiz</span>
+                                </h1>
                                 <input class="form__email" type="text" placeholder=" Email" />
                                 <input class="form__password" type="text" placeholder=" Mật khẩu" />
                                 <input class="form__submit-btn " type="submit" value="Đăng nhập" />
@@ -316,7 +344,7 @@
             </div>
         </div>
 
-        
+
         <!-- Site footer -->
         <footer class="site-footer">
             <div class="container">

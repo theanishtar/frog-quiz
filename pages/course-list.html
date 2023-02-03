@@ -7,222 +7,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../assets/img/ico/icon.png" type="image/x-icon">
     <title>Frog Quiz</title>
+
     <!-- icon -->
+    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css" />
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-
+    <!-- bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../js/jquery.min.js">
-    <link rel="stylesheet" href="../js/bootstrap.min.js">
-    
-    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css" />
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- my css -->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/course.css">
 
     <!-- mode -->
     <script src="../js/mode.js"></script>
     <link rel="stylesheet" href="../assets/css/mode.css">
-    <link rel="stylesheet" href="css/mode.css">
 
+    <!-- toast -->
+    <script src="../toast/main.js"></script>
+    <link rel="stylesheet" href="../toast/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
-
-
-    <style>
-        html {
-    font-family: Helvetica, arial, sans-serif;
-    scroll-behavior: smooth;
-}
-        .form {
-            width: 820px;
-            height: 500px;
-            margin: 50px auto;
-            padding: 45px 65px;
-        }
-
-        .form__box {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background: #fff;
-            border-radius: 40px;
-        }
-
-        .form__left {
-            width: 50%;
-        }
-
-        .form__padding {
-            width: 210px;
-            height: 210px;
-            background: #f2f2f2;
-            border-radius: 50%;
-            margin: 0 auto;
-            line-height: 210px;
-            position: relative;
-        }
-
-        .form__image {
-            max-width: 100%;
-            width: 60%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .form__right {
-            line-height: 26px;
-            width: 50%;
-        }
-
-        .form__padding-right {
-            padding: 0 25px;
-        }
-
-        .form__title {
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .form__submit-btn {
-            /* background: #1fcc44; */
-            /* font-size: 17px; */
-            padding: 0px;
-            cursor: pointer;
-            background: #ad5389;
-            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
-            border: none;
-            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
-
-            /* align-items: center;
-            font-family: inherit;
-            font-weight: 500;
-            font-size: 16px;
-            padding: 0.7em 1.4em 0.7em 1.1em;
-            color: white;
-            background: #ad5389;
-            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
-            border: none;
-            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
-            letter-spacing: 0.05em;
-            border-radius: 20em;
-            cursor: pointer;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation; */
-        }
-
-        .form__submit-btn:hover {
-            /* background: #ff3f70; */
-            box-shadow: 0 0.5em 1.5em -0.5em #00100498;
-            background: linear-gradient(0deg, rgb(137, 186, 218) 0%, rgb(92, 195, 223) 100%);
-        }
-
-        .form__email {
-            position: relative;
-        }
-
-        input {
-            display: block;
-            width: 100%;
-            margin-bottom: 25px;
-            height: 35px;
-            border-radius: 20px;
-            border: none;
-            background: #f2f2f2;
-            padding: 10px;
-            font-size: 14px;
-            position: relative;
-        }
-
-        input:after {
-            position: absolute;
-            content: "a***";
-        }
-
-        a {
-            color: #107b27;
-            position: relative;
-        }
-
-        a:hover {
-            color: #ff3f70;
-        }
-
-        .container {
-            margin-top: 90px;
-            margin-bottom: 50px;
-        }
-
-
-        /* Mobile */
-        @media (max-width: 46.1875em) {
-            .form {
-                margin: 0px 0px;
-                padding: 0px 0px;
-                width: 100%;
-            }
-
-            .form__box {
-                display: block;
-            }
-
-            .form__right {
-                width: auto;
-            }
-
-            .form__left {
-                width: auto;
-            }
-
-            input {
-                height: auto;
-            }
-            .form__submit-btn{
-                padding: 10px;
-            }
-
-            .site-footer {
-                padding-top: 10px;
-                padding-bottom: 5px;
-            }
-
-            .site-footer .container{
-                margin-top: 50px;
-            }
-
-            .container{
-                margin-bottom: 80px;
-            }
-        }
-    </style>
-
+    <div id="toast"></div>
+    <div class="tablet text-heading">
+        <div class="content-tablet">
+            <h1>Giao diện chỉ hỗ trợ PC và Mobile</h1>
+            <h2>Thành thật xin lỗi vì sự bất tiện này</h2>
+        </div>
+    </div>
     <div id="main">
         <div id="header">
-            <ul id="nav">
-                <li><a style="font-size: 20px;" href="../index.html">Frog <span style="color: #15825a;">Quiz</span></a>
+            <ul class="nav-pc" id="nav">
+                <li><a id="logo" style="font-size: 20px;" href="../index.html">Frog <span
+                            style="color: #15825a;">Quiz</span></a>
                 </li>
                 <li><a href="about.html">Giới thiệu</a></li>
                 <li>
-                    <a href="">Khóa học
+                    <a style="color: #15825a;">Khóa học
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="#">Tất cả</a></li>
-                        <li><a href="#">Lập trình cơ bản</a></li>
-                        <li><a href="#">Lập trình nâng cao</a></li>
-                        <li><a href="#">Lập trình website</a></li>
-                        <li><a href="#">Lập trình nhúng</a></li>
-                        <li><a href="#">Lập trình mobile</a></li>
-                        <li><a href="#">Lập trình game</a></li>
+                        <li><a href="">Tất cả</a></li>
+                        <li><a href="">Lập trình cơ bản</a></li>
+                        <li><a href="">Lập trình nâng cao</a></li>
+                        <li><a href="">Lập trình website</a></li>
+                        <li><a href="">Lập trình nhúng</a></li>
+                        <li><a href="">Lập trình mobile</a></li>
+                        <li><a href="">Lập trình game</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="contribute.html">Góp ý</a></li>
+                <li><a href="qna.html">Hỏi đáp</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li><a href="register.html">Đăng ký</a></li>
+                <!-- <li>
+                        <a href="#"
+                            >Hi, FrogDev
+                            <i class="nav-arrow-down ti-angle-down"></i>
+                        </a>
+                        <ul class="subnav">
+                            <li><a href="#">Cập nhật thông tin</a></li>
+                            <li><a href="#">Đổi mật khẩu</a></li>
+                            <li><a href="#">Quên mật khẩu</a></li>
+                            <li><a href="#">Quên mật khẩu</a></li>
+                            <li><a href="#">Lịch sử thi</a></li>
+                            <li><a href="#">Đăng xuất</a></li>
+                        </ul>
+                    </li> 
+                -->
+            </ul>
+
+            <div style="margin-right: 0px;" class="search-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
+            <!-- search -->
+            <div class="search-btn" data-toggle="modal" data-target="#myModal" id="search">
+                <i class="search-icon ti-search"> </i>
+            </div>
+
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <!-- <i id="menu-i" class="menu-icon ti-menu"></i> -->
+                <button id="menu-i" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+            <div class="mobile-menu-btn mode">
+                <!-- <i class="search-icon ti-search" id="search-mobile"> </i> -->
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
+
+            <!-- .nav -->
+        </div>
+
+        <div id="menu-mobile">
+            <ul class="nav">
+                <li><a href=""></a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li>
+                    <a style="color: #15825a;">Khóa học
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="">Tất cả</a></li>
+                        <li><a href="">Lập trình cơ bản</a></li>
+                        <li><a href="">Lập trình nâng cao</a></li>
+                        <li><a href="">Lập trình website</a></li>
+                        <li><a href="">Lập trình nhúng</a></li>
+                        <li><a href="">Lập trình mobile</a></li>
+                        <li><a href="">Lập trình game</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Liên hệ</a></li>
@@ -231,136 +135,254 @@
                 <li><a href="login.html">Đăng nhập</a></li>
                 <li><a href="register.html">Đăng ký</a></li>
             </ul>
-            
-            <div style="margin-right: 0px;" class="search-btn mode">
-                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
-            </div>
-            <!-- search -->
-            <div class="search-btn">
-                <i class="search-icon ti-search"> </i>
-            </div>
-
-
-            <div id="mobile-menu" class="mobile-menu-btn">
-                <i id="menu-i" class="menu-icon ti-menu"></i>
-            </div>
-
-            <div id="mobile-menu" class="mobile-menu-btn mode">
-                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
-            </div>
-
-            <!-- .nav -->
         </div>
 
-        
-        <div id="menu-mobile">
-            <ul  class="nav">
-                <li><a href="pages/about.html">Giới thiệu</a></li>
-                <li>
-                    <a>Khóa học
-                        <i class="nav-arrow-down ti-angle-down"></i>
-                    </a>
-                    <ul class="subnav">
-                        <li><a href="#">Tất cả</a></li>
-                        <li><a href="#">Lập trình cơ bản</a></li>
-                        <li><a href="#">Lập trình nâng cao</a></li>
-                        <li><a href="#">Lập trình website</a></li>
-                        <li><a href="#">Lập trình nhúng</a></li>
-                        <li><a href="#">Lập trình mobile</a></li>
-                        <li><a href="#">Lập trình game</a></li>
+        <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-                        <li><a href="#">aa</a></li>
-                        <li><a href="#">aa</a></li>
-                    </ul>
-                </li>
-                <li><a href="pages/contact.html">Liên hệ</a></li>
-                <li><a href="pages/contribute.html">Góp ý</a></li>
-                <li><a href="pages/qna.html">Hỏi đáp</a></li>
-                <li><a href="pages/login.html">Đăng nhập</a></li>
-                <li><a href="pages/register.html">Đăng ký</a></li>
-                
-                <li><a href="pages/register.html">Đăng ký</a></li>
-                <li><a href="pages/register.html">Đăng ký</a></li>
-                <li><a href="pages/register.html">Đăng ký</a></li>
-                <li><a href="pages/register.html">Đăng ký</a></li>
-                <li><a href="pages/register.html">Đăng ký</a></li>
-                <li><a href="pages/register.html">Đăng ký</a></li>
-                <li><a href="pages/contribute.html">Góp ý</a></li>
-                <li><a href="pages/qna.html">Hỏi đáp</a></li>
-                <li><a href="pages/login.html">Đăng nhập</a></li>
-                <li><a href="pages/register.html">Đăng ký</a></li>
-            </ul>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Tìm kiếm</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="search-container">
+                        <form class="search-inp" action="">
+                            <i class='bx bx-search-alt'></i>
+                          <input  type="text" placeholder="Lập trình Java..." name="search">
+                        </form>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
         </div>
-
+    </div>
 
         <div id="content">
-            <div class="row">
-                <div style="height: 1000px; border-right: solid 1.5px #191b1a; " class="col-sm-3 left">
-                    <a href="#about">Giới thiệu</a>
-                    <div class="slide-bar">
-                        <a href="#about">Giới thiệu</a>
-                    
-                    </div>
-                    
-                </div>
-                <div  class="col-sm-9 right">
-                    <div id="about1">
-                        <h2>Auto Sidebar</h2>
-                        <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-                        <p>Scroll down the page to see the result.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
-                            maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id
-                            agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his
-                            ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
-                            maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id
-                            agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his
-                            ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
-                            maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id
-                            agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his
-                            ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
-                            maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id
-                            agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his
-                            ad. Eum no molestiae voluptatibus.</p>
+            <div class="row" style="width: 100%;">
+                <article class="col-sm-9">
+                    <div class="row-items row">
+                        <div class="item">
+                            <img src="../images/course/ctdl.png" alt="">
+                            <div class="content">
+                                <p class="tag">Kiến thức nền tảng</p>
+                                <p class="name">Cấu trúc dữ liệu</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/course/He-dieu-hanh.png" alt="">
+                            <div class="content">
+                                <p class="tag">Kiến thức nền tảng</p>
+                                <p class="name">Kiến thức hệ điều hành</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/course/Toan-roi-rac-1.png" alt="">
+                            <div class="content">
+                                <p class="tag">Kiến thức nền tảng</p>
+                                <p class="name">Toán rời rạc</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div id="about">
-                        <h2>Auto Sidebar</h2>
-                        <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-                        <p>Scroll down the page to see the result.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
-                            maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id
-                            agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his
-                            ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
-                            maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id
-                            agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his
-                            ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
-                            maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id
-                            agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his
-                            ad. Eum no molestiae voluptatibus.</p>
-                        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
-                            maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id
-                            agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his
-                            ad. Eum no molestiae voluptatibus.</p>
+                    <div class="row-items row">
+                        <div class="item">
+                            <img src="../images/course/Python.png" alt="">
+                            <div class="content">
+                                <p class="tag">Lập trình căn bản</p>
+                                <p class="name">Lập trình Python</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/course/SQL.png" alt="">
+                            <div class="content">
+                                <p class="tag">Xử lí dữ liệu</p>
+                                <p class="name">Quản lí dữ liệu với My SQL</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/course/lap-trinh-c-1.png" alt="">
+                            <div class="content">
+                                <p class="tag">Lập trình căn bản</p>
+                                <p class="name">Lập trình C</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="row-items row">
+                        <div class="item">
+                            <img src="../images/course/Lap-trinh-Java.png" alt="">
+                            <div class="content">
+                                <p class="tag">Lập tình Hướng đối tượng</p>
+                                <p class="name">Lập trình Java</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/course/Maven.png" alt="">
+                            <div class="content">
+                                <p class="tag">Lập trình Hướng đối tượng</p>
+                                <p class="name">Sử dụng công cụ Maven với Java</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/course/Lap-trinh-JSP-2.png" alt="">
+                            <div class="content">
+                                <p class="tag">Lập trình nâng cao</p>
+                                <p class="name">Lập trình JSP với Java</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row-items row">
+                        <div class="item">
+                            <img src="../images/course/javaJDBC.jpg" alt="">
+                            <div class="content">
+                                <p class="tag">Lập trình nâng cao</p>
+                                <p class="name">Lập trình JDBC với Java</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/course/MSEXCEL.png" alt="">
+                            <div class="content">
+                                <p class="tag">Tin học văn phòng</p>
+                                <p class="name">Làm việc với EXCEL</p>
+                                <hr class="line-bott">
+                                <p class="price">Miễn phí</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </article>
+
+                <aside class="col-sm-3">
+                    <!--CartInfo-->
+                    <div class="poly-cart">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <!-- <img class="col-sm-5" src="images/shoppingcart.gif" /> -->
+                                <h3>Các khóa học</h3>
+                                <!-- <ul class="col-sm-7">
+                                    <li>100 items</li>
+                                    <li>$ 56.8</li>
+                                    <li><a href="">View Cart</a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--/CartInfo-->
+
+                    <!--Search-->
+                    <div class="nn-cart">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form method="post" action="/Product/Search">
+                                    <input placeholder="Tìm kiếm..." name="Keywords" class="form-control" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Search-->
+
+                    <div class="panel-group" id="accordion">
+
+                        <!--Category-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseOne">
+                                <i class='bx bx-list-plus'></i>
+                                <strong>Thể loại</strong>
+                            </div>
+
+                            <div class="list-group card-collapse panel-collapse collapse in" id="collapseOne">
+                                <a href="#" class="list-group-item">Kiến thức nền tảng</a>
+                                <a href="#" class="list-group-item">Lập trình căn bản</a>
+                                <a href="#" class="list-group-item">Lập trình nâng cao</a>
+                                <a href="#" class="list-group-item">Xử lí dữ liệu</a>
+                                <a href="#" class="list-group-item">Học máy</a>
+                                <a href="#" class="list-group-item">Trí tuệ nhân tạo</a>
+                            </div>
+                        </div>
+                        <!--/Category-->
+
+                        <!--Supplier-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseTwo">
+                                <i class='bx bx-layer'></i>
+                                <strong>Các công nghệ</strong>
+                            </div>
+
+                            <div class="list-group card-collapse panel-collapse collapse in" id="collapseTwo">
+                                <a href="#" class="list-group-item"><i class='bx bxl-java' ></i> Java</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-javascript' ></i> JavaScript</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-spring-boot' ></i> SpringBoot</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-php' ></i> PHP</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-react'></i> ReactJS</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-unity'></i> Unity</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-jquery'></i> JQuery</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-gitlab'></i> GitLab</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-python'></i> Python</a>
+                            </div>
+                        </div>
+                        <!--/Supplier-->
+
+                        <!--Special-->
+                        <!-- <div class="panel panel-default">
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseThree">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <strong>Hàng đặc biệt</strong>
+                            </div>
+
+                            <div class="list-group card-collapse panel-collapse collapse in" id="collapseThree">
+                                <a href="#" class="list-group-item">Hàng bán chạy</a>
+                                <a href="#" class="list-group-item">Hàng mới</a>
+                                <a href="#" class="list-group-item">Hàng giảm giá</a>
+                                <a href="#" class="list-group-item">Hàng đặc biệt</a>
+                                <a href="#" class="list-group-item">Hàng xem nhiều</a>
+                            </div>
+                        </div> -->
+                        <!--/Special-->
+                    </div>
+
+
+                </aside>
             </div>
         </div>
 
-
-        
         <!-- Site footer -->
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <h6>Giới thiệu</h6>
-                        <p class="text-justify">Frog Guide<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i> là một
-                            website hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các ngôn
+                        <p class="text-justify">Frog Quiz<i> HỆ THỐNG TRẮC NGHIỆM LẬP TRÌNH MIỄN PHÍ 2023</i> là một
+                            website hỗ trợ các bài tập cơ bản, các phần lí thuyết và bài tập trắc nghiệm của các
+                            ngôn
                             ngữ lập trình, công nghệ phổ biến như C, C++, Java, HTML, CSS, Bootstrap,
                             JavaScript, PHP, Android, SQL và các thuật toán.</p>
                     </div>
@@ -407,51 +429,80 @@
                             </li>
                             <li><a target="_blank" class="github" href="https://github.com/"><i
                                         class="github-icon ti-github"></i></a></li>
-                            <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in//"><i
+                            <li><a target="_blank" class="linkedin" href="#"><i
                                         class="linkedin-icon ti-linkedin"></i></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
+
     </div>
 
+    <script src="../js/mobile-menu.js"></script>
     <script>
-        var header = document.getElementById("header");
-        var mobileMenu = document.getElementById("mobile-menu");
-        var icon = document.getElementById("menu-i");
-        var headerHeight = header.clientHeight;
+        // var menuMobileRight = document.getElementById("menu-mobile");
+        // var header = document.getElementById("header");
+        // var mobileMenu = document.getElementById("mobile-menu");
+        // var icon = document.getElementById("menu-i");
+        // var headerHeight = header.clientHeight;
 
-        function changesIconMenu() {
-            icon.classList.toggle("ti-menu");
-            icon.classList.toggle("ti-close");
+        // function changesIconMenu() {
+        //     // icon.classList.toggle("ti-menu");
+        //     // icon.classList.toggle("ti-close");
+        //     icon.classList.toggle("is-active");
+        // }
+
+        // // mobile menu
+        // mobileMenu.onclick = function () {
+        //     changesIconMenu();
+        //     var isClosed = header.clientHeight === headerHeight;
+        //     var isOpen = menuMobileRight.getBoundingClientRect().left
+        //     //console.log(isOpen)
+        //     if (isOpen>200) {
+        //         menuMobileRight.style.right = "0";
+        //         //header.style.height = "auto";
+        //         // header.style.width = "70%";
+        //     } else {
+        //         menuMobileRight.style.right = "-100%";
+        //         //header.style.height = null;
+        //     }
+        //     //console.log(isOpen)
+        // };
+
+        // // auto close when clicked menu mobile
+        // var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        // for (let i = 0; i < menuItems.length; i++) {
+        //     const menuItem = menuItems[i];
+        //     menuItem.onclick = function (event) {
+        //         var isParentMenu =
+        //             this.nextElementSibling &&
+        //             this.nextElementSibling.classList.contains("subnav");
+        //         if (isParentMenu) {
+        //             event.preventDefault();
+        //         } else {
+        //             header.style.height = null;
+        //         }
+        //     };
+        // }
+
+        //toast
+        function showSuccessToast() {
+            toast({
+                title: "Thành công!",
+                message: "Quá tuyệt vời Chào mừng bạn đến với Frog Quiz.",
+                type: "success",
+                duration: 5000
+            });
         }
 
-        // mobile menu
-        mobileMenu.onclick = function () {
-            changesIconMenu();
-            var isClosed = header.clientHeight === headerHeight;
-            if (isClosed) {
-                header.style.height = "auto";
-            } else {
-                header.style.height = null;
-            }
-        };
-
-        // auto close when clicked menu mobile
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-        for (let i = 0; i < menuItems.length; i++) {
-            const menuItem = menuItems[i];
-            menuItem.onclick = function (event) {
-                var isParentMenu =
-                    this.nextElementSibling &&
-                    this.nextElementSibling.classList.contains("subnav");
-                if (isParentMenu) {
-                    event.preventDefault();
-                } else {
-                    header.style.height = null;
-                }
-            };
+        function showErrorToast() {
+            toast({
+                title: "Thất bại!",
+                message: "Vui lòng đăng nhập vào hệ thống để bắt đầu.",
+                type: "error",
+                duration: 5000
+            });
         }
     </script>
 </body>

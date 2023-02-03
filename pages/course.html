@@ -13,59 +13,27 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- my css -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
 
     <!-- mode -->
     <script src="js/mode.js"></script>
-    <link rel="stylesheet" href="assets/css/mode.css">
+    <link rel="stylesheet" href="../assets/css/mode.css">
 
     <!-- toast -->
     <script src="toast/main.js"></script>
-    <link rel="stylesheet" href="toast/style.css">
+    <link rel="stylesheet" href="../toast/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
 </head>
 
 <body>
-    <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        Launch demo modal
-    </button> -->
-
-
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Tìm kiếm</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="search-container">
-                        <form class="search-inp" action="">
-                            <i class='bx bx-search-alt'></i>
-                          <input  type="text" placeholder="Lập trình Java..." name="search">
-                        </form>
-                      </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
     <div id="toast"></div>
     <div class="tablet text-heading">
         <div class="content-tablet">
@@ -84,13 +52,13 @@
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="pages/course-list.html">Tất cả</a></li>
-                        <li><a href="pages/course-list.html">Lập trình cơ bản</a></li>
-                        <li><a href="pages/course-list.html">Lập trình nâng cao</a></li>
-                        <li><a href="pages/course-list.html">Lập trình website</a></li>
-                        <li><a href="pages/course-list.html">Lập trình nhúng</a></li>
-                        <li><a href="pages/course-list.html">Lập trình mobile</a></li>
-                        <li><a href="pages/course-list.html">Lập trình game</a></li>
+                        <li><a href="#">Tất cả</a></li>
+                        <li><a href="#">Lập trình cơ bản</a></li>
+                        <li><a href="#">Lập trình nâng cao</a></li>
+                        <li><a href="#">Lập trình website</a></li>
+                        <li><a href="#">Lập trình nhúng</a></li>
+                        <li><a href="#">Lập trình mobile</a></li>
+                        <li><a href="#">Lập trình game</a></li>
                     </ul>
                 </li>
                 <li><a href="pages/contact.html">Liên hệ</a></li>
@@ -150,13 +118,13 @@
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="pages/course-list.html">Tất cả</a></li>
-                        <li><a href="pages/course-list.html">Lập trình cơ bản</a></li>
-                        <li><a href="pages/course-list.html">Lập trình nâng cao</a></li>
-                        <li><a href="pages/course-list.html">Lập trình website</a></li>
-                        <li><a href="pages/course-list.html">Lập trình nhúng</a></li>
-                        <li><a href="pages/course-list.html">Lập trình mobile</a></li>
-                        <li><a href="pages/course-list.html">Lập trình game</a></li>
+                        <li><a href="#">Tất cả</a></li>
+                        <li><a href="#">Lập trình cơ bản</a></li>
+                        <li><a href="#">Lập trình nâng cao</a></li>
+                        <li><a href="#">Lập trình website</a></li>
+                        <li><a href="#">Lập trình nhúng</a></li>
+                        <li><a href="#">Lập trình mobile</a></li>
+                        <li><a href="#">Lập trình game</a></li>
                     </ul>
                 </li>
                 <li><a href="pages/contact.html">Liên hệ</a></li>
@@ -169,17 +137,11 @@
 
 
         <div id="slider">
-            <div class="text-content">
-                <h1 class="text-heading"><span class="text-heading">Chào mừng đến với</span> <br id="wrap-heading">
-                    <span id="heading-logo" style="color: #15825a;">Frog Quiz</span>
-                </h1>
-                <div class="text-description">
-                    Môi trường học tập thú vị dành cho sinh viên ngành CNTT!
-
-                </div>
-                <button onclick="showErrorToast();" class="button-88" role="button">Bắt đầu
-                    nào</button>
-            </div>
+            <script src="https://giscus.app/client.js" data-repo="dangth12/docs" data-repo-id="R_kgDOI5SZdw"
+                data-category="Announcements" data-category-id="DIC_kwDOI5SZd84CT-UT" data-mapping="pathname"
+                data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom"
+                data-theme="dark_tritanopia" data-lang="vi" crossorigin="anonymous" async>
+                </script>
         </div>
 
         <hr class="hr-feeds">

@@ -1,0 +1,39 @@
+
+.search-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.search-container form i{
+    font-size: 30px;
+    color: #009639;
+    padding-left: 15px;
+    z-index: 2;
+    position: relative;
+}
+
+.search-inp input[type="text"] {
+    z-index: 1;
+    position: absolute;
+    margin: 0 auto;
+    display: block;
+    width: 85%;
+    /* width: calc(100% - 50px); 20px [ left & Right ] padding + 4px border [ left & Right ]  */
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    padding: 10px;
+    padding-left: 50px;
+    border: 2px solid #00a778;
+    font-family: Helvetica, arial, sans-serif;
+}
+
+#myModal .btn-default{
+    background-color: #14ba54;
+}

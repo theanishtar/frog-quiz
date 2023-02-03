@@ -12,8 +12,8 @@
 
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../js/jquery.min.js">
-    <link rel="stylesheet" href="../js/bootstrap.min.js">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css" />
 
@@ -32,6 +32,8 @@
 </head>
 
 <body>
+
+
     <div class="tablet text-heading">
         <div class="content-tablet">
             <h1>Giao diện chỉ hỗ trợ PC và Mobile</h1>
@@ -43,22 +45,20 @@
             <ul class="nav-pc" id="nav">
                 <li><a style="font-size: 20px;" href="../index.html">Frog <span style="color: #15825a;">Quiz</span></a>
                 </li>
-                <li><a href="">Giới thiệu</a></li>
+                <li><a style="color: #15825a;" href="">Giới thiệu</a></li>
                 <li>
                     <a>Khóa học
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="#">Tất cả</a></li>
-                        <li><a href="#">Lập trình cơ bản</a></li>
-                        <li><a href="#">Lập trình nâng cao</a></li>
-                        <li><a href="#">Lập trình website</a></li>
-                        <li><a href="#">Lập trình nhúng</a></li>
-                        <li><a href="#">Lập trình mobile</a></li>
-                        <li><a href="#">Lập trình game</a></li>
+                        <li><a href="course-list.html">Tất cả</a></li>
+                        <li><a href="course-list.html">Lập trình cơ bản</a></li>
+                        <li><a href="course-list.html">Lập trình nâng cao</a></li>
+                        <li><a href="course-list.html">Lập trình website</a></li>
+                        <li><a href="course-list.html">Lập trình nhúng</a></li>
+                        <li><a href="course-list.html">Lập trình mobile</a></li>
+                        <li><a href="course-list.html">Lập trình game</a></li>
 
-                        <li><a href="#">aa</a></li>
-                        <li><a href="#">aa</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Liên hệ</a></li>
@@ -87,7 +87,7 @@
                 <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
             </div>
             <!-- search -->
-            <div class="search-btn">
+            <div class="search-btn" data-toggle="modal" data-target="#myModal" id="search1">
                 <i class="search-icon ti-search"> </i>
             </div>
 
@@ -112,19 +112,19 @@
         <div id="menu-mobile">
             <ul class="nav">
                 <li><a href=""></a></li>
-                <li><a href="">Giới thiệu</a></li>
+                <li><a style="color: #15825a;" href="">Giới thiệu</a></li>
                 <li>
                     <a>Khóa học
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="#">Tất cả</a></li>
-                        <li><a href="#">Lập trình cơ bản</a></li>
-                        <li><a href="#">Lập trình nâng cao</a></li>
-                        <li><a href="#">Lập trình website</a></li>
-                        <li><a href="#">Lập trình nhúng</a></li>
-                        <li><a href="#">Lập trình mobile</a></li>
-                        <li><a href="#">Lập trình game</a></li>
+                        <li><a href="course-list.html">Tất cả</a></li>
+                        <li><a href="course-list.html">Lập trình cơ bản</a></li>
+                        <li><a href="course-list.html">Lập trình nâng cao</a></li>
+                        <li><a href="course-list.html">Lập trình website</a></li>
+                        <li><a href="course-list.html">Lập trình nhúng</a></li>
+                        <li><a href="course-list.html">Lập trình mobile</a></li>
+                        <li><a href="course-list.html">Lập trình game</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Liên hệ</a></li>
@@ -135,6 +135,31 @@
             </ul>
         </div>
 
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Tìm kiếm</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="search-container">
+                            <form class="search-inp" action="">
+                                <i class='bx bx-search-alt'></i>
+                                <input type="text" placeholder="Lập trình Java..." name="search">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
         <div id="content">
             <div class="row">
@@ -225,7 +250,8 @@
                                 href="https://angularjs.org/">AngularJS</a>, <a href="https://jquery.com/">JQuery</a>,
                             <a href="https://getbootstrap.com/">Bootstrap</a>, <a
                                 href="https://boxicons.com/">Boxicon</a>, <a
-                                href="https://themify.me/themify-icons">Themify</a>,... </p>
+                                href="https://themify.me/themify-icons">Themify</a>,...
+                        </p>
                     </div>
                 </div>
             </div>

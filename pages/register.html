@@ -12,14 +12,15 @@
 
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../js/jquery.min.js">
-    <link rel="stylesheet" href="../js/bootstrap.min.js">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css" />
 
     <!-- my css -->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
+
     <!-- mode -->
     <script src="../js/mode.js"></script>
     <link rel="stylesheet" href="../assets/css/mode.css">
@@ -29,8 +30,8 @@
     <script src="../toast/main.js"></script>
     <link rel="stylesheet" href="../toast/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" />
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
@@ -105,6 +106,7 @@
             font-weight: bold;
             text-align: center;
             margin-bottom: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
         .form__submit-btn {
@@ -128,7 +130,8 @@
             position: relative;
         }
 
-        input {
+        form input[type="email"],
+        form input[type="password"] {
             display: block;
             width: 100%;
             margin-bottom: 25px;
@@ -142,9 +145,30 @@
             margin-top: 5px;
         }
 
-        input:after {
+        form input:after {
             position: absolute;
             content: "a***";
+        }
+
+        .form__submit-btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 25px;
+            height: 35px;
+            border-radius: 15px;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            position: relative;
+            margin-top: 5px;
+            /* background: #1fcc44; */
+            /* font-size: 17px; */
+            padding: 0px;
+            cursor: pointer;
+            background: #ad5389;
+            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+            border: none;
+            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
         }
 
         a {
@@ -227,37 +251,37 @@
 
         @-webkit-keyframes bounce_auto {
 
-0%,
-50%,
-100% {
-    -webkit-transform: translateY(0);
-}
+            0%,
+            50%,
+            100% {
+                -webkit-transform: translateY(0);
+            }
 
-25% {
-    -webkit-transform: translateY(15px);
-}
+            25% {
+                -webkit-transform: translateY(15px);
+            }
 
-75% {
-    -webkit-transform: translateY(-15px);
-}
-}
+            75% {
+                -webkit-transform: translateY(-15px);
+            }
+        }
 
-@keyframes bounce_auto {
+        @keyframes bounce_auto {
 
-0%,
-50%,
-100% {
-    -webkit-transform: translateY(0);
-}
+            0%,
+            50%,
+            100% {
+                -webkit-transform: translateY(0);
+            }
 
-25% {
-    -webkit-transform: translateY(15px);
-}
+            25% {
+                -webkit-transform: translateY(15px);
+            }
 
-75% {
-    -webkit-transform: translateY(-15px);
-}
-}
+            75% {
+                -webkit-transform: translateY(-15px);
+            }
+        }
 
         .bounce {
             -webkit-animation-name: bounce;
@@ -306,6 +330,7 @@
             .form__submit-btn {
                 padding: 10px;
             }
+
             .form {
                 margin-bottom: 80px;
             }
@@ -336,41 +361,38 @@
         }
     </style>
 
-<div class="tablet text-heading">
-    <div class="content-tablet">
-        <h1>Giao diện chỉ hỗ trợ PC và Mobile</h1>
-        <h2>Thành thật xin lỗi vì sự bất tiện này</h2>
+    <div class="tablet text-heading">
+        <div class="content-tablet">
+            <h1>Giao diện chỉ hỗ trợ PC và Mobile</h1>
+            <h2>Thành thật xin lỗi vì sự bất tiện này</h2>
+        </div>
     </div>
-</div>
-<div id="main">
-    <div id="header">
-        <ul class="nav-pc" id="nav">
-            <li><a style="font-size: 20px;" href="../index.html">Frog <span style="color: #15825a;">Quiz</span></a>
-            </li>
-            <li><a href="about.html">Giới thiệu</a></li>
-            <li>
-                <a>Khóa học
-                    <i class="nav-arrow-down ti-angle-down"></i>
-                </a>
-                <ul class="subnav">
-                    <li><a href="#">Tất cả</a></li>
-                    <li><a href="#">Lập trình cơ bản</a></li>
-                    <li><a href="#">Lập trình nâng cao</a></li>
-                    <li><a href="#">Lập trình website</a></li>
-                    <li><a href="#">Lập trình nhúng</a></li>
-                    <li><a href="#">Lập trình mobile</a></li>
-                    <li><a href="#">Lập trình game</a></li>
-
-                    <li><a href="#">aa</a></li>
-                    <li><a href="#">aa</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">Liên hệ</a></li>
-            <li><a href="contribute.html">Góp ý</a></li>
-            <li><a href="qna.html">Hỏi đáp</a></li>
-            <li><a href="login.html">Đăng nhập</a></li>
-            <li><a href="register.html">Đăng ký</a></li>
-            <!-- <li>
+    <div id="main">
+        <div id="header">
+            <ul class="nav-pc" id="nav">
+                <li><a style="font-size: 20px;" href="../index.html">Frog <span style="color: #15825a;">Quiz</span></a>
+                </li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li>
+                    <a>Khóa học
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="course-list.html">Tất cả</a></li>
+                        <li><a href="course-list.html">Lập trình cơ bản</a></li>
+                        <li><a href="course-list.html">Lập trình nâng cao</a></li>
+                        <li><a href="course-list.html">Lập trình website</a></li>
+                        <li><a href="course-list.html">Lập trình nhúng</a></li>
+                        <li><a href="course-list.html">Lập trình mobile</a></li>
+                        <li><a href="course-list.html">Lập trình game</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="contribute.html">Góp ý</a></li>
+                <li><a href="qna.html">Hỏi đáp</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li><a style="color: #15825a;" href="">Đăng ký</a></li>
+                <!-- <li>
             <a href="#"
                 >Hi, FrogDev
                 <i class="nav-arrow-down ti-angle-down"></i>
@@ -385,60 +407,85 @@
             </ul>
         </li> 
     -->
-        </ul>
+            </ul>
 
-        <div style="margin-right: 0px;" class="search-btn mode">
-            <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            <div style="margin-right: 0px;" class="search-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
+            <!-- search -->
+            <div class="search-btn" data-toggle="modal" data-target="#myModal" id="search">
+                <i class="search-icon ti-search"> </i>
+            </div>
+
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <!-- <i id="menu-i" class="menu-icon ti-menu"></i> -->
+                <button id="menu-i" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="mobile-menu-btn mode">
+                <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+            </div>
+
+            <!-- .nav -->
         </div>
-        <!-- search -->
-        <div class="search-btn">
-            <i class="search-icon ti-search"> </i>
+
+
+        <div id="menu-mobile">
+            <ul class="nav">
+                <li><a href=""></a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li>
+                    <a>Khóa học
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="course-list.html">Tất cả</a></li>
+                        <li><a href="course-list.html">Lập trình cơ bản</a></li>
+                        <li><a href="course-list.html">Lập trình nâng cao</a></li>
+                        <li><a href="course-list.html">Lập trình website</a></li>
+                        <li><a href="course-list.html">Lập trình nhúng</a></li>
+                        <li><a href="course-list.html">Lập trình mobile</a></li>
+                        <li><a href="course-list.html">Lập trình game</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="contribute.html">Góp ý</a></li>
+                <li><a href="qna.html">Hỏi đáp</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li><a style="color: #15825a;" href="">Đăng ký</a></li>
+            </ul>
         </div>
 
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
 
-        <div id="mobile-menu" class="mobile-menu-btn">
-            <!-- <i id="menu-i" class="menu-icon ti-menu"></i> -->
-            <button id="menu-i" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Tìm kiếm</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="search-container">
+                            <form class="search-inp" action="">
+                                <i class='bx bx-search-alt'></i>
+                                <input type="text" placeholder="Lập trình Java..." name="search">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="mobile-menu-btn mode">
-            <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
-        </div>
-
-        <!-- .nav -->
-    </div>
-
-
-    <div id="menu-mobile">
-        <ul class="nav">
-            <li><a href=""></a></li>
-            <li><a href="about.html">Giới thiệu</a></li>
-            <li>
-                <a>Khóa học
-                    <i class="nav-arrow-down ti-angle-down"></i>
-                </a>
-                <ul class="subnav">
-                    <li><a href="#">Tất cả</a></li>
-                    <li><a href="#">Lập trình cơ bản</a></li>
-                    <li><a href="#">Lập trình nâng cao</a></li>
-                    <li><a href="#">Lập trình website</a></li>
-                    <li><a href="#">Lập trình nhúng</a></li>
-                    <li><a href="#">Lập trình mobile</a></li>
-                    <li><a href="#">Lập trình game</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">Liên hệ</a></li>
-            <li><a href="contribute.html">Góp ý</a></li>
-            <li><a href="qna.html">Hỏi đáp</a></li>
-            <li><a href="login.html">Đăng nhập</a></li>
-            <li><a href="register.html">Đăng ký</a></li>
-        </ul>
-    </div>
-
 
         <div id="container" class="container">
             <div class="row">
@@ -451,27 +498,30 @@
                         <div class="form__right">
                             <div class="form__padding-right">
                                 <form>
-                                    <h1 class="form__title">Đăng ký tài khoản <span style="color: #15825a;">Frog Quiz</span>
+                                    <h1 class="form__title">Đăng ký tài khoản <span style="color: #15825a;">Frog
+                                            Quiz</span>
                                     </h1>
                                     <div class="user__email">
                                         <span>Email:</span>
-                                        <input class="form__email" type="text" placeholder="" />
+                                        <input class="form__email" type="email" placeholder="" />
                                     </div>
-    
+
                                     <div class="user__pass">
                                         <span class="pass__title">Mật khẩu:</span>
                                         <i id="show" class='turn__pass bx bxs-hide'></i>
-                                        
+
                                     </div>
                                     <input id="password" class="form__password" type="password" placeholder="" />
-    
+
                                     <div class="user__pass">
                                         <span class="pass__title">Nhập lại mật khẩu:</span>
-    
+
                                     </div>
-                                    <input id="password__confirm" class="form__password" type="password" placeholder="" />
-    
-                                    <input onclick="showErrorToast();"  class="form__submit-btn " type="button" value="Đăng ký" />
+                                    <input id="password__confirm" class="form__password" type="password"
+                                        placeholder="" />
+
+                                    <input onclick="showErrorToast();" class="form__submit-btn " type="button"
+                                        value="Đăng ký" />
                                 </form>
                                 <span><a class="form__link" href="changes-password.html">Quên mật khẩu?</a></span>
                                 <p>
@@ -536,8 +586,7 @@
                         <ul class="social-icons">
                             <li><a target="_blank" class="facebook" href="#"><i
                                         class="facebook-icon ti-facebook"></i></a></li>
-                            <li><a target="_blank" class="twitter" href="#"><i
-                                        class="twitter-icon ti-twitter"></i></a>
+                            <li><a target="_blank" class="twitter" href="#"><i class="twitter-icon ti-twitter"></i></a>
                             </li>
                             <li><a target="_blank" class="github" href="https://github.com/"><i
                                         class="github-icon ti-github"></i></a></li>
@@ -549,7 +598,7 @@
             </div>
         </footer>
     </div>
-<script src="../js/mobile-menu.js"></script>
+    <script src="../js/mobile-menu.js"></script>
     <script>
         document.getElementById("show").onclick = function () {
             let password = document.getElementById("password");

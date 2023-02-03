@@ -4,6 +4,10 @@
         display: none;
     }
 
+    #wrap-heading{
+        display: none;
+    }
+
     #menu-mobile {
         display: none;
     }
@@ -131,6 +135,10 @@
         z-index: 2;
         transition: all 0.3s ease;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #search-mobile{
+        margin-right: 15px;
     }
 
     #menu-mobile a {
@@ -298,7 +306,7 @@
     #slider .text-heading {
         font-weight: 500;
         font-size: 30px;
-        margin: 0 40px;
+        /* margin: 0 40px; */
     }
 
 
