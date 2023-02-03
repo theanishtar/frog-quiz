@@ -37,16 +37,49 @@
 
 <body>
     <style>
+        .row{
+            width: 100%;
+        }
         #cmt {
             width: 95%;
             align-items: center;
             display: flex;
             justify-content: center;
             margin: 0 auto;
+            padding-left: 20px;
         }
 
         #light-cmt {
             display: none;
+        }
+        
+        .contact .icon {
+            font-size: 30px;
+            color: rgb(34, 195, 172);
+        }
+
+        .contact .content {
+            font-size: 17px;
+            color: rgb(0, 0, 0);
+            margin-top: 7px;
+            margin-left: 8px;
+        }
+
+        .contact{
+            margin-left: 30px;
+            margin-right: 10px;
+        }
+
+        .row .title {
+            margin-left: 10px;
+        }
+
+        .contact {
+            display: flex;
+        }
+
+        iframe {
+            height: 540px;
         }
     </style>
     <div id="toast"></div>
@@ -178,7 +211,14 @@
         </div>
 
         <div id="content">
+            <div class="row">
+                <h1 style="text-align: center;">Hỏi <span style="color: #15825a;">đáp</span></h1>
+                    <hr>
+                
+                
+            </div>
             <div class="row" style="width: 100%;">
+                
                 <!-- <div id="light-cmt" class="light-comment">
                     <script src="https://giscus.app/client.js"
                     data-repo="dangth12/docs"
