@@ -1,0 +1,12 @@
+
+
+## Các công nghệ mình đã sử dụng trong dự án
+| Các công nghệ sử dụng                                             | Image                                                                                                                                     | Phiên bản                  | Tutorial                                                                         |
+| -----------------------------------------------------------| -------------------------------------------------------------------------------------------------------------------------------------------------| ------------------------ | --------------------------------------------------------------------------------------- |
+| [Boostrap v3.3](https://getbootstrap.com/docs/3.3/)            | <img src="https://www.drupal.org/files/styles/grid-3-2x/public/project-images/bootstrap-stack.png?itok=BdTnonBB" title="" alt="06-00-18-00-html5.gif" width="100"> | 3.3          | [Get Boostrap 3.3](https://getbootstrap.com/docs/3.3/) |
+| [HTML, CSS3, *SCSS](https://sass-lang.com/documentation/syntax)      | <img src="https://patrick-baessler.de/wp-content/uploads/2020/02/file_type_scss_icon_130177.png" width="100">                                 | 3.5        | [SCSS Syntax](https://sass-lang.com/documentation/syntax)              |
+| [AngularJS](hhttps://angularjs.org/)               | <img src="https://railsware.com/blog/wp-content/uploads/2014/09/Make-AngularJS.png" width="100">                                             | 1.2                   | [AngularJS Tutorial](https://angularjs.org/)               |
+| [Giscus](https://giscus.app/)             | <img src="https://raw.githubusercontent.com/github/explore/8753900cdf248290844b22340000825a102dd5a2/topics/giscus/giscus.png" width="100">                                      | Update to now            | [Giscus Contributing](https://github.com/giscus/giscus/blob/main/CONTRIBUTING.md)                                                                     |
+| [Gitpages](https://github.com)               | <img src="https://cs.stanford.edu/~deepakn/assets/icons/github.svg" width="100">                                      | Update to now         | [Git Guide](https://pages.github.com/)                                                                      |
+
+Ngoài ra còn sử dụng các ngôn ngữ đánh dấu như HTML, Mardown, CSS, ...

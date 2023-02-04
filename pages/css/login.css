@@ -71,7 +71,8 @@ html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
- form input[type="email"],  form input[type="password"]   {
+ form input[type="email"],  form input[type="password"],
+ form input[type="text"]   {
     display: block;
     width: 100%;
     margin-bottom: 25px;

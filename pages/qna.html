@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="qna-pages-frogquiz" >
     <link rel="shortcut icon" href="../assets/img/ico/icon.png" type="image/x-icon">
     <title>Frog Quiz - Hỏi đáp</title>
 
@@ -81,6 +82,9 @@
         iframe {
             height: 540px;
         }
+        .dark-mode #title{
+            color: rgba(240, 248, 255, 0.644);
+        }
     </style>
     <div id="toast"></div>
     <div class="tablet text-heading">
@@ -101,13 +105,13 @@
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Tất cả</a></li>
-                        <li><a href="">Lập trình cơ bản</a></li>
-                        <li><a href="">Lập trình nâng cao</a></li>
-                        <li><a href="">Lập trình website</a></li>
-                        <li><a href="">Lập trình nhúng</a></li>
-                        <li><a href="">Lập trình mobile</a></li>
-                        <li><a href="">Lập trình game</a></li>
+                        <li><a href="course-list.html">Tất cả</a></li>
+                        <li><a href="course-list.html">Lập trình cơ bản</a></li>
+                        <li><a href="course-list.html">Lập trình nâng cao</a></li>
+                        <li><a href="course-list.html">Lập trình website</a></li>
+                        <li><a href="course-list.html">Lập trình nhúng</a></li>
+                        <li><a href="course-list.html">Lập trình mobile</a></li>
+                        <li><a href="course-list.html">Lập trình game</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Liên hệ</a></li>
@@ -212,13 +216,12 @@
 
         <div id="content">
             <div class="row">
-                <h1 style="text-align: center;">Hỏi <span style="color: #15825a;">đáp</span></h1>
+                <h1 id="title" style="text-align: center;">Hỏi <span style="color: #15825a;">đáp</span></h1>
                     <hr>
                 
                 
             </div>
             <div class="row" style="width: 100%;">
-                
                 <!-- <div id="light-cmt" class="light-comment">
                     <script src="https://giscus.app/client.js"
                     data-repo="dangth12/docs"
@@ -238,14 +241,18 @@
                 </div> -->
                 <div id="cmt" class="dark-comment">
                     <script>
-                        let giscusTheme = localStorage.getItem("modeByThean");
+                        let giscusTheme = localStorage.getItem("modeByThean") || "light";
+                        // if(giscusTheme == null){
+                        //     localStorage.setItem("modeByThean","light");
+                        //     giscusTheme = 'light';
+                        // }
                         let giscusAttributes = {
                           "src": "https://giscus.app/client.js",
                           "data-repo": "dangth12/docs",
                           "data-repo-id": "R_kgDOI5SZdw",
                           "data-category": "Announcements",
                           "data-category-id": "DIC_kwDOI5SZd84CT-UT",
-                          "data-mapping": "pathname",
+                          "data-mapping": "og:title",
                           "data-strict":"0",
                           "data-reactions-enabled": "1",
                           "data-emit-metadata": "0",

@@ -18,7 +18,7 @@
     position: relative;
 }
 
-.search-inp input[type="text"] {
+.search-inp input[type="search"] {
     z-index: 1;
     position: absolute;
     margin: 0 auto;
