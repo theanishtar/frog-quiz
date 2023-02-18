@@ -28,5 +28,15 @@
         "birthday": "1993-05-15",
         "schoolfee": "2000000",
         "marks": "0"
+    },
+    {
+        "username": "dangth",
+        "password": "123",
+        "fullname": "Trần Hữu Đang",
+        "email": "dangthpc04349@fpt.edu.vn",
+        "gender": "true",
+        "birthday": "2003-12-10",
+        "schoolfee": "2000000",
+        "marks": "0"
     }
 ]

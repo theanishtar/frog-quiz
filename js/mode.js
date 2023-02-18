@@ -27,6 +27,7 @@ function setMode() {
         // alert("light mode -> dark mode")
         localStorage.setItem("modeByThean", "dark")
     }
+    changeGiscusTheme();
 }
 
 window.onload = function () {
@@ -48,4 +49,19 @@ window.onload = function () {
             changeMode() ;
         }
     }
+}
+
+
+// comment
+function changeGiscusTheme() {
+    const theme = localStorage.getItem("modeByThean") || "light";
+    function sendMessage(message) {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+    sendMessage({
+        setConfig: {
+            theme: theme
+        }
+    });
 }

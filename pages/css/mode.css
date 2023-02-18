@@ -66,12 +66,17 @@
     color: white;
 }
 
-.dark-mode form .ojb .user__name input,
-.dark-mode form .user__email input,
-.dark-mode form .user__subject input,
-.dark-mode form .user__message textarea{
+.dark-mode form .ojb .user__name .form__name,
+.dark-mode form .user__email .form__email,
+.dark-mode form .user__subject .form__password,
+.dark-mode form .user__message .form__message{
     background: #676767e9;
     color: rgb(255, 255, 255) ;
+}
+
+.dark-mode form .form__submit-btn{
+    background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
 }
 
 .dark-mode .content-tablet{

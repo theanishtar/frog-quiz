@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    name
+    <input type="text" id="name" name=""> <br>
+    email
+    <input type="text" id="email" name=""> <br>
+    mess
+    <input type="text" id="message" name=""> <br>
+
+    <button id="btn">a</button>
+
+    <script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', function (e) {
+            e.preventDefault()
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var body = 'Họ và tên: ' + name + '<br/> Email: ' + email + '<br/> Góp ý: ' + message;
+            Email.send({
+                SecureToken: "d2b8e750-6234-4ee4-bf52-9a07d483114d",
+                To: 'frogtech.contact@gmail.com',
+                From: "frogtech.contact@gmail.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+
+        })
+    </script>
+</body>
+
+</html>

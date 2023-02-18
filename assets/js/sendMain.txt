@@ -1,0 +1,37 @@
+Email.send({
+    SecureToken : "d2b8e750-6234-4ee4-bf52-9a07d483114d",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+
+
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+
+
+<script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', function(e) {
+            e.preventDefault()
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var body = 'Họ và tên: ' + name + '<br/> Email: ' + email + '<br/> Góp ý: ' + message;
+            Email.send({
+                SecureToken: "0cbe5f99-b0b5-4b08-a0b2-ba54d88e984a",
+                To: 'lebichvicm2020@gmail.com',
+                From: 'lebichvicm2020@gmail.com',
+                Subject: "Phản hồi của người dùng",
+                Body: body
+            }).then(
+                message => alert(message)
+            );
+        })
+    </script>

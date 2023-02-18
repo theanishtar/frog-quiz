@@ -32,9 +32,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+
+    <!-- angularJS -->
+    <script src="../js/angular.min.js"></script>
+
 </head>
 
-<body>
+<body ng-app="myApp">
     <div id="toast"></div>
     <div class="tablet text-heading">
         <div class="content-tablet">
@@ -138,30 +142,30 @@
         </div>
 
         <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Tìm kiếm</h4>
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Tìm kiếm</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="search-container">
+                            <form class="search-inp" action="">
+                                <i class='bx bx-search-alt'></i>
+                                <input type="text" placeholder="Lập trình Java..." name="search">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <div class="search-container">
-                        <form class="search-inp" action="">
-                            <i class='bx bx-search-alt'></i>
-                          <input  type="text" placeholder="Lập trình Java..." name="search">
-                        </form>
-                      </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+
             </div>
-
         </div>
-    </div>
 
         <div id="content">
             <div class="row" style="width: 100%;">
@@ -310,6 +314,22 @@
                     <div class="panel-group" id="accordion">
 
                         <!--Category-->
+                        <div class="panel panel-default" ng-controller="subjectCtrl">
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseOne">
+                                <i class='bx bx-list-plus'></i>
+                                <strong>Tất cả</strong>
+                            </div>
+
+                            <div class="list-group card-collapse panel-collapse collapse in" id="collapseOne"
+                                ng-repeat="sub in subjects">
+                                <a href="#" class="list-group-item">{{sub.Name}}</a>
+
+                            </div>
+                        </div>
+                        <!--/Category-->
+
+                        <!--Category-->
                         <div class="panel panel-default">
                             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion"
                                 href="#collapseOne">
@@ -337,10 +357,10 @@
                             </div>
 
                             <div class="list-group card-collapse panel-collapse collapse in" id="collapseTwo">
-                                <a href="#" class="list-group-item"><i class='bx bxl-java' ></i> Java</a>
-                                <a href="#" class="list-group-item"><i class='bx bxl-javascript' ></i> JavaScript</a>
-                                <a href="#" class="list-group-item"><i class='bx bxl-spring-boot' ></i> SpringBoot</a>
-                                <a href="#" class="list-group-item"><i class='bx bxl-php' ></i> PHP</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-java'></i> Java</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-javascript'></i> JavaScript</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-spring-boot'></i> SpringBoot</a>
+                                <a href="#" class="list-group-item"><i class='bx bxl-php'></i> PHP</a>
                                 <a href="#" class="list-group-item"><i class='bx bxl-react'></i> ReactJS</a>
                                 <a href="#" class="list-group-item"><i class='bx bxl-unity'></i> Unity</a>
                                 <a href="#" class="list-group-item"><i class='bx bxl-jquery'></i> JQuery</a>
@@ -438,9 +458,17 @@
         </footer>
 
     </div>
-
+    <!-- <script src="../assets/js/renderJSON.js"></script> -->
     <script src="../js/mobile-menu.js"></script>
     <script>
+        var app = angular.module("myApp", []);
+        app.controller("subjectCtrl", function ($scope, $http) {
+            $scope.subjects = [
+            ];
+            $http.get('../db/Subjects.js').then(function (reponse) {
+                $scope.subjects = reponse.data;
+            });
+        });
         // var menuMobileRight = document.getElementById("menu-mobile");
         // var header = document.getElementById("header");
         // var mobileMenu = document.getElementById("mobile-menu");
@@ -504,6 +532,7 @@
                 duration: 5000
             });
         }
+
     </script>
 </body>
 

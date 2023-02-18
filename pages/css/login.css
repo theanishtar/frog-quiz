@@ -201,6 +201,31 @@ a:hover {
     background-color: #14ba54;
 }
 
+.form__submit-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+    margin-top: 5px;
+    /* background: #1fcc44; */
+    /* font-size: 17px; */
+    padding: 0px;
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+}
+
+.form__submit-btn:hover {
+    /* background: #ff3f70; */
+    box-shadow: 0 0.5em 1.5em -0.5em #00100498;
+    background: linear-gradient(0deg, rgb(137, 186, 218) 0%, rgb(92, 195, 223) 100%);
+}
 
 /* bounce effect */
 @-webkit-keyframes bounce {
@@ -318,6 +343,18 @@ a:hover {
     padding-left: 50px;
     border: 2px solid #00a778;
     font-family: Helvetica, arial, sans-serif;
+}
+
+
+.mode .form__submit-btn {
+    background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+}
+
+.mode .form__submit-btn:hover {
+    /* background: #ff3f70; */
+    box-shadow: 0 0.5em 1.5em -0.5em #00100498;
+    background: linear-gradient(0deg, rgb(137, 186, 218) 0%, rgb(92, 195, 223) 100%);
 }
 
 #myModal .btn-default {

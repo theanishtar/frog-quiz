@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="./pages/css/mode.css">
+<link rel="stylesheet" href="./pages/css/search.css">
+<link rel="stylesheet" href="./pages/css/login.css">
+
+
+
+<section>
+    <style>
+        .dark-mode .form__submit-btn {
+            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+        }
+    
+    </style>
+    <div id="container" class="container">
+        <div class="row">
+            <div class="form">
+                <div class="form__box">
+                    <div class="form__left">
+                        <div class="form__padding bounce_auto">
+                            <img class="form__image bounce" src="./assets/img/ico/frog-bc.png" />
+                        </div>
+                    </div>
+                    <div class="form__right">
+                        <div class="form__padding-right">
+                            <form>
+                                <h1 class="form__title">Đăng nhập vào <span style="color: #15825a;">Frog Quiz</span>
+                                </h1>
+                                <div class="user__email">
+                                    <span>Email:</span>
+                                    <input class="form__email" ng-model="email" type="text" placeholder="" />
+                                    <!-- <div class="check">
+                                        <small ng-show="login.inpEmail.$error.required"
+                                            class="form-text text-danger">Vui lòng nhập email</small>
+                                        <small ng-show="login.inpEmail.$error.email" class="form-text text-danger">Không
+                                            đúng định dạng email</small>
+
+                                    </div>
+                                </div> -->
+
+                                    <div class="user__pass">
+                                        <span class="pass__title">Mật khẩu:</span>
+                                        <i id="show" class='turn__pass bx bxs-hide'></i>
+                                    </div>
+                                    <input id="password" ng-model="pass" class="form__password" type="password"
+                                        placeholder="" />
+                                    <!-- <div class="check">
+                                        <small ng-show="login.inpPass.$error.required" class="form-text text-danger">Vui lòng nhập mật khẩu</small>
+                                
+                                    </div> -->
+
+                                    <input ng-click="login()" class="form__submit-btn" type="button"
+                                        value="Đăng nhập" />
+                            </form>
+                            <span><a class="form__link" href="changes-password.html">Quên mật khẩu?</a></span>
+                            <p>
+                                <a class="form__link" href="#register">Tạo tài khoản mới</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById("show").onclick = function () {
+        let password = document.getElementById("password");
+        let iconPass = document.getElementById("show");
+        let flag = iconPass.classList.contains("bxs-hide");
+
+        flag && iconPass.classList.toggle("bxs-show");
+
+        password.type = password.type == "password" ? "text" : "password";
+    }
+
+    function showErrorToast() {
+        toast({
+            title: "Thất bại!",
+            message: "Tài khoản không tồn tại trên hệ thống!",
+            type: "error",
+            duration: 5000
+        });
+    }
+
+</script>

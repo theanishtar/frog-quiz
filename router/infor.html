@@ -1,0 +1,181 @@
+<!-- <link rel="stylesheet" href="./pages/css/login.css"> -->
+<link rel="stylesheet" href="./pages/css/mode.css">
+<link rel="stylesheet" href="./pages/css/search.css">
+
+<style>
+    .container {
+        margin-top: 70px;
+    }
+
+    h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    hr{
+        margin-bottom: 50px;
+    }
+
+    form {
+        width: 80%;
+        background-color: #ffffff;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    form .left,
+    form .right {
+        width: 40%;
+    }
+
+    form button {
+        width: 100%;
+        float: right;
+        height: 35px;
+
+        margin-top: 25px;
+        margin-bottom: 90px;
+        align-items: center;
+        font-family: inherit;
+        font-weight: 500;
+
+        font-size: 16px;
+        /* padding: 0.7em 1.4em 0.7em 1.1em; */
+        color: white;
+        background: #ad5389;
+        background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+        border: none;
+        box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+        letter-spacing: 0.05em;
+        border-radius: 20em;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    form button:hover {
+        color: rgb(255, 255, 255);
+        background: #ad5389;
+        background: linear-gradient(0deg, rgb(20, 133, 167) 0%, rgb(102, 175, 247) 100%);
+        box-shadow: 0 0.7em 1.5em -0.5em #143ba798;
+    }
+
+    .row {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    input {
+        height: 40px;
+        background-color: #ededed;
+    }
+
+    form input[type="email"],
+    form input[type="password"],
+    form input[type="text"] {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+        height: 35px;
+        border-radius: 15px;
+        border: none;
+        background: #f2f2f2;
+        padding: 10px;
+        font-size: 14px;
+        position: relative;
+        margin-top: 5px;
+    }
+
+    /* Mobile */
+    @media (max-width: 46.1875em) {
+        form {
+            display: block;
+            width: 100%;
+        }
+
+        form .left,
+        form .right {
+            width: 100%;
+        }
+    }
+</style>
+<section>
+    <div id="container" class="container">
+        <h1 class="form__title">Sửa tài khoản <span style="color: #15825a;">Frog Quiz</span></h1>
+        <hr>
+        <div class="row">
+
+
+            <form>
+                <div class="ojb left">
+                    <div class="user__name">
+                        <span>Họ tên:</span>
+                        <input class="form__name" type="text" />
+                    </div>
+                    <div class="user__email">
+                        <span>Email:</span>
+                        <input class="form__email" type="text" />
+                    </div>
+                    <div class="user__email">
+                        <span>Ngày sinh:</span>
+                        <input class="form__email" type="text" />
+                    </div>
+                    <div class="user__email">
+                        <span>Học phí:</span>
+                        <input class="form__email" type="text" />
+                    </div>
+                </div>
+
+                <div class="ojb right">
+                    <div class="user__name">
+                        <span>Tên đăng nhập:</span>
+                        <input class="form__name" type="text" />
+                    </div>
+
+                    <div class="user__email">
+                        <span>Điểm:</span>
+                        <input class="form__email" type="text" />
+                    </div>
+                    <div class="user__email">
+                        <span>Giới tính:</span>
+                        <input class="form__email" type="text" />
+                    </div>
+                    <div class="user__send">
+                        <button>Xác nhận</button>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById("show").onclick = function () {
+        let password = document.getElementById("password");
+        let iconPass = document.getElementById("show");
+        let flag = iconPass.classList.contains("bxs-hide");
+
+        flag && iconPass.classList.toggle("bxs-show");
+
+        password.type = password.type == "password" ? "text" : "password";
+    }
+
+    function showErrorToast() {
+        toast({
+            title: "Thất bại!",
+            message: "Tài khoản không tồn tại trên hệ thống!",
+            type: "error",
+            duration: 5000
+        });
+    }
+
+</script>

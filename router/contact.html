@@ -1,0 +1,329 @@
+<style>
+    @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-30px);
+        }
+
+        60% {
+            transform: translateY(-15px);
+        }
+    }
+
+    .bounce {
+        -webkit-animation-name: bounce;
+        animation-name: bounce;
+    }
+
+    html {
+        font-family: Helvetica, arial, sans-serif;
+        scroll-behavior: smooth;
+    }
+
+
+    .form__title {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .left {
+        padding-right: 50px;
+    }
+
+    input[type="text"],
+    textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        background: #f2f2f2;
+        padding: 10px;
+        font-size: 14px;
+        position: relative;
+        margin-top: 5px;
+    }
+
+    input[type="text"]:after {
+        position: absolute;
+        content: "a***";
+    }
+
+    textarea:after {
+        position: absolute;
+        content: "a***";
+    }
+
+    a {
+        color: #107b27;
+        position: relative;
+    }
+
+    a:hover {
+        color: #ff3f70;
+    }
+
+    #container {
+        margin-top: 150px;
+        margin-bottom: 60px;
+    }
+
+
+    textarea {
+        height: 100px;
+    }
+
+    .button-88 {
+        margin-top: 0px;
+        width: 150px;
+    }
+
+    .ojb {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .user__name,
+    .user__email {
+        width: 47%;
+    }
+
+    .right iframe {
+        border-radius: 10px;
+        box-shadow: 0 0.7em 1.5em -0.5em #62626298;
+    }
+
+    .toggle-collapse {
+        color: black;
+        font-size: 19px;
+    }
+
+    .toggle-collapse i {
+        color: black;
+        font-size: 15px;
+    }
+
+    .toggle-collapse:hover {
+        color: #107b27;
+        text-decoration: none;
+    }
+
+    .contact .icon {
+        font-size: 30px;
+        color: rgb(34, 195, 172);
+    }
+
+    .contact .content {
+        font-size: 17px;
+        color: rgb(0, 0, 0);
+        margin-top: 7px;
+        margin-left: 8px;
+    }
+
+    .row .title {
+        margin-left: 10px;
+    }
+
+    .contact {
+        display: flex;
+    }
+
+    iframe {
+        height: 540px;
+    }
+
+
+    .search-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding-left: 20px;
+    }
+
+    .search-container form {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container form i {
+        font-size: 30px;
+        color: #009639;
+        padding-left: 15px;
+        z-index: 2;
+        position: relative;
+    }
+
+    .search-inp input[type="search"] {
+        z-index: 1;
+        position: absolute;
+        margin: 0 auto;
+        display: block;
+        width: 85%;
+        /* width: calc(100% - 50px); 20px [ left & Right ] padding + 4px border [ left & Right ]  */
+        font-size: 18px;
+        font-weight: 500;
+        color: #000000;
+        padding: 10px;
+        padding-left: 50px;
+        border: 2px solid #00a778;
+        font-family: Helvetica, arial, sans-serif;
+    }
+
+    #myModal .btn-default {
+        background-color: #14ba54;
+    }
+
+    .dark-mode .row {
+        color: rgb(212, 209, 209);
+    }
+
+
+    /* Mobile */
+    @media (max-width: 46.1875em) {
+
+        .left {
+            padding-right: 20px;
+        }
+
+        #container {
+            margin-bottom: 180px;
+            margin-top: 70px;
+        }
+
+        .form__padding-right .form__title {
+            font-size: 20px;
+        }
+
+        .form .user__email input,
+        #password,
+        #password__confirm,
+        .form__submit-btn {
+            height: 40px;
+        }
+
+        .form__submit-btn {
+            margin-top: 30px;
+        }
+
+        .form input {
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            width: 99%;
+        }
+    }
+</style>
+<link rel="stylesheet" href="./pages/css/search.css">
+<link rel="stylesheet" href="./pages/css/mode.css">
+<div style="margin-top: 70px;" id="container" class="container">
+    <!--     <div  class="row">
+        <div style="margin-left: 50px; margin-top: 20px;" class="wrap">
+            <a href="#demo" class="toggle-collapse" data-toggle="collapse">Mở <i class='bx bxs-down-arrow'></i></a>
+            <div id="demo" class="collapse">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+        <div class="wrap">
+             <button class="button-54 " >btn</button> 
+            <a href="#demo" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
+            <div id="demo" class="collapse">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+    </div> -->
+
+    <div class="row">
+        <h1 style="text-align: center;">Liên <span style="color: #15825a;">hệ</span></h1>
+        <hr>
+        <div class="left col-sm-6">
+            <div class="contact">
+                <div class="icon">
+                    <i class='bx bx-location-plus'></i>
+                </div>
+                <div class="content">
+                    288 Nguyễn Văn Linh, Hưng Lợi, Ninh Kiều, Cần Thơ
+                </div>
+            </div>
+            <div class="contact">
+                <div class="icon">
+                    <i class='bx bxs-phone-incoming'></i>
+                </div>
+                <div class="content">
+                    +84 392 023 333
+                </div>
+            </div>
+            <div class="contact">
+                <div class="icon">
+                    <i class='bx bx-mail-send'></i>
+                </div>
+                <div class="content">
+                    frogtech@gmail.com
+                </div>
+            </div>
+            <hr class="hr-fire">
+            <form>
+
+                <div class="ojb">
+                    <div class="user__name">
+                        <span>Họ tên:</span>
+                        <input class="form__name" type="text" />
+                    </div>
+                    <div class="user__email">
+                        <span>Email:</span>
+                        <input class="form__email" type="text" />
+                    </div>
+                </div>
+                <div class="user__subject">
+                    <span class="pass__title">Chủ đề:</span>
+                    <input id="password" class="form__password" type="text" />
+                </div>
+                <div class="user__message">
+                    <span class="pass__title">Nội dung:</span>
+                    <textarea class="form__message" name="" id="" rows="3"></textarea>
+                </div>
+                <div class="user__send">
+                    <button onclick="window.location.href='pages/login.html';" class="button-88" role="button">Xác
+                        nhận</button>
+                </div>
+
+                <!-- <div class="user__email">
+                    <span>Email:</span>
+                    <input class="form__email" type="text" placeholder="" />
+                    <input class="form__email" type="text" placeholder="" />
+                </div>
+                
+                <div class="user__pass">
+                    <span class="pass__title">Mật khẩu:</span>
+                    <i id="show" class='turn__pass bx bxs-hide'></i>
+                    
+                </div>
+                <input id="password" class="form__password" type="password" placeholder="" />
+                
+                <input  onclick="showErrorToast();"  class="form__submit-btn " type="button" value="Đăng nhập" /> -->
+            </form>
+        </div>
+        <div class="right col-sm-6">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8788739320867!2d105.75512251471191!3d10.026853092832754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a088476bb00027%3A0xd3c02747d1cbc8c6!2zMjg4IMSQLiBOZ3V54buFbiBWxINuIExpbmgsIEjGsG5nIEzhu6NpLCBOaW5oIEtp4buBdSwgQ-G6p24gVGjGoSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1673982504773!5m2!1sen!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>

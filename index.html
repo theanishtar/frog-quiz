@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:title" content="qna-pages-frogquiz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="assets/img/ico/icon.png" type="image/x-icon">
     <title>Frog Quiz</title>
@@ -31,15 +32,82 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+
+    <!-- angularJS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+
+    <!-- fire -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css
+    " rel="stylesheet">
+
+    <!-- fire-base -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <script src="db/fire-base/connect.js"></script>
 </head>
 
-<body>
+<body ng-app="myApp">
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
         Launch demo modal
     </button> -->
 
+    <style>
+        /* The switch - the box around the slider */
+        .switch {
+            font-size: 17px;
+            position: relative;
+            display: inline-block;
+            width: 3.5em;
+            height: 2em;
+        }
 
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider-btn {
+            --background: #28096b;
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--background);
+            transition: .5s;
+            border-radius: 30px;
+        }
+
+        .slider-btn:before {
+            position: absolute;
+            content: "";
+            height: 1.4em;
+            width: 1.4em;
+            border-radius: 50%;
+            left: 10%;
+            bottom: 15%;
+            box-shadow: inset 8px -4px 0px 0px #fff000;
+            background: var(--background);
+            transition: .5s;
+        }
+
+        input:checked+.slider-btn {
+            background-color: #522ba7;
+        }
+
+        input:checked+.slider-btn:before {
+            transform: translateX(100%);
+            box-shadow: inset 15px -4px 0px 15px #fff000;
+        }
+    </style>
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -54,9 +122,9 @@
                     <div class="search-container">
                         <form class="search-inp" action="">
                             <i class='bx bx-search-alt'></i>
-                          <input  type="text" placeholder="Lập trình Java..." name="search">
+                            <input type="text" placeholder="Lập trình Java..." name="search">
                         </form>
-                      </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -76,28 +144,41 @@
     <div id="main">
         <div id="header">
             <ul class="nav-pc" id="nav">
-                <li><a id="logo" style="font-size: 20px;" href="">Frog <span style="color: #15825a;">Quiz</span></a>
+                <li><a id="logo" style="font-size: 20px;" href="#main">Frog <span
+                            style="color: #15825a;">Quiz</span></a>
                 </li>
-                <li><a href="pages/about.html">Giới thiệu</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
                 <li>
                     <a>Khóa học
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="pages/course-list.html">Tất cả</a></li>
-                        <li><a href="pages/course-list.html">Lập trình cơ bản</a></li>
-                        <li><a href="pages/course-list.html">Lập trình nâng cao</a></li>
-                        <li><a href="pages/course-list.html">Lập trình website</a></li>
-                        <li><a href="pages/course-list.html">Lập trình nhúng</a></li>
-                        <li><a href="pages/course-list.html">Lập trình mobile</a></li>
-                        <li><a href="pages/course-list.html">Lập trình game</a></li>
+                        <li><a href="#courses">Tất cả</a></li>
+                        <li><a href="#courses">Lập trình cơ bản</a></li>
+                        <li><a href="#courses">Lập trình nâng cao</a></li>
+                        <li><a href="#courses">Lập trình website</a></li>
+                        <li><a href="#courses">Lập trình nhúng</a></li>
+                        <li><a href="#courses">Lập trình mobile</a></li>
+                        <li><a href="#courses">Lập trình game</a></li>
                     </ul>
                 </li>
-                <li><a href="pages/contact.html">Liên hệ</a></li>
-                <li><a href="pages/contribute.html">Góp ý</a></li>
-                <li><a href="pages/qna.html">Hỏi đáp</a></li>
-                <li><a href="pages/login.html">Đăng nhập</a></li>
-                <li><a href="pages/register.html">Đăng ký</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+                <li><a href="#contribute">Góp ý</a></li>
+                <li><a id="reload1" href="#qna">Hỏi đáp</a></li>
+                <li ng-if="Student == null"><a href="#login">Đăng nhập</a></li>
+                <li ng-if="Student == null"><a href="#register">Đăng ký</a></li>
+
+                <li ng-if="Student != null">
+                    <a>Hi, {{Student.fullname.slice(Student.fullname.lastIndexOf(" "))}}
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav" style="width: 200px;">
+                        <li><a href="#infor">Chỉnh sửa thông tin</a></li>
+                        <li><a ng-click="logout()">Đăng xuất</a></li>
+                    </ul>
+                </li>
+                
+
                 <!-- <li>
                         <a href="#"
                             >Hi, FrogDev
@@ -117,6 +198,10 @@
 
             <div style="margin-right: 0px;" class="search-btn mode">
                 <i onclick="changesIcon(this)" class="bx bx-sun bx-moon sun-moon"></i>
+                <!-- <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider-btn"></span>
+                </label> -->
             </div>
             <!-- search -->
             <div class="search-btn" data-toggle="modal" data-target="#myModal" id="search">
@@ -125,6 +210,7 @@
 
 
             <div id="mobile-menu" class="mobile-menu-btn">
+                
                 <!-- <i id="menu-i" class="menu-icon ti-menu"></i> -->
                 <button id="menu-i" class="hamburger">
                     <span></span>
@@ -144,163 +230,43 @@
         <div id="menu-mobile">
             <ul class="nav">
                 <li><a href=""></a></li>
-                <li><a href="pages/about.html">Giới thiệu</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
                 <li>
                     <a>Khóa học
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="pages/course-list.html">Tất cả</a></li>
-                        <li><a href="pages/course-list.html">Lập trình cơ bản</a></li>
-                        <li><a href="pages/course-list.html">Lập trình nâng cao</a></li>
-                        <li><a href="pages/course-list.html">Lập trình website</a></li>
-                        <li><a href="pages/course-list.html">Lập trình nhúng</a></li>
-                        <li><a href="pages/course-list.html">Lập trình mobile</a></li>
-                        <li><a href="pages/course-list.html">Lập trình game</a></li>
+                        <li><a href="#courses">Tất cả</a></li>
+                        <li><a href="#courses">Lập trình cơ bản</a></li>
+                        <li><a href="#courses">Lập trình nâng cao</a></li>
+                        <li><a href="#courses">Lập trình website</a></li>
+                        <li><a href="#courses">Lập trình nhúng</a></li>
+                        <li><a href="#courses">Lập trình mobile</a></li>
+                        <li><a href="#courses">Lập trình game</a></li>
                     </ul>
                 </li>
-                <li><a href="pages/contact.html">Liên hệ</a></li>
-                <li><a href="pages/contribute.html">Góp ý</a></li>
-                <li><a href="pages/qna.html">Hỏi đáp</a></li>
-                <li><a href="pages/login.html">Đăng nhập</a></li>
-                <li><a href="pages/register.html">Đăng ký</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+                <li><a href="#contribute">Góp ý</a></li>
+                <li><a id="reload1" href="#qna">Hỏi đáp</a></li>
+                <li ng-if="Student == null"><a href="#login">Đăng nhập</a></li>
+                <li ng-if="Student == null"><a href="#register">Đăng ký</a></li>
+
+                <li ng-if="Student != null">
+                    <a>Hi, {{Student.fullname.slice(Student.fullname.lastIndexOf(" "))}}
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav" style="width: 200px;">
+                        <li><a href="#infor">Chỉnh sửa thông tin</a></li>
+                        <li><a ng-click="logout()">Đăng xuất</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
 
-        <div id="slider">
-            <div class="text-content">
-                <h1 class="text-heading"><span class="text-heading">Chào mừng đến với</span> <br id="wrap-heading">
-                    <span id="heading-logo" style="color: #15825a;">Frog Quiz</span>
-                </h1>
-                <div class="text-description">
-                    Môi trường học tập thú vị dành cho sinh viên ngành CNTT!
+        <main ng-view>
 
-                </div>
-                <button onclick="showErrorToast();" class="button-88" role="button">Bắt đầu
-                    nào</button>
-            </div>
-        </div>
-
-        <hr class="hr-feeds">
-        <div class="noi_bat">
-            <div class="one">
-                <div class="left">
-                    <i class='bx bxl-spring-boot'></i>
-                </div>
-                <div class="right">
-                    <div class="tieu_de">SPRING BOOT</div>
-                    <p>Hiểu biết về Restfull Api bằng ngôn ngữ Java</p>
-                </div>
-            </div>
-            <div class="two">
-                <div class="left">
-                    <i class='bx bxl-flutter'></i>
-                </div>
-                <div class="right">
-                    <div class="tieu_de">FLUTTER</div>
-                    <p>xây dựng được mobile-app đơn giản với ngôn ngữ Dart</p>
-                </div>
-            </div>
-            <div class="three">
-                <div class="left">
-                    <i class='bx bxl-unity'></i>
-                </div>
-                <div class="right">
-                    <div class="tieu_de">UNITY</div>
-                    <p>xây dựng game cơ bản với Unity</p>
-                </div>
-
-            </div>
-            <div class="four">
-                <div class="left">
-                    <i class='bx bxs-bug'></i>
-                </div>
-                <div class="right">
-                    <div class="tieu_de">BUGS</div>
-                    <p>có kỹ năng gỡ lỗi, debug với nhiều tool khác nhau</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="banner" class="banner row">
-            <div class="col-sm-8 left">
-                <div class="content">
-                    <h2>Frog <span style="color: #15825a;">Quiz</span> sẽ giúp được gì cho bạn</h2>
-                    <div class="block">
-                        <i class='bx bx-meteor'></i>
-                        <p>Giúp bạn học lập trình thú vị hơn qua các câu trắc nghiệm thay vì những bài học khô khan trên
-                            lớp</p>
-                    </div>
-                    <div class="block">
-                        <i class='bx bx-layer-plus'></i>
-                        <p>Giúp bạn nhớ lâu hơn các cú pháp trong lập trình, từ đó có thể ứng dụng vào các dự án thực tế
-                        </p>
-                    </div>
-                    <div class="block">
-                        <i class='bx bx-rocket'></i>
-                        <p>Hiểu hơn các công nghệ mới, phổ biến trên thế giới. Giúp bạn có thể học hỏi nhiều kiến thức
-                            chuyên môn</p>
-                    </div>
-                    <div class="block">
-                        <!-- HTML !-->
-                        <button onclick="window.location.href='pages/login.html';" class="button-30" role="button">Bắt
-                            đầu ngay</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 right">
-                <div class="content">
-                    <img src="images/banner-img-1.png" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div id="content">
-            <hr class="hr-fire">
-            <h2 id="title-tong-quan" style="margin-left: 20px;">Cùng tìm hiểu về Frog <span
-                    style="color: #15825a;">Quiz</span></h2>
-
-            <div class="noi_bat tong-quan">
-                <div class="one">
-                    <div class="left">
-                        <i style="color: rgb(27, 135, 138);" class='bx bx-code-alt'></i>
-                    </div>
-                    <div class="right">
-                        <div class="tieu_de">CODE</div>
-                        <p>Cung cấp nhiều kiến thức thú vị, thực tế liên quan tới lập trình</p>
-                    </div>
-                </div>
-                <div class="two">
-                    <div class="left">
-                        <i style="color: rgb(255, 61, 61);" class='bx bx-palette'></i>
-                    </div>
-                    <div class="right">
-                        <div class="tieu_de">GRAPHIC</div>
-                        <p>Giao diện tiện lợi dễ sử dụng, tương thích nhiều nền tảng</p>
-                    </div>
-                </div>
-                <div class="three">
-                    <div class="left">
-                        <i style="color: rgb(185, 152, 22);" class='bx bxs-brightness-half'></i>
-                    </div>
-                    <div class="right">
-                        <div class="tieu_de">DARK MODE</div>
-                        <p>Cung cấp chế độ dark mode giúp người học tránh cường độ ánh sáng cao</p>
-                    </div>
-
-                </div>
-                <div class="four">
-                    <div class="left">
-                        <i style="color: rgb(197, 43, 153);" class='ti-infinite'></i>
-                    </div>
-                    <div class="right">
-                        <div class="tieu_de">PERMANENTLY</div>
-                        <p>Cập nhật các kiến thức mới liên tục</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </main>
 
         <!-- Site footer -->
         <footer class="site-footer">
@@ -368,51 +334,83 @@
     </div>
 
     <script src="js/mobile-menu.js"></script>
+    <script src="router/js/main.js"></script>
+    <script src="router/js/login.js"></script>
+    <script src="router/js/qnaCtrl.js"></script>
+    <script src="router/js/register.js"></script>
+    <script src="router/js/courseCtrl.js"></script>
+    <script src="router/js/coursesCtrl.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAYXprRSstGjbytZt-hL76pF6iidX6GVCM",
+            authDomain: "frog-quiz-1b87e.firebaseapp.com",
+            databaseURL: "https://frog-quiz-1b87e-default-rtdb.firebaseio.com",
+            projectId: "frog-quiz-1b87e",
+            storageBucket: "frog-quiz-1b87e.appspot.com",
+            messagingSenderId: "531268254580",
+            appId: "1:531268254580:web:ea3b4d8699f2b7be9c4a21",
+            measurementId: "G-N04SML8LWH"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+
     <script>
-        // var menuMobileRight = document.getElementById("menu-mobile");
-        // var header = document.getElementById("header");
-        // var mobileMenu = document.getElementById("mobile-menu");
-        // var icon = document.getElementById("menu-i");
-        // var headerHeight = header.clientHeight;
+        function reloadPage() {
+            //reload my page when click qna page
 
-        // function changesIconMenu() {
-        //     // icon.classList.toggle("ti-menu");
-        //     // icon.classList.toggle("ti-close");
-        //     icon.classList.toggle("is-active");
-        // }
+            //username password
+            let userName = localStorage.getItem("user-name");
+            let userPass = localStorage.getItem("user-pass");
 
-        // // mobile menu
-        // mobileMenu.onclick = function () {
-        //     changesIconMenu();
-        //     var isClosed = header.clientHeight === headerHeight;
-        //     var isOpen = menuMobileRight.getBoundingClientRect().left
-        //     //console.log(isOpen)
-        //     if (isOpen>200) {
-        //         menuMobileRight.style.right = "0";
-        //         //header.style.height = "auto";
-        //         // header.style.width = "70%";
-        //     } else {
-        //         menuMobileRight.style.right = "-100%";
-        //         //header.style.height = null;
-        //     }
-        //     //console.log(isOpen)
-        // };
+            let path = 'user';
+            var dbRef = firebase.database().ref().child(path + '/' + userName);
 
-        // // auto close when clicked menu mobile
-        // var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-        // for (let i = 0; i < menuItems.length; i++) {
-        //     const menuItem = menuItems[i];
-        //     menuItem.onclick = function (event) {
-        //         var isParentMenu =
-        //             this.nextElementSibling &&
-        //             this.nextElementSibling.classList.contains("subnav");
-        //         if (isParentMenu) {
-        //             event.preventDefault();
-        //         } else {
-        //             header.style.height = null;
-        //         }
-        //     };
-        // }
+            // alert(userName);
+            if (userName != "none" && userPass != "none") {
+                dbRef.on('value', (snapshot) => {
+                    if (snapshot.val() == null) {
+                        return;
+                    }
+                    let getEmail = snapshot.val().email;
+                    let getUserName = snapshot.val().username;
+                    let getPass = snapshot.val().password;
+                    if (userPass == getPass && userName == getUserName) {
+                        //alert(true);
+                        $rootScope.Student = snapshot.val();
+                        //window.location.reload();
+                        window.location.href = '#qna';
+                        window.location.reload();
+                        // Swal.fire({
+                        //     title: '<h1 style="color: red; font-size:20px;font-weight: bold;">Tự động đăng nhập thành công</h1>',
+                        //     icon: 'success',
+                        //     showConfirmButton: false,
+                        //     showCancelButton: false,
+                        //     timer: 1000
+
+                        // });
+                    }
+
+                }, (errorObject) => {
+                    console.log('The read failed: ' + errorObject.name);
+                });
+            }
+
+        }
+
+
 
         //toast
         function showSuccessToast() {

@@ -11,7 +11,7 @@
     },
     {
         "Id": "ADTE",
-        "Name": "Kiểm thử và triển khai ứng dụng Android",
+        "Name": "Kiểm thử ứng dụng Android",
         "Logo": "ADTE.jpg"
     },
     {

@@ -8,6 +8,7 @@
 
 .row-items{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
@@ -23,9 +24,12 @@
     /* border: solid 1px red; */
     width: 300px;
     cursor: pointer;
+    margin-bottom: 50px;
 }
 
-
+a:hover{
+    text-decoration: none;
+}
 
 .row-items .item .content{
     padding-left: 20px;
@@ -44,6 +48,7 @@
 .row-items .item .content .name{
     margin-top: 20px;
     font-size: larger;
+    color: black;
 }
 
 .row-items .item .content .line-bott{
@@ -56,6 +61,7 @@
     text-align: right;
     padding-right: 30px;
     font-weight: bold;
+    color: rgb(75, 75, 75);
 }
 
 
@@ -122,9 +128,12 @@
         display: block;
         margin: 0;
         margin-right: -10px;
+       
     }
 
     .row-items .item{
+        justify-content: center;
+        margin: 0 auto;
         width: 100%;
         margin-bottom: 30px
     }
