@@ -73,4 +73,5 @@ app.controller("qnaCtrl", function ($rootScope, $scope) {
     }
     //reloadPage();
     aut();
+    localStorage.setItem("FrogQuiz-Cursor","#qna");
 });

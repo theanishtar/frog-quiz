@@ -1,0 +1,185 @@
+<style>
+    .main {
+        padding: 50px;
+        margin-bottom: 80px;
+    }
+
+    /* PC */
+    @media (min-width: 64em) {
+        .manager-mobile {
+            display: none;
+        }
+
+        .edit {
+            font-size: 20px;
+            color: rgb(0, 98, 255);
+            transition: all 1s;
+        }
+
+        .edit:hover {
+            cursor: pointer;
+            font-size: 20px;
+            color: red;
+        }
+
+        table {
+            margin: 50px 0px;
+        }
+
+        .user img{
+            width: 50%;
+        }
+
+    }
+
+    /* Mobile */
+    @media (max-width: 46.1875em) {
+        .manager-pc {
+            display: none;
+        }
+
+        .user img{
+            width: 100%;
+        }
+    }
+
+    .dark-mode h2, .dark-mode h1{
+        color: white;
+    }
+
+    .dark-mode .pc{
+        color: #fff;
+    }
+
+</style>
+
+
+<section>
+
+
+    <div style="margin-top: 70px;" class="main">
+        <div class="admin" ng-if="Student.role == 1">
+            <div class="setting" ng-show="setting">
+                <h2>Chỉnh sửa tài khoản</h2>
+                <div class="content">
+                    <form style="margin-top: 30px;" role="form">
+                    
+                        <div class="form-group col-sm-6">
+                            <label for="">Họ và tên</label>
+                            <input ng-model="user.fullname" type="text" class="form-control" id="" placeholder="Input field">
+                        </div>
+    
+                        <div class="form-group col-sm-6">
+                            <label for="">Tên đăng nhập</label>
+                            <input ng-model="user.username" type="text" class="form-control" id="" placeholder="Input field" readonly>
+                        </div>
+    
+                        <div class="form-group col-sm-6">
+                            <label for="">Email</label>
+                            <input ng-model="user.email" type="text" class="form-control" id="" placeholder="Input field">
+                        </div>
+    
+                        <div class="form-group col-sm-6">
+                            <label for="">Mật khẩu</label>
+                            <input type="text" ng-model="user.password" class="form-control" id="" placeholder="Input field">
+                        </div>
+    
+                        <div class="form-group col-sm-6">
+                            <label for="">Điểm</label>
+                            <input ng-model="user.marks" type="text" class="form-control" id="" placeholder="Input field">
+                        </div>
+    
+                        <div class="form-group col-sm-6">
+                            <label for="">Học phí</label>
+                            <input type="text" ng-model="user.schoolfee" class="form-control" id="" placeholder="Input field">
+                        </div>
+                    
+                        
+                    
+                        <button type="submit" class="btn btn-success" style="margin-left: 13px;" ng-click="update()">Cập nhật</button>
+                        <button type="submit" class="btn btn-danger" style="margin-left: 13px;" ng-click="delete()">Xóa</button>
+                    </form>
+                </div>
+            </div>
+            <div class="view" ng-hide="setting">
+                <h2>Danh sách tài khoản trên hệ thống</h2>
+                <table class="table manager-pc">
+                    <thead>
+                        <tr class="pc">
+                            <th>Tên đăng nhập</th>
+                            <th>Tên tài khoản</th>
+                            <th>Email</th>
+                            <th>Mật khẩu</th>
+                            <th>Điểm</th>
+                            <th>Học phí</th>
+                            <!-- <th>Chỉnh sửa</th> -->
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="u in Users">
+                        <tr class="pc" ng-if="u.role!=1">
+                            <td>{{u.username}}</td>
+                            <td>{{u.fullname}}</td>
+                            <td>{{u.email}}</td>
+                            <td>{{u.password}}</td>
+                            <td>{{u.marks}}</td>
+                            <td>{{u.schoolfee}}</td>
+                            <td><i ng-click="edit($index)" class='edit bx bxs-edit'></i></td>
+                        </tr>    
+                    </tbody>
+                </table>
+    
+                <div class="manager-mobile" ng-repeat="u in Users">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{u.username}}</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td><b>Họ tên</b></td>
+                                        <td>{{u.fullname}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Email</b></td>
+                                        <td>{{u.email}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Mật khẩu</b></td>
+                                        <td>{{u.password}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Ngày sinh</b></td>
+                                        <td>{{u.birthday | date: 'dd-MM-yyyy'}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Giới tính</b></td>
+                                        <td>{{u.gender}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Điểm</b></td>
+                                        <td>{{u.marks}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+    
+                        <div class="panel-footer">
+    
+                            <button type="button" class="btn btn-warning" ng-click="edit($index)">Sửa</button>
+    
+                            <button type="button" class="btn btn-danger" ng-click="delete($index)">Xóa</button>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="user" style="margin: 50px 0px;" ng-if="Student.role != 1">
+            <h1>Tài khoản của bạn không có quyền truy cập!</h1>
+            <img  src="https://camo.githubusercontent.com/2dcdc8a60b4c15cee5696246267572b76b356d8eaf18009e7a8311068ddbc98d/68747470733a2f2f74682e62696e672e636f6d2f74682f69642f522e32313131363135386461616562313435396234656330373538353035653161643f72696b3d796d51647a6d7959495472426e51267069643d496d6752617726723d30" alt="">
+        </div>
+    </div>
+
+</section>

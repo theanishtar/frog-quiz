@@ -70,6 +70,21 @@
         color: rgb(75, 75, 75);
     }
 
+    .slider__control {
+        border: none;
+        background-color: #fff;
+        font-size: 30px;
+    }
+
+    .slder-control-icon{
+        color: black;
+        
+    }
+
+    .slider__control--prev{
+        margin-right: 50px;
+    }
+
 
     /* mode */
 
@@ -183,12 +198,12 @@
     }
 </style>
 <section>
-    <div id="content">
+    <div ng-controller="coursesCtrl" id="content">
         <div class="row" style="width: 100%;">
             <article class="col-sm-9">
                 <div class="row-items row">
                     <div style="margin-bottom: 50px;" class="item" ng-repeat="subject in Subjects|limitTo: 6:begin">
-                        <a href="#course/{{subject.Id}}">
+                        <a ng-click="checkAccount(subject.Id)">
                             <!-- ./images/course/ctdl.png  {{'images/logos/'+subject.Logo}}-->
                             <img src={{'images/logos/'+subject.Logo}} alt="">
                             <!-- <img src="./images/course/ctdl.png " alt=""> -->
@@ -202,12 +217,17 @@
 
                     </div>
 
-                    <button class="slider__control js__slider__control--prev slider__control--prev" ng-click="prev()"
-                        style="color: black; font-size: 20px;"><span class="fa fa-arrow-circle-left"></span></button>
-                    <!-- <ol class="js__slider__pagers slider__pagers"></ol> -->
-                    <button class="slider__control js__slider__control--next slider__control--next" ng-click="next()"
-                        style=" color: black; font-size: 20px; "><span class="fa fa-arrow-circle-right"></span></button>
 
+
+                </div>
+
+                <div class="text-center">
+                    <button style="margin-right: 50px;" class="slider__control slider__control--prev" ng-disabled="count<=1" ng-click="prev()"><i
+                            class='ti-control-backward slder-control-icon'></i></button>
+                    <!-- <ol class="js__slider__pagers slider__pagers"></ol> -->
+                    <span ng-model="count">{{count}}</span>
+                    <button style="margin-left: 50px;" class="slider__control slider__control--next" ng-disabled="count>=4" ng-click="next()"><i
+                            class='ti-control-forward slder-control-icon'></i></button>
                 </div>
 
 
