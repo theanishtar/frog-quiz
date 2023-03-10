@@ -44,7 +44,8 @@ app.run(function ($rootScope, $http) {
 					}
 					let pointer = localStorage.getItem("FrogQuiz-Cursor");
 
-					if (pointer == '#course') {
+					if (pointer === '#course') {
+						window.location.href = "#courses";
 						return;
 					}
 					if (!pointer) {

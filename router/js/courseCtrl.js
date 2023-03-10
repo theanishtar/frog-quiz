@@ -1,8 +1,8 @@
 
 app.controller("courseCtrl", function ($scope, $rootScope, $routeParams, $http, $interval) {
-
+	sessionStorage.setItem('FrogQuiz-Sesion', '');
 	localStorage.setItem("FrogQuiz-Cursor", "#course");
-	sessionStorage.setItem('FrogQuiz-Sesion', 'course');
+
 
 	$scope.indexquestion = 0;
 	$scope.mark = 0;
@@ -41,7 +41,7 @@ app.controller("courseCtrl", function ($scope, $rootScope, $routeParams, $http, 
 				$scope.checkOut = 1;
 				$scope.checkFinish = true;
 				$scope.timer = 3;
-
+				sessionStorage.setItem('FrogQuiz-Sesion', 'course');
 				for (var i = 0; i < $scope.Questions.length; i++) {
 					// alert($scope.Questions[i].AnswerId+" "+$scope.cauTrl[i])
 					if ($scope.Questions[i].AnswerId == $scope.cauTrl[i] && $scope.cauTrl[i] != undefined) {
