@@ -1,436 +1,328 @@
 <link rel="stylesheet" href="./assets/css/course.css">
 <style>
-    #content {
-        margin-top: 100px;
-    }
+	#content {
+		margin-top: 100px;
+	}
 
-    .panel-heading {
-        cursor: pointer;
-    }
+	.panel-heading {
+		cursor: pointer;
+	}
 
-    a {
-        text-decoration: none;
-    }
+	a {
+		text-decoration: none;
+	}
 
-    .row-items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0px 20px;
-        margin-right: -40px;
-        margin-bottom: 80px;
-    }
+	.row-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 20px;
+		margin-right: -40px;
+		margin-bottom: 80px;
+	}
 
-    .row-items .item img {
-        width: 100%;
-    }
+	.row-items .item img {
+		width: 100%;
+	}
 
-    .row-items .item {
-        /* border: solid 1px red; */
-        width: 300px;
-        cursor: pointer;
-        margin-bottom: 50px;
-    }
+	.row-items .item {
+		/* border: solid 1px red; */
+		width: 300px;
+		cursor: pointer;
+		margin-bottom: 50px;
+	}
 
-    a:hover {
-        text-decoration: none;
-    }
+	a:hover {
+		text-decoration: none;
+	}
 
-    .row-items .item .content {
-        padding-left: 20px;
-        padding-top: 20px;
-        border-bottom: solid 1px rgba(63, 63, 63, 0.271);
+	.row-items .item .content {
+		padding-left: 20px;
+		padding-top: 20px;
+		border-bottom: solid 1px rgba(63, 63, 63, 0.271);
 
-        border-right: solid 1px rgba(63, 63, 63, 0.271);
+		border-right: solid 1px rgba(63, 63, 63, 0.271);
 
-        border-left: solid 1px rgba(63, 63, 63, 0.271);
-    }
+		border-left: solid 1px rgba(63, 63, 63, 0.271);
+	}
 
-    .row-items .item .content .tag {
-        color: rgba(95, 95, 95, 0.762);
-    }
+	.row-items .item .content .tag {
+		color: rgba(95, 95, 95, 0.762);
+	}
 
-    .row-items .item .content .name {
-        margin-top: 20px;
-        font-size: larger;
-        color: black;
-    }
+	.row-items .item .content .name {
+		margin-top: 20px;
+		font-size: larger;
+		color: black;
+	}
 
-    .row-items .item .content .line-bott {
-        width: 90%;
-        border-bottom: solid 1px rgba(0, 0, 0, 0.31);
-        margin-top: 15px;
-    }
+	.row-items .item .content .line-bott {
+		width: 90%;
+		border-bottom: solid 1px rgba(0, 0, 0, 0.31);
+		margin-top: 15px;
+	}
 
-    .row-items .item .content .price {
-        text-align: right;
-        padding-right: 30px;
-        font-weight: bold;
-        color: rgb(75, 75, 75);
-    }
+	.row-items .item .content .price {
+		text-align: right;
+		padding-right: 30px;
+		font-weight: bold;
+		color: rgb(75, 75, 75);
+	}
 
-    .slider__control {
-        border: none;
-        background-color: #fff;
-        font-size: 30px;
-    }
+	.slider__control {
+		border: none;
+		background-color: #fff;
+		font-size: 30px;
+	}
 
-    .slder-control-icon{
-        color: black;
-        
-    }
+	.slder-control-icon {
+		color: black;
 
-    .slider__control--prev{
-        margin-right: 50px;
-    }
+	}
 
-
-    /* mode */
-
-    /* =================================== */
-
-    .dark-mode .row-items .item .content {
-        border-bottom: solid 1px rgba(248, 248, 248, 0.414);
-
-        border-right: solid 1px rgba(248, 248, 248, 0.414);
-
-        border-left: solid 1px rgba(248, 248, 248, 0.414);
-    }
-
-    .dark-mode .row-items .item .content .tag {
-        color: rgb(141, 141, 141);
-    }
-
-    .dark-mode .row-items .item .content .name {
-        color: aliceblue;
-    }
-
-    .dark-mode .row-items .item .content .line-bott {
-        color: rgb(153, 153, 153);
-    }
-
-    .dark-mode .row-items .item .content .price {
-        color: aliceblue;
-    }
-
-    .dark-mode .panel {
-        background-color: rgba(49, 46, 46, 0.384);
-        border-color: rgba(58, 112, 70, 0.919);
-    }
-
-    .dark-mode .panel-default,
-    .dark-mode .panel-default .panel-heading {
-        background-color: rgb(69, 67, 67);
-        color: aliceblue;
-    }
-
-    .dark-mode .panel .list-group a {
-        color: aliceblue;
-        background-color: rgb(63, 61, 61);
-    }
-
-    .dark-mode .panel .panel-body {
-        color: rgb(30, 154, 104);
-    }
-
-    .dark-mode .panel .panel-body input {
-        background-color: rgb(62, 59, 59);
-        border-color: rgb(128, 130, 130);
-    }
+	.slider__control--prev {
+		margin-right: 50px;
+	}
 
 
+	/* mode */
 
-    /* mobile */
-    /* Mobile */
-    @media (max-width: 46.1875em) {
-        aside {
-            display: none;
-        }
+	/* =================================== */
 
-        .row-items {
-            margin: 0;
-            margin-right: -10px;
-            width: 100%;
-        }
+	.dark-mode .row-items .item .content {
+		border-bottom: solid 1px rgba(248, 248, 248, 0.414);
 
-        .row-items .item {
-            justify-content: center;
-            margin: 0px 10px;
-            width: 100%;
-        }
-    }
+		border-right: solid 1px rgba(248, 248, 248, 0.414);
 
-    .row-items {
-        justify-content: start;
-    }
+		border-left: solid 1px rgba(248, 248, 248, 0.414);
+	}
 
-    .row-items .item {
-        margin: 0px 30px;
-    }
+	.dark-mode .row-items .item .content .tag {
+		color: rgb(141, 141, 141);
+	}
 
-    .slider__controls {
-        margin-top: 30px;
-        user-select: none;
-        text-align: center;
-    }
+	.dark-mode .row-items .item .content .name {
+		color: aliceblue;
+	}
 
-    .slider__control {
-        display: inline-block;
-        color: #829995;
-        cursor: pointer;
-        border-radius: 10px;
-    }
+	.dark-mode .row-items .item .content .line-bott {
+		color: rgb(153, 153, 153);
+	}
 
-    .slider__control--prev {
-        margin-right: 10px;
-    }
+	.dark-mode .row-items .item .content .price {
+		color: aliceblue;
+	}
 
-    .slider__control--next {
-        margin-left: 10px;
-    }
+	.dark-mode .panel {
+		background-color: rgba(49, 46, 46, 0.384);
+		border-color: rgba(58, 112, 70, 0.919);
+	}
 
-    .slider__pagers {
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-    }
+	.dark-mode .panel-default,
+	.dark-mode .panel-default .panel-heading {
+		background-color: rgb(69, 67, 67);
+		color: aliceblue;
+	}
+
+	.dark-mode .panel .list-group a {
+		color: aliceblue;
+		background-color: rgb(63, 61, 61);
+	}
+
+	.dark-mode .panel .panel-body {
+		color: rgb(30, 154, 104);
+	}
+
+	.dark-mode .panel .panel-body input {
+		background-color: rgb(62, 59, 59);
+		border-color: rgb(128, 130, 130);
+	}
+
+
+
+	/* mobile */
+	/* Mobile */
+	@media (max-width: 46.1875em) {
+		aside {
+			display: none;
+		}
+
+		.row-items {
+			margin: 0;
+			margin-right: -10px;
+			width: 100%;
+		}
+
+		.row-items .item {
+			justify-content: center;
+			margin: 0px 10px;
+			width: 100%;
+		}
+	}
+
+	.row-items {
+		justify-content: start;
+	}
+
+	.row-items .item {
+		margin: 0px 30px;
+	}
+
+	.slider__controls {
+		margin-top: 30px;
+		user-select: none;
+		text-align: center;
+	}
+
+	.slider__control {
+		display: inline-block;
+		color: #829995;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+
+	.slider__control--prev {
+		margin-right: 10px;
+	}
+
+	.slider__control--next {
+		margin-left: 10px;
+	}
+
+	.slider__pagers {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
 </style>
 <section>
-    <div ng-controller="coursesCtrl" id="content">
-        <div class="row" style="width: 100%;">
-            <article class="col-sm-9">
-                <div class="row-items row">
-                    <div style="margin-bottom: 50px;" class="item" ng-repeat="subject in Subjects|limitTo: 6:begin">
-                        <a ng-click="checkAccount(subject.Id)">
-                            <!-- ./images/course/ctdl.png  {{'images/logos/'+subject.Logo}}-->
-                            <img src={{'images/logos/'+subject.Logo}} alt="">
-                            <!-- <img src="./images/course/ctdl.png " alt=""> -->
-                            <div class="content">
-                                <p class="tag">Kiến thức nền tảng</p>
-                                <p class="name">{{subject.Name}}</p>
-                                <hr class="line-bott">
-                                <p class="price">Miễn phí</p>
-                            </div>
-                        </a>
+	<div ng-controller="coursesCtrl" id="content">
+		<div class="row" style="width: 100%;">
+			<article class="col-sm-9">
+				<div class="row-items row">
+					<div style="margin-bottom: 50px;" class="item" ng-repeat="subject in Subjects|limitTo: 6:begin">
+						<a ng-click="checkAccount(subject.Id)">
+							<!-- ./images/course/ctdl.png  {{'images/logos/'+subject.Logo}}-->
+							<img src={{'images/logos/'+subject.Logo}} alt="">
+							<!-- <img src="./images/course/ctdl.png " alt=""> -->
+							<div class="content">
+								<p class="tag">Kiến thức nền tảng</p>
+								<p class="name">{{subject.Name}}</p>
+								<hr class="line-bott">
+								<p class="price">Miễn phí</p>
+							</div>
+						</a>
 
-                    </div>
-
-
-
-                </div>
-
-                <div class="text-center">
-                    <button style="margin-right: 50px;" class="slider__control slider__control--prev" ng-disabled="count<=1" ng-click="prev()"><i
-                            class='ti-control-backward slder-control-icon'></i></button>
-                    <!-- <ol class="js__slider__pagers slider__pagers"></ol> -->
-                    <span ng-model="count">{{count}}</span>
-                    <button style="margin-left: 50px;" class="slider__control slider__control--next" ng-disabled="count>=4" ng-click="next()"><i
-                            class='ti-control-forward slder-control-icon'></i></button>
-                </div>
+					</div>
 
 
 
-                <!-- <div class="row-items row">
-                    <div class="item">
-                        <img src="./images/course/ctdl.png" alt="">
-                        <div class="content">
-                            <p class="tag">Kiến thức nền tảng</p>
-                            <p class="name">Cấu trúc dữ liệu</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./images/course/He-dieu-hanh.png" alt="">
-                        <div class="content">
-                            <p class="tag">Kiến thức nền tảng</p>
-                            <p class="name">Kiến thức hệ điều hành</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./images/course/Toan-roi-rac-1.png" alt="">
-                        <div class="content">
-                            <p class="tag">Kiến thức nền tảng</p>
-                            <p class="name">Toán rời rạc</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="row-items row">
-                    <div class="item">
-                        <img src="./images/course/Python.png" alt="">
-                        <div class="content">
-                            <p class="tag">Lập trình căn bản</p>
-                            <p class="name">Lập trình Python</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./images/course/SQL.png" alt="">
-                        <div class="content">
-                            <p class="tag">Xử lí dữ liệu</p>
-                            <p class="name">Quản lí dữ liệu với My SQL</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./images/course/lap-trinh-c-1.png" alt="">
-                        <div class="content">
-                            <p class="tag">Lập trình căn bản</p>
-                            <p class="name">Lập trình C</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="row-items row">
-                    <div class="item">
-                        <img src="./images/course/Lap-trinh-Java.png" alt="">
-                        <div class="content">
-                            <p class="tag">Lập tình Hướng đối tượng</p>
-                            <p class="name">Lập trình Java</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./images/course/Maven.png" alt="">
-                        <div class="content">
-                            <p class="tag">Lập trình Hướng đối tượng</p>
-                            <p class="name">Sử dụng công cụ Maven với Java</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="./images/course/Lap-trinh-JSP-2.png" alt="">
-                        <div class="content">
-                            <p class="tag">Lập trình nâng cao</p>
-                            <p class="name">Lập trình JSP với Java</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                </div> -->
+				</div>
 
-                <!-- <div class="row-items row">
-                    <div class="item">
-                        <img src="../images/course/javaJDBC.jpg" alt="">
-                        <div class="content">
-                            <p class="tag">Lập trình nâng cao</p>
-                            <p class="name">Lập trình JDBC với Java</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../images/course/MSEXCEL.png" alt="">
-                        <div class="content">
-                            <p class="tag">Tin học văn phòng</p>
-                            <p class="name">Làm việc với EXCEL</p>
-                            <hr class="line-bott">
-                            <p class="price">Miễn phí</p>
-                        </div>
-                    </div>
-                </div> -->
-            </article>
+				<div class="text-center">
+					<button style="margin-left: 50px; float: left;width: 130px;"
+						class="slider__control slider__control--prev" ng-disabled="count<=1" ng-click="prev()"><i
+							class='ti-arrow-left slder-control-icon' style="margin-right: 10px;"></i> Trước</button>
+					<!-- <ol class="js__slider__pagers slider__pagers"></ol> -->
+					<span ng-model="count">{{count}}</span>
+					<button style="margin-right: 20px; width: 130px; float: right;"
+						class="slider__control slider__control--next" ng-disabled="count>=4" ng-click="next()">Sau <i
+							class='ti-arrow-right slder-control-icon' style="margin-left: 10px;"></i></button>
+				</div>
 
-            <aside class="col-sm-3">
-                <!--CartInfo-->
-                <div class="poly-cart">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <!-- <img class="col-sm-5" src="images/shoppingcart.gif" /> -->
-                            <h3>Các khóa học</h3>
-                            <!-- <ul class="col-sm-7">
+
+
+			</article>
+
+			<aside class="col-sm-3">
+				<!--CartInfo-->
+				<div class="poly-cart">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<!-- <img class="col-sm-5" src="images/shoppingcart.gif" /> -->
+							<h3>Các khóa học</h3>
+							<!-- <ul class="col-sm-7">
                                 <li>100 items</li>
                                 <li>$ 56.8</li>
                                 <li><a href="">View Cart</a></li>
                             </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <!--/CartInfo-->
+						</div>
+					</div>
+				</div>
+				<!--/CartInfo-->
 
-                <!--Search-->
-                <div class="nn-cart">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <form method="post" action="/Product/Search">
-                                <input placeholder="Tìm kiếm..." name="Keywords" class="form-control" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!--/Search-->
+				<!--Search-->
+				<div class="nn-cart">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<form method="post" action="/Product/Search">
+								<input placeholder="Tìm kiếm..." name="Keywords" class="form-control" />
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--/Search-->
 
-                <div class="panel-group" id="accordion">
+				<div class="panel-group" id="accordion">
 
-                    <!--Category-->
-                    <div class="panel panel-default" ng-controller="subjectCtrl">
-                        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                            <i class='bx bx-list-plus'></i>
-                            <strong>Tất cả</strong>
-                        </div>
+					<!--Category-->
+					<div class="panel panel-default" ng-controller="subjectCtrl">
+						<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+							<i class='bx bx-list-plus'></i>
+							<strong>Tất cả</strong>
+						</div>
 
-                        <div class="list-group card-collapse panel-collapse collapse in" id="collapseOne"
-                            ng-repeat="sub in subjects">
-                            <a href="#" class="list-group-item">{{sub.Name}}</a>
+						<div class="list-group card-collapse panel-collapse collapse in" id="collapseOne"
+							ng-repeat="sub in subjects">
+							<a href="#" class="list-group-item">{{sub.Name}}</a>
 
-                        </div>
-                    </div>
-                    <!--/Category-->
+						</div>
+					</div>
+					<!--/Category-->
 
-                    <!--Category-->
-                    <div class="panel panel-default">
-                        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                            <i class='bx bx-list-plus'></i>
-                            <strong>Thể loại</strong>
-                        </div>
+					<!--Category-->
+					<div class="panel panel-default">
+						<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+							<i class='bx bx-list-plus'></i>
+							<strong>Thể loại</strong>
+						</div>
 
-                        <div class="list-group card-collapse panel-collapse collapse in" id="collapseOne">
-                            <a href="#" class="list-group-item">Kiến thức nền tảng</a>
-                            <a href="#" class="list-group-item">Lập trình căn bản</a>
-                            <a href="#" class="list-group-item">Lập trình nâng cao</a>
-                            <a href="#" class="list-group-item">Xử lí dữ liệu</a>
-                            <a href="#" class="list-group-item">Học máy</a>
-                            <a href="#" class="list-group-item">Trí tuệ nhân tạo</a>
-                        </div>
-                    </div>
-                    <!--/Category-->
+						<div class="list-group card-collapse panel-collapse collapse in" id="collapseOne">
+							<a href="#" class="list-group-item">Kiến thức nền tảng</a>
+							<a href="#" class="list-group-item">Lập trình căn bản</a>
+							<a href="#" class="list-group-item">Lập trình nâng cao</a>
+							<a href="#" class="list-group-item">Xử lí dữ liệu</a>
+							<a href="#" class="list-group-item">Học máy</a>
+							<a href="#" class="list-group-item">Trí tuệ nhân tạo</a>
+						</div>
+					</div>
+					<!--/Category-->
 
-                    <!--Supplier-->
-                    <div class="panel panel-default">
-                        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                            <i class='bx bx-layer'></i>
-                            <strong>Các công nghệ</strong>
-                        </div>
+					<!--Supplier-->
+					<div class="panel panel-default">
+						<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+							<i class='bx bx-layer'></i>
+							<strong>Các công nghệ</strong>
+						</div>
 
-                        <div class="list-group card-collapse panel-collapse collapse in" id="collapseTwo">
-                            <a href="#" class="list-group-item"><i class='bx bxl-java'></i> Java</a>
-                            <a href="#" class="list-group-item"><i class='bx bxl-javascript'></i> JavaScript</a>
-                            <a href="#" class="list-group-item"><i class='bx bxl-spring-boot'></i> SpringBoot</a>
-                            <a href="#" class="list-group-item"><i class='bx bxl-php'></i> PHP</a>
-                            <a href="#" class="list-group-item"><i class='bx bxl-react'></i> ReactJS</a>
-                            <a href="#" class="list-group-item"><i class='bx bxl-unity'></i> Unity</a>
-                            <a href="#" class="list-group-item"><i class='bx bxl-jquery'></i> JQuery</a>
-                            <a href="#" class="list-group-item"><i class='bx bxl-gitlab'></i> GitLab</a>
-                            <a href="#" class="list-group-item"><i class='bx bxl-python'></i> Python</a>
-                        </div>
-                    </div>
-                    <!--/Supplier-->
+						<div class="list-group card-collapse panel-collapse collapse in" id="collapseTwo">
+							<a href="#" class="list-group-item"><i class='bx bxl-java'></i> Java</a>
+							<a href="#" class="list-group-item"><i class='bx bxl-javascript'></i> JavaScript</a>
+							<a href="#" class="list-group-item"><i class='bx bxl-spring-boot'></i> SpringBoot</a>
+							<a href="#" class="list-group-item"><i class='bx bxl-php'></i> PHP</a>
+							<a href="#" class="list-group-item"><i class='bx bxl-react'></i> ReactJS</a>
+							<a href="#" class="list-group-item"><i class='bx bxl-unity'></i> Unity</a>
+							<a href="#" class="list-group-item"><i class='bx bxl-jquery'></i> JQuery</a>
+							<a href="#" class="list-group-item"><i class='bx bxl-gitlab'></i> GitLab</a>
+							<a href="#" class="list-group-item"><i class='bx bxl-python'></i> Python</a>
+						</div>
+					</div>
+					<!--/Supplier-->
 
-                    <!--Special-->
-                    <!-- <div class="panel panel-default">
+					<!--Special-->
+					<!-- <div class="panel panel-default">
                         <div class="panel-heading" data-toggle="collapse" data-parent="#accordion"
                             href="#collapseThree">
                             <span class="glyphicon glyphicon-star-empty"></span>
@@ -445,11 +337,82 @@
                             <a href="#" class="list-group-item">Hàng xem nhiều</a>
                         </div>
                     </div> -->
-                    <!--/Special-->
-                </div>
+					<!--/Special-->
+				</div>
 
 
-            </aside>
-        </div>
-    </div>
+			</aside>
+		</div>
+	</div>
 </section>
+
+
+<style>
+	.slider__control {
+		padding: 10px 40px;
+		font-size: 18px;
+		background-color: #008542;
+		color: #fff;
+		text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		border: 0;
+		z-index: 1;
+		user-select: none;
+		cursor: pointer;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		white-space: unset;
+		padding: .8rem 1.5rem;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.7s cubic-bezier(0, .8, .26, .99);
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+
+	.slider__control:before {
+		position: absolute;
+		pointer-events: none;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		content: '';
+		transition: .7s cubic-bezier(0, .8, .26, .99);
+		z-index: -1;
+		background-color: #0cb560 !important;
+		box-shadow: 0 -4px rgb(21 108 0 / 50%) inset, 0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset, 4px 0 rgb(21 108 0 / 50%) inset;
+	}
+
+	.slider__control:after {
+		position: absolute;
+		pointer-events: none;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		content: '';
+		box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+		transition: .7s cubic-bezier(0, .8, .26, .99);
+	}
+
+	.slider__control:hover:before {
+		box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset, -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+	}
+
+	.slider__control:hover:after {
+		box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+	}
+
+	.slider__control:active {
+		transform: translateY(4px);
+	}
+
+	.slider__control:active:after {
+		box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+	}
+</style>

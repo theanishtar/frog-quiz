@@ -5,11 +5,8 @@ var app = angular.module("myApp", [
 app.run(function ($rootScope, $http) {
 	$rootScope.User = null;
 	$rootScope.Student = null;
-	// $http.get('db/Students.js').then(function (response) {
-	//     $rootScope.Students = response.data;
-	// });
 
-	$http.get('db/Subjects.js').then(function (response) {
+	$http.get('db/Subjects.json').then(function (response) {
 		$rootScope.Subjects = response.data;
 	});
 

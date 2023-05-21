@@ -73,7 +73,7 @@ app.controller("courseCtrl", function ($scope, $rootScope, $routeParams, $http, 
 			return;
 		}
 		$scope.timer = 600;
-		$http.get('db/Quizs/' + $routeParams.id + '.js').then(function (response) {
+		$http.get('db/Quizs/' + $routeParams.id + '.json').then(function (response) {
 			$scope.questions = response.data;
 			ranDom();
 		});
@@ -110,7 +110,7 @@ app.controller("courseCtrl", function ($scope, $rootScope, $routeParams, $http, 
 			} else if ($scope.timer == 0) {
 				if ($scope.checkOut == 0) {
 					Swal.fire({
-						title: 'Kết thúc bài thi1',
+						title: 'Kết thúc bài thi',
 						text: 'Tổng số điểm của bạn: ' + $scope.point,
 						icon: 'success',
 						showConfirmButton: false,
