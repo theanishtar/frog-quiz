@@ -1,6 +1,7 @@
 
 # Xây dựng website thi trắc nghiệm trực tuyến triển khai theo hình thức SPA sử dụng công nghệ Bootstrap và AngularJS với các chức năng theo yêu cầu sau
 
+Website đật điểm tuyệt đối trong lúc học tập và được đăng lên web trường [(xem thêm)](https://caodang.fpt.edu.vn/tin-tuc-poly/can-tho-tin-sinh-vien/nam-sinh-fpt-polytechnic-can-tho-tai-nang-sang-tao-he-thong-hoc-lap-trinh-bo-ich.html?zarsrc=30&utm_source=zalo&utm_medium=zalo&utm_campaign=zalo&gidzl=jGLlJD1wT3os6sbDsc9sFBuQOqp4ONa-g1vb7PrWAsZz73KSosOhFVeUCKYRCYKv-4vlI3HKJon7qtDwCm&fbclid=IwAR1m8KfRtCRX_PJ7pvADZQ4Xlev_vFS_RXZBHCHtcoYm6hLJzEZnp7qLdAg)
 
 ## Các công nghệ mình đã sử dụng trong dự án
 | Các công nghệ sử dụng                                             | Image                                                                                                                                     | Phiên bản                  | Nội dung                                                                         |
